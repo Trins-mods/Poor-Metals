@@ -1,6 +1,6 @@
 {
-  "parent": "poormetals:block/stone_background",
+  "parent": "block/cube_all",
   "textures": {
-    "ore": "poormetals:blocks/poor_gold_ore"
+    "all": "poormetals:blocks/poor_gold_ore"
   }
 }

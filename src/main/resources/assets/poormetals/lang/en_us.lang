@@ -1,0 +1,27 @@
+itemGroup.poormetals=Poor Metals
+
+tile.poormetals.poor_iron_ore.name=Poor Iron Ore
+tile.poormetals.poor_gold_ore.name=Poor Gold Ore
+tile.poormetals.poor_antimony_ore.name=Poor Antimony Ore
+tile.poormetals.poor_bismuth_ore.name=Poor Bismuth Ore
+tile.poormetals.poor_nickel_ore.name=Poor Nickel Ore
+tile.poormetals.poor_mercury_ore.name=Poor Mercury Ore
+tile.poormetals.poor_tin_ore.name=Poor Tin Ore
+tile.poormetals.poor_lead_ore.name=Poor Lead Ore
+tile.poormetals.poor_silver_ore.name=Poor Silver Ore
+tile.poormetals.poor_platinum_ore.name=Poor Platinum Ore
+tile.poormetals.poor_copper_ore.name=Poor Copper Ore
+tile.poormetals.poor_zinc_ore.name=Poor Zinc Ore
+
+tile.poormetals.poor_nether_iron_ore.name=Poor Nether Iron Ore
+tile.poormetals.poor_nether_gold_ore.name=Poor Nether Gold Ore
+tile.poormetals.poor_nether_antimony_ore.name=Poor Nether Antimony Ore
+tile.poormetals.poor_nether_bismuth_ore.name=Poor Nether Bismuth Ore
+tile.poormetals.poor_nether_nickel_ore.name=Poor Nether Nickel Ore
+tile.poormetals.poor_nether_mercury_ore.name=Poor Nether Mercury Ore
+tile.poormetals.poor_nether_tin_ore.name=Poor Nether Tin Ore
+tile.poormetals.poor_nether_lead_ore.name=Poor Nether Lead Ore
+tile.poormetals.poor_nether_silver_ore.name=Poor Nether Silver Ore
+tile.poormetals.poor_nether_platinum_ore.name=Poor Nether Platinum Ore
+tile.poormetals.poor_nether_copper_ore.name=Poor Nether Copper Ore
+tile.poormetals.poor_nether_zinc_ore.name=Poor Nether Zinc Ore

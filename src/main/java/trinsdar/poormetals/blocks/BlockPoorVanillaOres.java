@@ -20,9 +20,9 @@ public class BlockPoorVanillaOres extends Block {
         this.variant = variant;
         setCreativeTab(PoorMetals.creativeTab);
         final String name = "poor_"+ variant.toString().toLowerCase()+ "_ore";
-        setUnlocalizedName( PoorMetals.MODID + ".block." + name );
+        setUnlocalizedName( PoorMetals.MODID + "." + name );
         setRegistryName(name);
-        this.setHarvestLevel("pickaxe", 2);
+        this.setHarvestLevel("pickaxe", 1);
         setHardness(4.0f);
         setResistance(15.0f);
     }
