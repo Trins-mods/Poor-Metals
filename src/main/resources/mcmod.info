@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "poormetals",
+  "name": "Poor Metals",
+  "description": "Adds poor variants of vanilla, Base Metals, and Nether Metals ores..",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["Trinsdar"],
+  "credits": "The Forge and FML guys, for making forge, and  the MMD team for making the MMD mods",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
