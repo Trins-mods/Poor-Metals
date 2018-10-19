@@ -18,9 +18,13 @@ public class BlockPoorVanillaOres extends Block {
     public BlockPoorVanillaOres(PoorVanillaOresVariant variant) {
         super(Material.ROCK);
         this.variant = variant;
+        setCreativeTab(PoorMetals.creativeTab);
         final String name = "poor_"+ variant.toString().toLowerCase()+ "_ore";
         setUnlocalizedName( PoorMetals.MODID + ".block." + name );
         setRegistryName(name);
+        this.setHarvestLevel("pickaxe", 2);
+        setHardness(4.0f);
+        setResistance(15.0f);
     }
 
     @SideOnly(Side.CLIENT)

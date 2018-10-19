@@ -9,6 +9,8 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.common.registry.GameRegistry.ObjectHolder;
 import net.minecraftforge.registries.IForgeRegistry;
 import trinsdar.poormetals.Config;
 import trinsdar.poormetals.PoorMetals;
@@ -19,6 +21,7 @@ import trinsdar.poormetals.blocks.BlockPoorModdedOres.PoorModdedOresVariant;
 import trinsdar.poormetals.blocks.BlockPoorVanillaOres;
 import trinsdar.poormetals.blocks.BlockPoorVanillaOres.PoorVanillaOresVariant;
 
+@ObjectHolder(PoorMetals.MODID)
 public class ModBlocks {
     public static final BlockPoorVanillaOres
     poorIronOre = new BlockPoorVanillaOres(PoorVanillaOresVariant.IRON),
@@ -90,6 +93,7 @@ public class ModBlocks {
                         final ResourceLocation registryName = Preconditions.checkNotNull(block.getRegistryName(),
                                 "Block %s has null registry name", block);
                         registry.register(item.setRegistryName(registryName));
+                        item.setCreativeTab(PoorMetals.creativeTab);
                     }
                 }
             }
@@ -108,6 +112,7 @@ public class ModBlocks {
                         final ResourceLocation registryName = Preconditions.checkNotNull(block.getRegistryName(),
                                 "Block %s has null registry name", block);
                         registry.register(item.setRegistryName(registryName));
+                        item.setCreativeTab(PoorMetals.creativeTab);
                     }
                 }
             }
@@ -121,6 +126,7 @@ public class ModBlocks {
                     final ResourceLocation registryName = Preconditions.checkNotNull(block.getRegistryName(),
                             "Block %s has null registry name", block);
                     registry.register(item.setRegistryName(registryName));
+                    item.setCreativeTab(PoorMetals.creativeTab);
                 }
             }
         }

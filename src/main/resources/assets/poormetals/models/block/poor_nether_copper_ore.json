@@ -1,6 +1,6 @@
 {
-  "parent": "block/cube_all",
+  "parent": "poormetals:block/netherrack_background",
   "textures": {
-    "all": "poormetals:blocks/poor_copper_ore"
+    "ore": "poormetals:blocks/poor_copper_ore"
   }
 }

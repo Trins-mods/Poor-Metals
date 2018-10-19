@@ -1,5 +1,6 @@
 package trinsdar.poormetals;
 
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -13,6 +14,7 @@ public class PoorMetals {
     public static final String MODID = "poormetals";
     public static final String MODNAME = "Poor Metals";
     public static final String VERSION= "@VERSION@";
+    public static final CreativeTabs creativeTab = new CreativeTabPoorMetals(MODID);
 
     @SidedProxy(clientSide = "trinsdar.poormetals.proxy.ClientProxy", serverSide = "trinsdar.poormetals.proxy.ServerProxy")
     public static CommonProxy proxy;
