@@ -1,0 +1,6 @@
+{
+  "parent": "poormetals:block/stone_background",
+  "textures": {
+    "ore": "poormetals:blocks/poor_antimony_ore"
+  }
+}

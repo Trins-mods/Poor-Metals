@@ -1,0 +1,10 @@
+{
+  "forge_marker": 1,
+  "defaults": {
+    "model": "poormetals:poor_bismuth_ore"
+  },
+  "variants": {
+    "normal": [{}],
+    "inventory": [{}]
+  }
+}
