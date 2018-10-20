@@ -12,6 +12,9 @@ tile.poormetals.poor_silver_ore.name=Poor Silver Ore
 tile.poormetals.poor_platinum_ore.name=Poor Platinum Ore
 tile.poormetals.poor_copper_ore.name=Poor Copper Ore
 tile.poormetals.poor_zinc_ore.name=Poor Zinc Ore
+tile.poormetals.poor_starsteel_ore.name=Poor Starsteel Ore
+tile.poormetals.poor_adamantine_ore.name=Poor Adamantine Ore
+tile.poormetals.poor_cold_iron_ore.name=Poor Cold-Iron Ore
 
 tile.poormetals.poor_nether_iron_ore.name=Poor Nether Iron Ore
 tile.poormetals.poor_nether_gold_ore.name=Poor Nether Gold Ore
