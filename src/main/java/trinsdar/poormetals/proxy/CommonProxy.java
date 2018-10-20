@@ -15,7 +15,7 @@ public class CommonProxy {
 
     public void preInit(FMLPreInitializationEvent event) {
         File directory = event.getModConfigurationDirectory();
-        config = new Configuration(new File(directory.getPath(), "Densemetals.cfg"));
+        config = new Configuration(new File(directory.getPath(), "poormetals.cfg"));
         Config.readConfig();
     }
 
