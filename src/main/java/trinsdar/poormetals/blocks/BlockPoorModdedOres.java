@@ -12,7 +12,7 @@ import trinsdar.poormetals.PoorMetals;
 public class BlockPoorModdedOres extends Block {
 
     public enum PoorModdedOresVariant{
-        COPPER, TIN, SILVER, LEAD, NICKEL, ZINC, MERCURY, PLATINUM, BISMUTH, ANTIMONY;
+        COPPER, TIN, SILVER, LEAD, NICKEL, ZINC, MERCURY, PLATINUM, BISMUTH, ANTIMONY, ADAMANTINE, COLD_IRON, STARSTEEL;
     }
 
     PoorModdedOresVariant variant;

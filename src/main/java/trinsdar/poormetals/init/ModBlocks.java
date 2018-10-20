@@ -37,7 +37,10 @@ public class ModBlocks {
     poorMercuryOre = new BlockPoorModdedOres(PoorModdedOresVariant.MERCURY),
     poorPlatinumOre = new BlockPoorModdedOres(PoorModdedOresVariant.PLATINUM),
     poorBismuthOre = new BlockPoorModdedOres(PoorModdedOresVariant.BISMUTH),
-    poorAntimonyOre = new BlockPoorModdedOres(PoorModdedOresVariant.ANTIMONY);
+    poorAntimonyOre = new BlockPoorModdedOres(PoorModdedOresVariant.ANTIMONY),
+    poorAdamantineOre = new BlockPoorModdedOres(PoorModdedOresVariant.ADAMANTINE),
+    poorColdIronOre = new BlockPoorModdedOres(PoorModdedOresVariant.COLD_IRON),
+    poorStarsteelOre = new BlockPoorModdedOres(PoorModdedOresVariant.STARSTEEL);
 
     public static final BlockPoorModdedNetherOres
     poorIronNetherOre = new BlockPoorModdedNetherOres(PoorModdedNetherOresVariant.IRON),
@@ -58,13 +61,30 @@ public class ModBlocks {
 
         @SubscribeEvent
         public static void registerBlocks(RegistryEvent.Register<Block> event){
-            if (Loader.isModLoaded("basemetals")){
+            if (!Config.baseMetalsPoorOresOverride){
+                if (Loader.isModLoaded("basemetals")){
+                    if (Config.baseMetalsPoorOres){
+                        event.getRegistry().registerAll(poorAntimonyOre, poorBismuthOre,
+                                poorCopperOre, poorLeadOre, poorSilverOre, poorNickelOre, poorMercuryOre,
+                                poorTinOre, poorPlatinumOre, poorZincOre, poorAdamantineOre, poorColdIronOre, poorStarsteelOre);
+                    }
+                }
+            }else if (Config.baseMetalsPoorOresOverride){
                 if (Config.baseMetalsPoorOres){
                     event.getRegistry().registerAll(poorAntimonyOre, poorBismuthOre,
-                            poorCopperOre, poorLeadOre, poorSilverOre, poorNickelOre, poorMercuryOre, poorTinOre, poorPlatinumOre, poorZincOre);
+                            poorCopperOre, poorLeadOre, poorSilverOre, poorNickelOre, poorMercuryOre,
+                            poorTinOre, poorPlatinumOre, poorZincOre, poorAdamantineOre, poorColdIronOre, poorStarsteelOre);
                 }
             }
-            if (Loader.isModLoaded("nethermetals")){
+            if (!Config.netherMetalsPoorOresOverride){
+                if (Loader.isModLoaded("nethermetals")){
+                    if (Config.netherMetalsPoorOres){
+                        event.getRegistry().registerAll(poorGoldNetherOre, poorIronNetherOre, poorCopperNetherOre,
+                                poorTinNetherOre, poorSilverNetherOre, poorLeadNetherOre, poorNickelNetherOre, poorZincNetherOre,
+                                poorMercuryNetherOre, poorPlatinumNetherOre, poorBismuthNetherOre, poorAntimonyNetherOre);
+                    }
+                }
+            }else if (Config.netherMetalsPoorOresOverride){
                 if (Config.netherMetalsPoorOres){
                     event.getRegistry().registerAll(poorGoldNetherOre, poorIronNetherOre, poorCopperNetherOre,
                             poorTinNetherOre, poorSilverNetherOre, poorLeadNetherOre, poorNickelNetherOre, poorZincNetherOre,
@@ -83,9 +103,24 @@ public class ModBlocks {
                     new ItemBlock(poorCopperOre), new ItemBlock(poorNickelOre),
                     new ItemBlock(poorMercuryOre), new ItemBlock(poorTinOre),
                     new ItemBlock(poorZincOre), new ItemBlock(poorLeadOre),
-                    new ItemBlock(poorSilverOre), new ItemBlock(poorPlatinumOre)
+                    new ItemBlock(poorSilverOre), new ItemBlock(poorPlatinumOre),
+                    new ItemBlock(poorAdamantineOre), new ItemBlock(poorColdIronOre),
+                    new ItemBlock(poorStarsteelOre)
             };
-            if (Loader.isModLoaded("basemetals")){
+            if (!Config.baseMetalsPoorOresOverride){
+                if (Loader.isModLoaded("basemetals")){
+                    if (Config.baseMetalsPoorOres) {
+                        final IForgeRegistry<Item> registry = event.getRegistry();
+                        for (final ItemBlock item : itemsModded) {
+                            final Block block = item.getBlock();
+                            final ResourceLocation registryName = Preconditions.checkNotNull(block.getRegistryName(),
+                                    "Block %s has null registry name", block);
+                            registry.register(item.setRegistryName(registryName));
+                            item.setCreativeTab(PoorMetals.creativeTab);
+                        }
+                    }
+                }
+            }else if (Config.baseMetalsPoorOresOverride){
                 if (Config.baseMetalsPoorOres) {
                     final IForgeRegistry<Item> registry = event.getRegistry();
                     for (final ItemBlock item : itemsModded) {
@@ -97,6 +132,7 @@ public class ModBlocks {
                     }
                 }
             }
+
             final ItemBlock[] itemsNether = {
                     new ItemBlock(poorGoldNetherOre),new ItemBlock(poorIronNetherOre),
                     new ItemBlock(poorCopperNetherOre), new ItemBlock(poorTinNetherOre),
@@ -104,7 +140,20 @@ public class ModBlocks {
                     new ItemBlock(poorMercuryNetherOre), new ItemBlock(poorZincNetherOre),
                     new ItemBlock(poorAntimonyNetherOre), new ItemBlock(poorBismuthNetherOre)
             };
-            if (Loader.isModLoaded("nethermetals")){
+            if (!Config.netherMetalsPoorOresOverride){
+                if (Loader.isModLoaded("nethermetals")){
+                    if (Config.netherMetalsPoorOres) {
+                        final IForgeRegistry<Item> registry = event.getRegistry();
+                        for (final ItemBlock item : itemsNether) {
+                            final Block block = item.getBlock();
+                            final ResourceLocation registryName = Preconditions.checkNotNull(block.getRegistryName(),
+                                    "Block %s has null registry name", block);
+                            registry.register(item.setRegistryName(registryName));
+                            item.setCreativeTab(PoorMetals.creativeTab);
+                        }
+                    }
+                }
+            }else if (Config.netherMetalsPoorOresOverride){
                 if (Config.netherMetalsPoorOres) {
                     final IForgeRegistry<Item> registry = event.getRegistry();
                     for (final ItemBlock item : itemsNether) {
@@ -133,7 +182,25 @@ public class ModBlocks {
     }
 
     public static void initModels(){
-        if (Loader.isModLoaded("basemetals")){
+        if (!Config.baseMetalsPoorOresOverride){
+            if (Loader.isModLoaded("basemetals")){
+                if (Config.baseMetalsPoorOres) {
+                    poorAntimonyOre.initModel();
+                    poorBismuthOre.initModel();
+                    poorCopperOre.initModel();
+                    poorNickelOre.initModel();
+                    poorMercuryOre.initModel();
+                    poorTinOre.initModel();
+                    poorZincOre.initModel();
+                    poorLeadOre.initModel();
+                    poorSilverOre.initModel();
+                    poorPlatinumOre.initModel();
+                    poorAdamantineOre.initModel();
+                    poorColdIronOre.initModel();
+                    poorStarsteelOre.initModel();
+                }
+            }
+        }else if (Config.baseMetalsPoorOresOverride){
             if (Config.baseMetalsPoorOres) {
                 poorAntimonyOre.initModel();
                 poorBismuthOre.initModel();
@@ -145,11 +212,30 @@ public class ModBlocks {
                 poorLeadOre.initModel();
                 poorSilverOre.initModel();
                 poorPlatinumOre.initModel();
-
+                poorAdamantineOre.initModel();
+                poorColdIronOre.initModel();
+                poorStarsteelOre.initModel();
             }
         }
 
-        if (Loader.isModLoaded("nethermetals")){
+        if (!Config.netherMetalsPoorOresOverride){
+            if (Loader.isModLoaded("nethermetals")){
+                if (Config.netherMetalsPoorOres) {
+                    poorGoldNetherOre.initModel();
+                    poorIronNetherOre.initModel();
+                    poorCopperNetherOre.initModel();
+                    poorTinNetherOre.initModel();
+                    poorLeadNetherOre.initModel();
+                    poorSilverNetherOre.initModel();
+                    poorNickelNetherOre.initModel();
+                    poorMercuryNetherOre.initModel();
+                    poorZincNetherOre.initModel();
+                    poorPlatinumNetherOre.initModel();
+                    poorAntimonyNetherOre.initModel();
+                    poorBismuthNetherOre.initModel();
+                }
+            }
+        }else if (Config.netherMetalsPoorOresOverride){
             if (Config.netherMetalsPoorOres) {
                 poorGoldNetherOre.initModel();
                 poorIronNetherOre.initModel();
@@ -163,7 +249,6 @@ public class ModBlocks {
                 poorPlatinumNetherOre.initModel();
                 poorAntimonyNetherOre.initModel();
                 poorBismuthNetherOre.initModel();
-
             }
         }
 
