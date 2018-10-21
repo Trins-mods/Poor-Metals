@@ -216,20 +216,18 @@ public class ModBlocks {
             if (!Config.netherModernMetalsPoorOresOverride){
                 if (Loader.isModLoaded("modernmetals") && Loader.isModLoaded("nethermetals")){
                     if (Config.netherModernMetalsPoorOres){
-                        event.getRegistry().registerAll(poorNetherAluminumOre, poorNetherBerylliumOre, poorNetherBoronOre,
-                                poorNetherCadmiumOre, poorNetherChromiumOre, poorNetherIridiumOre, poorNetherMagnesiumOre,
-                                poorNetherMaganeseOre, poorNetherOsmiumOre, poorNetherPlutoniumOre, poorNetherRutileOre,
-                                poorNetherTantalumOre, poorNetherThoriumOre, poorNetherTitaniumOre, poorNetherTungstenOre,
-                                poorNetherUraniumOre, poorNetherZirconiumOre);
+                        event.getRegistry().registerAll(poorNetherAluminumOre, poorNetherCadmiumOre, poorNetherChromiumOre,
+                                poorNetherIridiumOre, poorNetherMagnesiumOre, poorNetherMaganeseOre,
+                                poorNetherOsmiumOre, poorNetherPlutoniumOre, poorNetherRutileOre, poorNetherTantalumOre,
+                                poorNetherTitaniumOre, poorNetherTungstenOre, poorNetherUraniumOre, poorNetherZirconiumOre);
                     }
                 }
             }else if (Config.netherModernMetalsPoorOresOverride){
                 if (Config.netherModernMetalsPoorOres){
-                    event.getRegistry().registerAll(poorNetherAluminumOre, poorNetherBerylliumOre, poorNetherBoronOre,
-                                poorNetherCadmiumOre, poorNetherChromiumOre, poorNetherIridiumOre, poorNetherMagnesiumOre,
-                                poorNetherMaganeseOre, poorNetherOsmiumOre, poorNetherPlutoniumOre, poorNetherRutileOre,
-                                poorNetherTantalumOre, poorNetherThoriumOre, poorNetherTitaniumOre, poorNetherTungstenOre,
-                                poorNetherUraniumOre, poorNetherZirconiumOre);
+                    event.getRegistry().registerAll(poorNetherAluminumOre, poorNetherCadmiumOre, poorNetherChromiumOre,
+                                poorNetherIridiumOre, poorNetherMagnesiumOre, poorNetherMaganeseOre,
+                                poorNetherOsmiumOre, poorNetherPlutoniumOre, poorNetherRutileOre, poorNetherTantalumOre,
+                                poorNetherTitaniumOre, poorNetherTungstenOre, poorNetherUraniumOre, poorNetherZirconiumOre);
                 }
             }
 
@@ -252,20 +250,18 @@ public class ModBlocks {
             if (!Config.endModernMetalsPoorOresOverride){
                 if (Loader.isModLoaded("modernmetals") && Loader.isModLoaded("endmetals")){
                     if (Config.endModernMetalsPoorOres){
-                        event.getRegistry().registerAll(poorEndAluminumOre, poorEndBerylliumOre, poorEndBoronOre,
-                                poorEndCadmiumOre, poorEndChromiumOre, poorEndIridiumOre, poorEndMagnesiumOre,
-                                poorEndMaganeseOre, poorEndOsmiumOre, poorEndPlutoniumOre, poorEndRutileOre,
-                                poorEndTantalumOre, poorEndThoriumOre, poorEndTitaniumOre, poorEndTungstenOre,
-                                poorEndUraniumOre, poorEndZirconiumOre);
+                        event.getRegistry().registerAll(poorEndAluminumOre, poorEndCadmiumOre, poorEndChromiumOre,
+                                poorEndIridiumOre, poorEndMagnesiumOre, poorEndMaganeseOre,
+                                poorEndOsmiumOre, poorEndPlutoniumOre, poorEndRutileOre, poorEndTantalumOre,
+                                poorEndTitaniumOre, poorEndTungstenOre, poorEndUraniumOre, poorEndZirconiumOre);
                     }
                 }
             }else if (Config.endModernMetalsPoorOresOverride){
                 if (Config.endModernMetalsPoorOres){
-                    event.getRegistry().registerAll(poorEndAluminumOre, poorEndBerylliumOre, poorEndBoronOre,
-                                poorEndCadmiumOre, poorEndChromiumOre, poorEndIridiumOre, poorEndMagnesiumOre,
-                                poorEndMaganeseOre, poorEndOsmiumOre, poorEndPlutoniumOre, poorEndRutileOre,
-                                poorEndTantalumOre, poorEndThoriumOre, poorEndTitaniumOre, poorEndTungstenOre,
-                                poorEndUraniumOre, poorEndZirconiumOre);
+                    event.getRegistry().registerAll(poorEndAluminumOre, poorEndCadmiumOre, poorEndChromiumOre,
+                                poorEndIridiumOre, poorEndMagnesiumOre, poorEndMaganeseOre,
+                                poorEndOsmiumOre, poorEndPlutoniumOre, poorEndRutileOre, poorEndTantalumOre,
+                                poorEndTitaniumOre, poorEndTungstenOre, poorEndUraniumOre, poorEndZirconiumOre);
                 }
             }
         }
@@ -393,15 +389,13 @@ public class ModBlocks {
             }
 
             final ItemBlock[] itemsNetherModern = {
-                    new ItemBlock(poorNetherAluminumOre),new ItemBlock(poorNetherBerylliumOre),
-                    new ItemBlock(poorNetherBoronOre), new ItemBlock(poorNetherCadmiumOre),
+                    new ItemBlock(poorNetherAluminumOre), new ItemBlock(poorNetherCadmiumOre),
                     new ItemBlock(poorNetherChromiumOre), new ItemBlock(poorNetherIridiumOre),
                     new ItemBlock(poorNetherMagnesiumOre), new ItemBlock(poorNetherMaganeseOre),
                     new ItemBlock(poorNetherOsmiumOre), new ItemBlock(poorNetherPlutoniumOre),
                     new ItemBlock(poorNetherRutileOre), new ItemBlock(poorNetherTantalumOre),
-                    new ItemBlock(poorNetherThoriumOre), new ItemBlock(poorNetherTitaniumOre),
-                    new ItemBlock(poorNetherTungstenOre), new ItemBlock(poorNetherUraniumOre),
-                    new ItemBlock(poorNetherZirconiumOre)
+                    new ItemBlock(poorNetherTitaniumOre), new ItemBlock(poorNetherTungstenOre),
+                    new ItemBlock(poorNetherUraniumOre), new ItemBlock(poorNetherZirconiumOre)
             };
             if (!Config.netherModernMetalsPoorOresOverride){
                 if (Loader.isModLoaded("modernmetals") && Loader.isModLoaded("nethermetals")){
@@ -465,15 +459,13 @@ public class ModBlocks {
             }
 
             final ItemBlock[] itemsEndModern = {
-                    new ItemBlock(poorEndAluminumOre),new ItemBlock(poorEndBerylliumOre),
-                    new ItemBlock(poorEndBoronOre), new ItemBlock(poorEndCadmiumOre),
+                    new ItemBlock(poorEndAluminumOre), new ItemBlock(poorEndCadmiumOre),
                     new ItemBlock(poorEndChromiumOre), new ItemBlock(poorEndIridiumOre),
                     new ItemBlock(poorEndMagnesiumOre), new ItemBlock(poorEndMaganeseOre),
                     new ItemBlock(poorEndOsmiumOre), new ItemBlock(poorEndPlutoniumOre),
                     new ItemBlock(poorEndRutileOre), new ItemBlock(poorEndTantalumOre),
-                    new ItemBlock(poorEndThoriumOre), new ItemBlock(poorEndTitaniumOre),
-                    new ItemBlock(poorEndTungstenOre), new ItemBlock(poorEndUraniumOre),
-                    new ItemBlock(poorEndZirconiumOre)
+                    new ItemBlock(poorEndTitaniumOre), new ItemBlock(poorEndTungstenOre),
+                    new ItemBlock(poorEndUraniumOre), new ItemBlock(poorEndZirconiumOre)
             };
             if (!Config.endModernMetalsPoorOresOverride){
                 if (Loader.isModLoaded("modernmetals") && Loader.isModLoaded("endmetals")){
@@ -626,8 +618,8 @@ public class ModBlocks {
             if (Loader.isModLoaded("modernmetals") && Loader.isModLoaded("nethermetals")){
                 if (Config.netherModernMetalsPoorOres) {
                     poorNetherAluminumOre.initModel();
-                    poorNetherBerylliumOre.initModel();
-                    poorNetherBoronOre.initModel();
+                    //poorNetherBerylliumOre.initModel();
+                    //poorNetherBoronOre.initModel();
                     poorNetherCadmiumOre.initModel();
                     poorNetherChromiumOre.initModel();
                     poorNetherIridiumOre.initModel();
@@ -637,7 +629,7 @@ public class ModBlocks {
                     poorNetherPlutoniumOre.initModel();
                     poorNetherRutileOre.initModel();
                     poorNetherTantalumOre.initModel();
-                    poorNetherThoriumOre.initModel();
+                    //poorNetherThoriumOre.initModel();
                     poorNetherTitaniumOre.initModel();
                     poorNetherTungstenOre.initModel();
                     poorNetherUraniumOre.initModel();
@@ -647,8 +639,8 @@ public class ModBlocks {
         }else if (Config.netherModernMetalsPoorOresOverride){
             if (Config.netherModernMetalsPoorOres) {
                 poorNetherAluminumOre.initModel();
-                poorNetherBerylliumOre.initModel();
-                poorNetherBoronOre.initModel();
+                //poorNetherBerylliumOre.initModel();
+                //poorNetherBoronOre.initModel();
                 poorNetherCadmiumOre.initModel();
                 poorNetherChromiumOre.initModel();
                 poorNetherIridiumOre.initModel();
@@ -658,7 +650,7 @@ public class ModBlocks {
                 poorNetherPlutoniumOre.initModel();
                 poorNetherRutileOre.initModel();
                 poorNetherTantalumOre.initModel();
-                poorNetherThoriumOre.initModel();
+                //poorNetherThoriumOre.initModel();
                 poorNetherTitaniumOre.initModel();
                 poorNetherTungstenOre.initModel();
                 poorNetherUraniumOre.initModel();
@@ -704,8 +696,8 @@ public class ModBlocks {
             if (Loader.isModLoaded("modernmetals") && Loader.isModLoaded("endmetals")){
                 if (Config.endModernMetalsPoorOres) {
                     poorEndAluminumOre.initModel();
-                    poorEndBerylliumOre.initModel();
-                    poorEndBoronOre.initModel();
+                    //poorEndBerylliumOre.initModel();
+                    //poorEndBoronOre.initModel();
                     poorEndCadmiumOre.initModel();
                     poorEndChromiumOre.initModel();
                     poorEndIridiumOre.initModel();
@@ -715,7 +707,7 @@ public class ModBlocks {
                     poorEndPlutoniumOre.initModel();
                     poorEndRutileOre.initModel();
                     poorEndTantalumOre.initModel();
-                    poorEndThoriumOre.initModel();
+                    //poorEndThoriumOre.initModel();
                     poorEndTitaniumOre.initModel();
                     poorEndTungstenOre.initModel();
                     poorEndUraniumOre.initModel();
@@ -725,8 +717,8 @@ public class ModBlocks {
         }else if (Config.endModernMetalsPoorOresOverride){
             if (Config.endModernMetalsPoorOres) {
                 poorEndAluminumOre.initModel();
-                poorEndBerylliumOre.initModel();
-                poorEndBoronOre.initModel();
+                //poorEndBerylliumOre.initModel();
+                //poorEndBoronOre.initModel();
                 poorEndCadmiumOre.initModel();
                 poorEndChromiumOre.initModel();
                 poorEndIridiumOre.initModel();
@@ -736,7 +728,7 @@ public class ModBlocks {
                 poorEndPlutoniumOre.initModel();
                 poorEndRutileOre.initModel();
                 poorEndTantalumOre.initModel();
-                poorEndThoriumOre.initModel();
+                //poorEndThoriumOre.initModel();
                 poorEndTitaniumOre.initModel();
                 poorEndTungstenOre.initModel();
                 poorEndUraniumOre.initModel();
