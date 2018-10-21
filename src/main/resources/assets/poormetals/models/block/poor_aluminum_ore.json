@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "poormetals:blocks/poor_aluminum_ore"
+  }
+}
