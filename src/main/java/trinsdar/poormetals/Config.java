@@ -9,6 +9,8 @@ public class Config {
 
     private static final String CATEGORY_GENERAL = " General";
 
+    private static final String CATEGORY_INDIVIDUAL = " Individual Toggles";
+
     public static boolean isOreSpawnEnabled = true;
 
     public static boolean vanillaPoorOres = true;
