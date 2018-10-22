@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "poormetals:blocks/poor_nether_tungsten_ore"
+    "all": "poormetals:blocks/nether/poor_nether_tungsten_ore"
   }
 }

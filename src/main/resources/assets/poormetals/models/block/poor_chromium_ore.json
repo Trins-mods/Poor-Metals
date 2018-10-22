@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "poormetals:blocks/poor_chromium_ore"
+    "all": "poormetals:blocks/overworld/poor_chromium_ore"
   }
 }
