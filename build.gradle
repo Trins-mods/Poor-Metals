@@ -32,7 +32,7 @@ minecraft {
 
 }
 
-respositories{
+repositories{
     maven {
         name 'MMD'
         url 'https://maven.mcmoddev.com/'
