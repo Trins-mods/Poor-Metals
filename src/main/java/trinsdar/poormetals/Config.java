@@ -28,6 +28,8 @@ public class Config {
     public static boolean endModernMetalsPoorOres = true;
     public static boolean endModernMetalsPoorOresOverride = false;
 
+    public static boolean poorOreDouble = false;
+
     public static void readConfig() {
         Configuration cfg = CommonProxy.config;
         try {
@@ -58,5 +60,6 @@ public class Config {
         netherModernMetalsPoorOresOverride = cfg.getBoolean("enableNetherModernMetalsPoorOresOverride", CATEGORY_GENERAL, netherModernMetalsPoorOresOverride, "Set to true to enable Nether Modern Metals ores even when Nether Metals & Modern Metals are not loaded. Does nothing if enableNetherModernMetalsPoorOres is set to false.");
         endModernMetalsPoorOres = cfg.getBoolean("enableEndModernMetalsPoorOres", CATEGORY_GENERAL, endModernMetalsPoorOres, "Set to false to disable End Modern Metals Poor ores");
         endModernMetalsPoorOresOverride = cfg.getBoolean("enableEndModernMetalsPoorOresOverride", CATEGORY_GENERAL, endModernMetalsPoorOresOverride, "Set to true to enable End Modern Metals ores even when End Metals & Modern Metals are not loaded. Does nothing if enableEndModernMetalsPoorOres is set to false.");
+        poorOreDouble = cfg.getBoolean("enablePoorOreDoubling", CATEGORY_GENERAL, poorOreDouble, "Set to true to enable doubling of poor ores with crack hammer and other mod methods.");
     }
 }
