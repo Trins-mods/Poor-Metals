@@ -12,11 +12,12 @@ import trinsdar.poormetals.proxy.CommonProxy;
 
 import java.io.File;
 
-@Mod(modid = PoorMetals.MODID, name = PoorMetals.MODNAME, version = PoorMetals.VERSION)
+@Mod(modid = PoorMetals.MODID, name = PoorMetals.MODNAME, version = PoorMetals.VERSION, dependencies = PoorMetals.DEPENDENCIES)
 public class PoorMetals {
     public static final String MODID = "poormetals";
     public static final String MODNAME = "Poor Metals";
     public static final String VERSION= "@VERSION@";
+    public static final String DEPENDENCIES = "after:basemetals;";
     public static final CreativeTabs creativeTab = new CreativeTabPoorMetals(MODID);
 
     @SidedProxy(clientSide = "trinsdar.poormetals.proxy.ClientProxy", serverSide = "trinsdar.poormetals.proxy.ServerProxy")
