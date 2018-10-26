@@ -17,7 +17,7 @@ public class PoorMetals {
     public static final String MODID = "poormetals";
     public static final String MODNAME = "Poor Metals";
     public static final String VERSION= "@VERSION@";
-    public static final String DEPENDENCIES = "after:basemetals;";
+    public static final String DEPENDENCIES = "after:basemetals; after:modernmetals";
     public static final CreativeTabs creativeTab = new CreativeTabPoorMetals(MODID);
 
     @SidedProxy(clientSide = "trinsdar.poormetals.proxy.ClientProxy", serverSide = "trinsdar.poormetals.proxy.ServerProxy")
