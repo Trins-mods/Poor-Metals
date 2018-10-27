@@ -59,6 +59,174 @@ public class PoorMetalsRecipes {
             }
         }
 
+        if (!Config.netherMetalsPoorOresOverride){
+            if (Loader.isModLoaded("nethermetals")){
+                if (Config.netherMetalsPoorOres){
+                    if (Config.vanillaPoorOres){
+                        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherGoldOre, 1), new ItemStack(ModBlocks.poorGoldOre, 2), 0.7f);
+                        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherIronOre, 1), new ItemStack(ModBlocks.poorIronOre, 2), 0.7f);
+                    }
+                    if (!Config.baseMetalsPoorOresOverride){
+                        if (Loader.isModLoaded("basemetals")){
+                            if (Config.baseMetalsPoorOres){
+                                FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherAntimonyOre, 1), new ItemStack(ModBlocks.poorAntimonyOre, 2), 0.7f);
+                                FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherBismuthOre, 1), new ItemStack(ModBlocks.poorBismuthOre, 2), 0.7f);
+                                FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherCopperOre, 1), new ItemStack(ModBlocks.poorCopperOre, 2), 0.7f);
+                                FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherLeadOre, 1), new ItemStack(ModBlocks.poorLeadOre, 2), 0.7f);
+                                FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherMercuryOre, 1), new ItemStack(ModBlocks.poorMercuryOre, 2), 0.7f);
+                                FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherNickelOre, 1), new ItemStack(ModBlocks.poorNickelOre, 2), 0.7f);
+                                FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherPlatinumOre, 1), new ItemStack(ModBlocks.poorPlatinumOre, 2), 0.7f);
+                                FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherSilverOre, 1), new ItemStack(ModBlocks.poorSilverOre, 2), 0.7f);
+                                FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherTinOre, 1), new ItemStack(ModBlocks.poorTinOre, 2), 0.7f);
+                                FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherZincOre, 1), new ItemStack(ModBlocks.poorZincOre, 2), 0.7f);
+                            }
+                        }
+                    }else if (Config.baseMetalsPoorOresOverride){
+                        if (Config.baseMetalsPoorOres){
+                            FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherAntimonyOre, 1), new ItemStack(ModBlocks.poorAntimonyOre, 2), 0.7f);
+                            FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherBismuthOre, 1), new ItemStack(ModBlocks.poorBismuthOre, 2), 0.7f);
+                            FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherCopperOre, 1), new ItemStack(ModBlocks.poorCopperOre, 2), 0.7f);
+                            FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherLeadOre, 1), new ItemStack(ModBlocks.poorLeadOre, 2), 0.7f);
+                            FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherMercuryOre, 1), new ItemStack(ModBlocks.poorMercuryOre, 2), 0.7f);
+                            FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherNickelOre, 1), new ItemStack(ModBlocks.poorNickelOre, 2), 0.7f);
+                            FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherPlatinumOre, 1), new ItemStack(ModBlocks.poorPlatinumOre, 2), 0.7f);
+                            FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherSilverOre, 1), new ItemStack(ModBlocks.poorSilverOre, 2), 0.7f);
+                            FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherTinOre, 1), new ItemStack(ModBlocks.poorTinOre, 2), 0.7f);
+                            FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherZincOre, 1), new ItemStack(ModBlocks.poorZincOre, 2), 0.7f);
+                        }
+                    }
+                }
+            }
+        }else if (Config.netherMetalsPoorOresOverride){
+            if (Config.netherMetalsPoorOres){
+                if (Config.vanillaPoorOres){
+                    FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherGoldOre, 1), new ItemStack(ModBlocks.poorGoldOre, 2), 0.7f);
+                    FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherIronOre, 1), new ItemStack(ModBlocks.poorIronOre, 2), 0.7f);
+                }
+                if (!Config.baseMetalsPoorOresOverride){
+                    if (Loader.isModLoaded("basemetals")){
+                        if (Config.baseMetalsPoorOres){
+                            FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherAntimonyOre, 1), new ItemStack(ModBlocks.poorAntimonyOre, 2), 0.7f);
+                            FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherBismuthOre, 1), new ItemStack(ModBlocks.poorBismuthOre, 2), 0.7f);
+                            FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherCopperOre, 1), new ItemStack(ModBlocks.poorCopperOre, 2), 0.7f);
+                            FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherLeadOre, 1), new ItemStack(ModBlocks.poorLeadOre, 2), 0.7f);
+                            FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherMercuryOre, 1), new ItemStack(ModBlocks.poorMercuryOre, 2), 0.7f);
+                            FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherNickelOre, 1), new ItemStack(ModBlocks.poorNickelOre, 2), 0.7f);
+                            FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherPlatinumOre, 1), new ItemStack(ModBlocks.poorPlatinumOre, 2), 0.7f);
+                            FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherSilverOre, 1), new ItemStack(ModBlocks.poorSilverOre, 2), 0.7f);
+                            FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherTinOre, 1), new ItemStack(ModBlocks.poorTinOre, 2), 0.7f);
+                            FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherZincOre, 1), new ItemStack(ModBlocks.poorZincOre, 2), 0.7f);
+                        }
+                    }
+                }else if (Config.baseMetalsPoorOresOverride){
+                    if (Config.baseMetalsPoorOres){
+                        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherAntimonyOre, 1), new ItemStack(ModBlocks.poorAntimonyOre, 2), 0.7f);
+                        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherBismuthOre, 1), new ItemStack(ModBlocks.poorBismuthOre, 2), 0.7f);
+                        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherCopperOre, 1), new ItemStack(ModBlocks.poorCopperOre, 2), 0.7f);
+                        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherLeadOre, 1), new ItemStack(ModBlocks.poorLeadOre, 2), 0.7f);
+                        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherMercuryOre, 1), new ItemStack(ModBlocks.poorMercuryOre, 2), 0.7f);
+                        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherNickelOre, 1), new ItemStack(ModBlocks.poorNickelOre, 2), 0.7f);
+                        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherPlatinumOre, 1), new ItemStack(ModBlocks.poorPlatinumOre, 2), 0.7f);
+                        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherSilverOre, 1), new ItemStack(ModBlocks.poorSilverOre, 2), 0.7f);
+                        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherTinOre, 1), new ItemStack(ModBlocks.poorTinOre, 2), 0.7f);
+                        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherZincOre, 1), new ItemStack(ModBlocks.poorZincOre, 2), 0.7f);
+                    }
+                }
+            }
+        }
+
+        if (!Config.endMetalsPoorOresOverride){
+            if (Loader.isModLoaded("endmetals")){
+                if (Config.endMetalsPoorOres){
+                    if (Config.vanillaPoorOres){
+                        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndGoldOre, 1), new ItemStack(ModBlocks.poorGoldOre, 2), 0.7f);
+                        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndIronOre, 1), new ItemStack(ModBlocks.poorIronOre, 2), 0.7f);
+                    }
+                    if (!Config.baseMetalsPoorOresOverride){
+                        if (Loader.isModLoaded("basemetals")){
+                            if (Config.baseMetalsPoorOres){
+                                FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndAntimonyOre, 1), new ItemStack(ModBlocks.poorAntimonyOre, 2), 0.7f);
+                                FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndBismuthOre, 1), new ItemStack(ModBlocks.poorBismuthOre, 2), 0.7f);
+                                FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndCopperOre, 1), new ItemStack(ModBlocks.poorCopperOre, 2), 0.7f);
+                                FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndLeadOre, 1), new ItemStack(ModBlocks.poorLeadOre, 2), 0.7f);
+                                FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndMercuryOre, 1), new ItemStack(ModBlocks.poorMercuryOre, 2), 0.7f);
+                                FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndNickelOre, 1), new ItemStack(ModBlocks.poorNickelOre, 2), 0.7f);
+                                FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndPlatinumOre, 1), new ItemStack(ModBlocks.poorPlatinumOre, 2), 0.7f);
+                                FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndSilverOre, 1), new ItemStack(ModBlocks.poorSilverOre, 2), 0.7f);
+                                FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndTinOre, 1), new ItemStack(ModBlocks.poorTinOre, 2), 0.7f);
+                                FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndZincOre, 1), new ItemStack(ModBlocks.poorZincOre, 2), 0.7f);
+                            }
+                        }
+                    }else if (Config.baseMetalsPoorOresOverride){
+                        if (Config.baseMetalsPoorOres){
+                            FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndAntimonyOre, 1), new ItemStack(ModBlocks.poorAntimonyOre, 2), 0.7f);
+                            FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndBismuthOre, 1), new ItemStack(ModBlocks.poorBismuthOre, 2), 0.7f);
+                            FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndCopperOre, 1), new ItemStack(ModBlocks.poorCopperOre, 2), 0.7f);
+                            FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndLeadOre, 1), new ItemStack(ModBlocks.poorLeadOre, 2), 0.7f);
+                            FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndMercuryOre, 1), new ItemStack(ModBlocks.poorMercuryOre, 2), 0.7f);
+                            FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndNickelOre, 1), new ItemStack(ModBlocks.poorNickelOre, 2), 0.7f);
+                            FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndPlatinumOre, 1), new ItemStack(ModBlocks.poorPlatinumOre, 2), 0.7f);
+                            FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndSilverOre, 1), new ItemStack(ModBlocks.poorSilverOre, 2), 0.7f);
+                            FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndTinOre, 1), new ItemStack(ModBlocks.poorTinOre, 2), 0.7f);
+                            FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndZincOre, 1), new ItemStack(ModBlocks.poorZincOre, 2), 0.7f);
+                        }
+                    }
+                }
+            }
+        }else if (Config.endMetalsPoorOresOverride){
+            if (Config.endMetalsPoorOres){
+                if (Config.vanillaPoorOres){
+                    FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndGoldOre, 1), new ItemStack(ModBlocks.poorGoldOre, 2), 0.7f);
+                    FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndIronOre, 1), new ItemStack(ModBlocks.poorIronOre, 2), 0.7f);
+                }
+                if (!Config.baseMetalsPoorOresOverride){
+                    if (Loader.isModLoaded("basemetals")){
+                        if (Config.baseMetalsPoorOres){
+                            FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndAntimonyOre, 1), new ItemStack(ModBlocks.poorAntimonyOre, 2), 0.7f);
+                            FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndBismuthOre, 1), new ItemStack(ModBlocks.poorBismuthOre, 2), 0.7f);
+                            FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndCopperOre, 1), new ItemStack(ModBlocks.poorCopperOre, 2), 0.7f);
+                            FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndLeadOre, 1), new ItemStack(ModBlocks.poorLeadOre, 2), 0.7f);
+                            FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndMercuryOre, 1), new ItemStack(ModBlocks.poorMercuryOre, 2), 0.7f);
+                            FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndNickelOre, 1), new ItemStack(ModBlocks.poorNickelOre, 2), 0.7f);
+                            FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndPlatinumOre, 1), new ItemStack(ModBlocks.poorPlatinumOre, 2), 0.7f);
+                            FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndSilverOre, 1), new ItemStack(ModBlocks.poorSilverOre, 2), 0.7f);
+                            FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndTinOre, 1), new ItemStack(ModBlocks.poorTinOre, 2), 0.7f);
+                            FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndZincOre, 1), new ItemStack(ModBlocks.poorZincOre, 2), 0.7f);
+                        }
+                    }
+                }else if (Config.baseMetalsPoorOresOverride){
+                    if (Config.baseMetalsPoorOres){
+                        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndAntimonyOre, 1), new ItemStack(ModBlocks.poorAntimonyOre, 2), 0.7f);
+                        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndBismuthOre, 1), new ItemStack(ModBlocks.poorBismuthOre, 2), 0.7f);
+                        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndCopperOre, 1), new ItemStack(ModBlocks.poorCopperOre, 2), 0.7f);
+                        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndLeadOre, 1), new ItemStack(ModBlocks.poorLeadOre, 2), 0.7f);
+                        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndMercuryOre, 1), new ItemStack(ModBlocks.poorMercuryOre, 2), 0.7f);
+                        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndNickelOre, 1), new ItemStack(ModBlocks.poorNickelOre, 2), 0.7f);
+                        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndPlatinumOre, 1), new ItemStack(ModBlocks.poorPlatinumOre, 2), 0.7f);
+                        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndSilverOre, 1), new ItemStack(ModBlocks.poorSilverOre, 2), 0.7f);
+                        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndTinOre, 1), new ItemStack(ModBlocks.poorTinOre, 2), 0.7f);
+                        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndZincOre, 1), new ItemStack(ModBlocks.poorZincOre, 2), 0.7f);
+                    }
+                }
+            }
+        }
+
+        if (!Config.netherModernMetalsPoorOresOverride){
+            if (Loader.isModLoaded("nethermetals") && Loader.isModLoaded("modernmetals")){
+                if (Config.netherModernMetalsPoorOres){}
+            }
+        }else if (Config.netherModernMetalsPoorOresOverride){
+
+        }
+
+        if (!Config.endModernMetalsPoorOresOverride){
+            if (Loader.isModLoaded("endmetals") && Loader.isModLoaded("modernmetals")){
+                if (Config.endModernMetalsPoorOres){}
+            }
+        }else if (Config.endModernMetalsPoorOresOverride){
+
+        }
+
     }
 
     public static void init(){
