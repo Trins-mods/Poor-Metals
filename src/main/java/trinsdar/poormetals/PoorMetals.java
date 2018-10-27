@@ -37,6 +37,7 @@ public class PoorMetals {
     @Mod.EventHandler
     public void init(FMLInitializationEvent event){
         proxy.init(event);
+        PoorMetalsRecipes.init();
     }
 
     @Mod.EventHandler
