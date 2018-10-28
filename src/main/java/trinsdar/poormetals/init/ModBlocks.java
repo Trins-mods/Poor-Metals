@@ -736,4 +736,234 @@ public class ModBlocks {
             }
         }
     }
+
+    public static void init(){
+        if (Config.vanillaPoorOres) {
+            poorIronOre.setHarvestLevel("pickaxe", 1);
+            poorGoldOre.setHarvestLevel("pickaxe", 2);
+        }
+        if (!Config.baseMetalsPoorOresOverride){
+            if (Loader.isModLoaded("basemetals")){
+                if (Config.baseMetalsPoorOres) {
+                    poorAdamantineOre.setHarvestLevel("pickaxe", 3);
+                    poorAntimonyOre.setHarvestLevel("pickaxe", 0);
+                    poorBismuthOre.setHarvestLevel("pickaxe", 0);
+                    poorColdIronOre.setHarvestLevel("pickaxe", 2);
+                    poorCopperOre.setHarvestLevel("pickaxe", 1);
+                    poorLeadOre.setHarvestLevel("pickaxe", 0);
+                    poorMercuryOre.setHarvestLevel("pickaxe", 0);
+                    poorNickelOre.setHarvestLevel("pickaxe", 1);
+                    poorPlatinumOre.setHarvestLevel("pickaxe", 0);
+                    poorSilverOre.setHarvestLevel("pickaxe", 1);
+                    poorStarsteelOre.setHarvestLevel("pickaxe", 3);
+                    poorTinOre.setHarvestLevel("pickaxe", 0);
+                    poorZincOre.setHarvestLevel("pickaxe", 0);
+                }
+            }
+        }else if (Config.baseMetalsPoorOresOverride){
+            if (Config.baseMetalsPoorOres) {
+                poorAdamantineOre.setHarvestLevel("pickaxe", 3);
+                poorAntimonyOre.setHarvestLevel("pickaxe", 0);
+                poorBismuthOre.setHarvestLevel("pickaxe", 0);
+                poorColdIronOre.setHarvestLevel("pickaxe", 2);
+                poorCopperOre.setHarvestLevel("pickaxe", 1);
+                poorLeadOre.setHarvestLevel("pickaxe", 0);
+                poorMercuryOre.setHarvestLevel("pickaxe", 0);
+                poorNickelOre.setHarvestLevel("pickaxe", 1);
+                poorPlatinumOre.setHarvestLevel("pickaxe", 0);
+                poorSilverOre.setHarvestLevel("pickaxe", 1);
+                poorStarsteelOre.setHarvestLevel("pickaxe", 3);
+                poorTinOre.setHarvestLevel("pickaxe", 0);
+                poorZincOre.setHarvestLevel("pickaxe", 0);
+            }
+        }
+
+        if (!Config.modernMetalsPoorOresOverride){
+            if (Loader.isModLoaded("modernmetals")){
+                if (Config.modernMetalsPoorOres) {
+                    poorAluminumOre.setHarvestLevel("pickaxe", 0);
+                    poorBerylliumOre.setHarvestLevel("pickaxe", 1);
+                    poorBoronOre.setHarvestLevel("pickaxe", 2);
+                    poorCadmiumOre.setHarvestLevel("pickaxe", 0);
+                    poorChromiumOre.setHarvestLevel("pickaxe", 2);
+                    poorIridiumOre.setHarvestLevel("pickaxe", 1);
+                    poorMagnesiumOre.setHarvestLevel("pickaxe", 0);
+                    poorMaganeseOre.setHarvestLevel("pickaxe", 1);
+                    poorOsmiumOre.setHarvestLevel("pickaxe", 2);
+                    poorPlutoniumOre.setHarvestLevel("pickaxe", 1);
+                    poorRutileOre.setHarvestLevel("pickaxe", 1);
+                    poorTantalumOre.setHarvestLevel("pickaxe", 1);
+                    poorThoriumOre.setHarvestLevel("pickaxe", 0);
+                    poorTitaniumOre.setHarvestLevel("pickaxe", 1);
+                    poorTungstenOre.setHarvestLevel("pickaxe", 2);
+                    poorUraniumOre.setHarvestLevel("pickaxe", 1);
+                    poorZirconiumOre.setHarvestLevel("pickaxe", 1);
+                }
+            }
+        }else if (Config.modernMetalsPoorOresOverride){
+            if (Config.modernMetalsPoorOres) {
+                poorAluminumOre.setHarvestLevel("pickaxe", 0);
+                poorBerylliumOre.setHarvestLevel("pickaxe", 1);
+                poorBoronOre.setHarvestLevel("pickaxe", 2);
+                poorCadmiumOre.setHarvestLevel("pickaxe", 0);
+                poorChromiumOre.setHarvestLevel("pickaxe", 2);
+                poorIridiumOre.setHarvestLevel("pickaxe", 1);
+                poorMagnesiumOre.setHarvestLevel("pickaxe", 0);
+                poorMaganeseOre.setHarvestLevel("pickaxe", 1);
+                poorOsmiumOre.setHarvestLevel("pickaxe", 2);
+                poorPlutoniumOre.setHarvestLevel("pickaxe", 1);
+                poorRutileOre.setHarvestLevel("pickaxe", 1);
+                poorTantalumOre.setHarvestLevel("pickaxe", 1);
+                poorThoriumOre.setHarvestLevel("pickaxe", 0);
+                poorTitaniumOre.setHarvestLevel("pickaxe", 1);
+                poorTungstenOre.setHarvestLevel("pickaxe", 2);
+                poorUraniumOre.setHarvestLevel("pickaxe", 1);
+                poorZirconiumOre.setHarvestLevel("pickaxe", 1);
+            }
+        }
+
+        if (!Config.netherMetalsPoorOresOverride){
+            if (Loader.isModLoaded("nethermetals")){
+                if (Config.netherMetalsPoorOres) {
+                    poorNetherGoldOre.setHarvestLevel("pickaxe", 0);
+                    poorNetherIronOre.setHarvestLevel("pickaxe", 2);
+                    poorNetherAntimonyOre.setHarvestLevel("pickaxe", 0);
+                    poorNetherBismuthOre.setHarvestLevel("pickaxe", 0);
+                    poorNetherCopperOre.setHarvestLevel("pickaxe", 1);
+                    poorNetherLeadOre.setHarvestLevel("pickaxe", 0);
+                    poorNetherMercuryOre.setHarvestLevel("pickaxe", 0);
+                    poorNetherNickelOre.setHarvestLevel("pickaxe", 1);
+                    poorNetherPlatinumOre.setHarvestLevel("pickaxe", 0);
+                    poorNetherSilverOre.setHarvestLevel("pickaxe", 1);
+                    poorNetherTinOre.setHarvestLevel("pickaxe", 0);
+                    poorNetherZincOre.setHarvestLevel("pickaxe", 0);
+                }
+            }
+        }else if (Config.netherMetalsPoorOresOverride){
+            if (Config.netherMetalsPoorOres) {
+                poorNetherGoldOre.setHarvestLevel("pickaxe", 0);
+                poorNetherIronOre.setHarvestLevel("pickaxe", 2);
+                poorNetherAntimonyOre.setHarvestLevel("pickaxe", 0);
+                poorNetherBismuthOre.setHarvestLevel("pickaxe", 0);
+                poorNetherCopperOre.setHarvestLevel("pickaxe", 1);
+                poorNetherLeadOre.setHarvestLevel("pickaxe", 0);
+                poorNetherMercuryOre.setHarvestLevel("pickaxe", 0);
+                poorNetherNickelOre.setHarvestLevel("pickaxe", 1);
+                poorNetherPlatinumOre.setHarvestLevel("pickaxe", 0);
+                poorNetherSilverOre.setHarvestLevel("pickaxe", 1);
+                poorNetherTinOre.setHarvestLevel("pickaxe", 0);
+                poorNetherZincOre.setHarvestLevel("pickaxe", 0);
+            }
+        }
+
+        if (!Config.netherModernMetalsPoorOresOverride){
+            if (Loader.isModLoaded("modernmetals") && Loader.isModLoaded("nethermetals")){
+                if (Config.netherModernMetalsPoorOres) {
+                    poorNetherAluminumOre.setHarvestLevel("pickaxe", 0);
+                    poorNetherCadmiumOre.setHarvestLevel("pickaxe", 0);
+                    poorNetherChromiumOre.setHarvestLevel("pickaxe", 2);
+                    poorNetherIridiumOre.setHarvestLevel("pickaxe", 1);
+                    poorNetherMagnesiumOre.setHarvestLevel("pickaxe", 0);
+                    poorNetherMaganeseOre.setHarvestLevel("pickaxe", 1);
+                    poorNetherOsmiumOre.setHarvestLevel("pickaxe", 2);
+                    poorNetherPlutoniumOre.setHarvestLevel("pickaxe", 1);
+                    poorNetherRutileOre.setHarvestLevel("pickaxe", 1);
+                    poorNetherTantalumOre.setHarvestLevel("pickaxe", 1);
+                    poorNetherTitaniumOre.setHarvestLevel("pickaxe", 1);
+                    poorNetherTungstenOre.setHarvestLevel("pickaxe", 2);
+                    poorNetherUraniumOre.setHarvestLevel("pickaxe", 1);
+                    poorNetherZirconiumOre.setHarvestLevel("pickaxe", 1);
+                }
+            }
+        }else if (Config.netherModernMetalsPoorOresOverride){
+            if (Config.netherModernMetalsPoorOres) {
+                poorNetherAluminumOre.setHarvestLevel("pickaxe", 0);
+                poorNetherCadmiumOre.setHarvestLevel("pickaxe", 0);
+                poorNetherChromiumOre.setHarvestLevel("pickaxe", 2);
+                poorNetherIridiumOre.setHarvestLevel("pickaxe", 1);
+                poorNetherMagnesiumOre.setHarvestLevel("pickaxe", 0);
+                poorNetherMaganeseOre.setHarvestLevel("pickaxe", 1);
+                poorNetherOsmiumOre.setHarvestLevel("pickaxe", 2);
+                poorNetherPlutoniumOre.setHarvestLevel("pickaxe", 1);
+                poorNetherRutileOre.setHarvestLevel("pickaxe", 1);
+                poorNetherTantalumOre.setHarvestLevel("pickaxe", 1);
+                poorNetherTitaniumOre.setHarvestLevel("pickaxe", 1);
+                poorNetherTungstenOre.setHarvestLevel("pickaxe", 2);
+                poorNetherUraniumOre.setHarvestLevel("pickaxe", 1);
+                poorNetherZirconiumOre.setHarvestLevel("pickaxe", 1);
+            }
+        }
+
+        if (!Config.endMetalsPoorOresOverride){
+            if (Loader.isModLoaded("endmetals")){
+                if (Config.endMetalsPoorOres) {
+                    poorEndGoldOre.setHarvestLevel("pickaxe", 0);
+                    poorEndIronOre.setHarvestLevel("pickaxe", 2);
+                    poorEndAntimonyOre.setHarvestLevel("pickaxe", 0);
+                    poorEndBismuthOre.setHarvestLevel("pickaxe", 0);
+                    poorEndCopperOre.setHarvestLevel("pickaxe", 1);
+                    poorEndLeadOre.setHarvestLevel("pickaxe", 0);
+                    poorEndMercuryOre.setHarvestLevel("pickaxe", 0);
+                    poorEndNickelOre.setHarvestLevel("pickaxe", 1);
+                    poorEndPlatinumOre.setHarvestLevel("pickaxe", 0);
+                    poorEndSilverOre.setHarvestLevel("pickaxe", 1);
+                    poorEndTinOre.setHarvestLevel("pickaxe", 0);
+                    poorEndZincOre.setHarvestLevel("pickaxe", 0);
+                }
+            }
+        }else if (Config.endMetalsPoorOresOverride){
+            if (Config.endMetalsPoorOres) {
+                poorEndGoldOre.setHarvestLevel("pickaxe", 0);
+                poorEndIronOre.setHarvestLevel("pickaxe", 2);
+                poorEndAntimonyOre.setHarvestLevel("pickaxe", 0);
+                poorEndBismuthOre.setHarvestLevel("pickaxe", 0);
+                poorEndCopperOre.setHarvestLevel("pickaxe", 1);
+                poorEndLeadOre.setHarvestLevel("pickaxe", 0);
+                poorEndMercuryOre.setHarvestLevel("pickaxe", 0);
+                poorEndNickelOre.setHarvestLevel("pickaxe", 1);
+                poorEndPlatinumOre.setHarvestLevel("pickaxe", 0);
+                poorEndSilverOre.setHarvestLevel("pickaxe", 1);
+                poorEndTinOre.setHarvestLevel("pickaxe", 0);
+                poorEndZincOre.setHarvestLevel("pickaxe", 0);
+            }
+        }
+
+        if (!Config.endModernMetalsPoorOresOverride){
+            if (Loader.isModLoaded("modernmetals") && Loader.isModLoaded("endmetals")){
+                if (Config.endModernMetalsPoorOres) {
+                    poorEndAluminumOre.setHarvestLevel("pickaxe", 0);
+                    poorEndCadmiumOre.setHarvestLevel("pickaxe", 0);
+                    poorEndChromiumOre.setHarvestLevel("pickaxe", 2);
+                    poorEndIridiumOre.setHarvestLevel("pickaxe", 1);
+                    poorEndMagnesiumOre.setHarvestLevel("pickaxe", 0);
+                    poorEndMaganeseOre.setHarvestLevel("pickaxe", 1);
+                    poorEndOsmiumOre.setHarvestLevel("pickaxe", 2);
+                    poorEndPlutoniumOre.setHarvestLevel("pickaxe", 1);
+                    poorEndRutileOre.setHarvestLevel("pickaxe", 1);
+                    poorEndTantalumOre.setHarvestLevel("pickaxe", 1);
+                    poorEndTitaniumOre.setHarvestLevel("pickaxe", 1);
+                    poorEndTungstenOre.setHarvestLevel("pickaxe", 2);
+                    poorEndUraniumOre.setHarvestLevel("pickaxe", 1);
+                    poorEndZirconiumOre.setHarvestLevel("pickaxe", 1);
+                }
+            }
+        }else if (Config.endModernMetalsPoorOresOverride){
+            if (Config.endModernMetalsPoorOres) {
+                poorEndAluminumOre.setHarvestLevel("pickaxe", 0);
+                poorEndCadmiumOre.setHarvestLevel("pickaxe", 0);
+                poorEndChromiumOre.setHarvestLevel("pickaxe", 2);
+                poorEndIridiumOre.setHarvestLevel("pickaxe", 1);
+                poorEndMagnesiumOre.setHarvestLevel("pickaxe", 0);
+                poorEndMaganeseOre.setHarvestLevel("pickaxe", 1);
+                poorEndOsmiumOre.setHarvestLevel("pickaxe", 2);
+                poorEndPlutoniumOre.setHarvestLevel("pickaxe", 1);
+                poorEndRutileOre.setHarvestLevel("pickaxe", 1);
+                poorEndTantalumOre.setHarvestLevel("pickaxe", 1);
+                poorEndTitaniumOre.setHarvestLevel("pickaxe", 1);
+                poorEndTungstenOre.setHarvestLevel("pickaxe", 2);
+                poorEndUraniumOre.setHarvestLevel("pickaxe", 1);
+                poorEndZirconiumOre.setHarvestLevel("pickaxe", 1);
+            }
+        }
+    }
 }

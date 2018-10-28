@@ -8,6 +8,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.Logger;
+import trinsdar.poormetals.init.ModBlocks;
 import trinsdar.poormetals.proxy.CommonProxy;
 
 import java.io.File;
@@ -37,6 +38,7 @@ public class PoorMetals {
     @Mod.EventHandler
     public void init(FMLInitializationEvent event){
         proxy.init(event);
+        ModBlocks.init();
         PoorMetalsRecipes.init();
     }
 
