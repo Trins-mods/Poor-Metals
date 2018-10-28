@@ -3,6 +3,7 @@ package trinsdar.poormetals;
 import com.mcmoddev.basemetals.data.MaterialNames;
 import com.mcmoddev.basemetals.init.Materials;
 import com.mcmoddev.lib.data.Names;
+import com.mcmoddev.lib.registry.CrusherRecipeRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -381,7 +382,57 @@ public class PoorMetalsRecipes {
 
     }
 
+    public static void initCrackhammerRecipes(){
+        if (Config.poorOreDouble){
+            if (Loader.isModLoaded("basemetals")) {
+                if (Config.vanillaPoorOres){
+                    CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorGoldOre, 1), new ItemStack(Materials.getMaterialByName(MaterialNames.GOLD).getItem(Names.SMALLPOWDER), 6));
+                    CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorIronOre, 1), new ItemStack(Materials.getMaterialByName(MaterialNames.IRON).getItem(Names.SMALLPOWDER), 6));
+                }
+
+                if (Config.baseMetalsPoorOres){
+                    CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorAdamantineOre, 1), new ItemStack(Materials.getMaterialByName(MaterialNames.ADAMANTINE).getItem(Names.SMALLPOWDER), 6));
+                    CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorAntimonyOre, 1), new ItemStack(Materials.getMaterialByName(MaterialNames.ANTIMONY).getItem(Names.SMALLPOWDER), 6));
+                    CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorBismuthOre, 1), new ItemStack(Materials.getMaterialByName(MaterialNames.BISMUTH).getItem(Names.SMALLPOWDER), 6));
+                    CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorColdIronOre, 1), new ItemStack(Materials.getMaterialByName(MaterialNames.COLDIRON).getItem(Names.SMALLPOWDER), 6));
+                    CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorCopperOre, 1), new ItemStack(Materials.getMaterialByName(MaterialNames.COPPER).getItem(Names.SMALLPOWDER), 6));
+                    CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorLeadOre, 1), new ItemStack(Materials.getMaterialByName(MaterialNames.LEAD).getItem(Names.SMALLPOWDER), 6));
+                    CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorMercuryOre, 1), new ItemStack(Materials.getMaterialByName(MaterialNames.MERCURY).getItem(Names.SMALLPOWDER), 6));
+                    CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorNickelOre, 1), new ItemStack(Materials.getMaterialByName(MaterialNames.NICKEL).getItem(Names.SMALLPOWDER), 6));
+                    CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorPlatinumOre, 1), new ItemStack(Materials.getMaterialByName(MaterialNames.PLATINUM).getItem(Names.SMALLPOWDER), 6));
+                    CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorSilverOre, 1), new ItemStack(Materials.getMaterialByName(MaterialNames.SILVER).getItem(Names.SMALLPOWDER), 6));
+                    CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorStarsteelOre, 1), new ItemStack(Materials.getMaterialByName(MaterialNames.STARSTEEL).getItem(Names.SMALLPOWDER), 6));
+                    CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorTinOre, 1), new ItemStack(Materials.getMaterialByName(MaterialNames.TIN).getItem(Names.SMALLPOWDER), 6));
+                    CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorZincOre, 1), new ItemStack(Materials.getMaterialByName(MaterialNames.ZINC).getItem(Names.SMALLPOWDER), 6));
+                }
+
+                if (Loader.isModLoaded("modernmetals")){
+                    if (Config.modernMetalsPoorOres){
+                        CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorAluminumOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.ALUMINUM).getItem(Names.SMALLPOWDER), 6));
+                        CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorBerylliumOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.BERYLLIUM).getItem(Names.SMALLPOWDER), 6));
+                        CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorBoronOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.BORON).getItem(Names.SMALLPOWDER), 6));
+                        CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorCadmiumOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.CADMIUM).getItem(Names.SMALLPOWDER), 6));
+                        CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorChromiumOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.CHROMIUM).getItem(Names.SMALLPOWDER), 6));
+                        CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorIridiumOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.IRIDIUM).getItem(Names.SMALLPOWDER), 6));
+                        CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorMaganeseOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.MANGANESE).getItem(Names.SMALLPOWDER), 6));
+                        CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorMagnesiumOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.MAGNESIUM).getItem(Names.SMALLPOWDER), 6));
+                        CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorOsmiumOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.OSMIUM).getItem(Names.SMALLPOWDER), 6));
+                        CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorPlutoniumOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.PLUTONIUM).getItem(Names.SMALLPOWDER), 6));
+                        CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorRutileOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.RUTILE).getItem(Names.SMALLPOWDER), 6));
+                        CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorTantalumOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.TANTALUM).getItem(Names.SMALLPOWDER), 6));
+                        CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorThoriumOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.THORIUM).getItem(Names.SMALLPOWDER), 6));
+                        CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorTitaniumOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.TITANIUM).getItem(Names.SMALLPOWDER), 6));
+                        CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorTungstenOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.TUNGSTEN).getItem(Names.SMALLPOWDER), 6));
+                        CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorUraniumOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.URANIUM).getItem(Names.SMALLPOWDER), 6));
+                        CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorZirconiumOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.ZIRCONIUM).getItem(Names.SMALLPOWDER), 6));
+                    }
+                }
+            }
+        }
+    }
+
     public static void init(){
-      PoorMetalsRecipes.initFurnaceRecipes();
+        PoorMetalsRecipes.initFurnaceRecipes();
+        PoorMetalsRecipes.initCrackhammerRecipes();
     }
 }
