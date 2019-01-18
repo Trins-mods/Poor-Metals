@@ -9,20 +9,17 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import trinsdar.poormetals.PoorMetals;
 
-public class BlockPoorVanillaOres extends Block {
-    public enum PoorVanillaOresVariant{
-        IRON, GOLD;
-    }
+public class BlockPoorNetherOres extends Block {
 
-    PoorVanillaOresVariant variant;
-    public BlockPoorVanillaOres(PoorVanillaOresVariant variant) {
+    BlockPooreOreTypes variant;
+    public BlockPoorNetherOres(BlockPooreOreTypes variant) {
         super(Material.ROCK);
         this.variant = variant;
         setCreativeTab(PoorMetals.creativeTab);
-        final String name = "poor_"+ variant.toString().toLowerCase()+ "_ore";
+        final String name = "poor_nether_"+ variant.toString().toLowerCase()+ "_ore";
         setUnlocalizedName( PoorMetals.MODID + "." + name );
         setRegistryName(name);
-        this.setHarvestLevel("pickaxe", 1);
+        this.setHarvestLevel("pickaxe", variant.getHarvest());
         setHardness(4.0f);
         setResistance(15.0f);
     }
@@ -34,5 +31,4 @@ public class BlockPoorVanillaOres extends Block {
                 new ModelResourceLocation(getRegistryName(), "inventory")
         );
     }
-
 }

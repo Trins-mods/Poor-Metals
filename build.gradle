@@ -133,8 +133,8 @@ repositories{
 }
 
 dependencies {
-    deobfProvided "com.mcmoddev:AdditionalLootTables:${mc_version}-${alt_version}"
-    runtime "com.mcmoddev:AdditionalLootTables:${mc_version}-${alt_version}"
+    //deobfProvided "com.mcmoddev:AdditionalLootTables:${mc_version}-${alt_version}"
+    //runtime "com.mcmoddev:AdditionalLootTables:${mc_version}-${alt_version}"
     deobfProvided "com.mcmoddev:OreSpawn:${mc_version}-${orespawn_version}"
     runtime "com.mcmoddev:OreSpawn:${mc_version}-${orespawn_version}"
     deobfProvided "com.mcmoddev:BaseMetals:${mc_version}-${bme_version}"

@@ -9,141 +9,130 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry.ObjectHolder;
 import net.minecraftforge.registries.IForgeRegistry;
-import scala.actors.threadpool.Arrays;
 import trinsdar.poormetals.Config;
 import trinsdar.poormetals.PoorMetals;
-import trinsdar.poormetals.blocks.*;
-import trinsdar.poormetals.blocks.BlockPoorModdedNetherOres.PoorModdedNetherOresVariant;
-import trinsdar.poormetals.blocks.BlockPoorModdedEndOres.PoorModdedEndOresVariant;
-import trinsdar.poormetals.blocks.BlockPoorModdedOres.PoorModdedOresVariant;
-import trinsdar.poormetals.blocks.BlockPoorVanillaOres.PoorVanillaOresVariant;
-import trinsdar.poormetals.blocks.BlockPoorModernMetalsOres.PoorModernMetalsOreVariant;
-import trinsdar.poormetals.blocks.BlockPoorModernMetalsEndOres.PoorModernMetalsEndOreVariant;
-import trinsdar.poormetals.blocks.BlockPoorModernMetalsNetherOres.PoorModernMetalsNetherOreVariant;
+import trinsdar.poormetals.blocks.BlockPoorEndOres;
+import trinsdar.poormetals.blocks.BlockPoorNetherOres;
+import trinsdar.poormetals.blocks.BlockPoorOres;
+import trinsdar.poormetals.blocks.BlockPooreOreTypes;
 
 
 import java.util.ArrayList;
-import java.util.List;
 
 @ObjectHolder(PoorMetals.MODID)
 public class ModBlocks {
-    public static final BlockPoorVanillaOres
-    poorIronOre = new BlockPoorVanillaOres(PoorVanillaOresVariant.IRON),
-    poorGoldOre = new BlockPoorVanillaOres(PoorVanillaOresVariant.GOLD);
+    public static final BlockPoorOres
+    poorIronOre = new BlockPoorOres(BlockPooreOreTypes.IRON),
+    poorGoldOre = new BlockPoorOres(BlockPooreOreTypes.GOLD);
 
-    public static final BlockPoorModdedOres
-    poorCopperOre = new BlockPoorModdedOres(PoorModdedOresVariant.COPPER),
-    poorTinOre = new BlockPoorModdedOres(PoorModdedOresVariant.TIN),
-    poorSilverOre = new BlockPoorModdedOres(PoorModdedOresVariant.SILVER),
-    poorLeadOre = new BlockPoorModdedOres(PoorModdedOresVariant.LEAD),
-    poorNickelOre = new BlockPoorModdedOres(PoorModdedOresVariant.NICKEL),
-    poorZincOre = new BlockPoorModdedOres(PoorModdedOresVariant.ZINC),
-    poorMercuryOre = new BlockPoorModdedOres(PoorModdedOresVariant.MERCURY),
-    poorPlatinumOre = new BlockPoorModdedOres(PoorModdedOresVariant.PLATINUM),
-    poorBismuthOre = new BlockPoorModdedOres(PoorModdedOresVariant.BISMUTH),
-    poorAntimonyOre = new BlockPoorModdedOres(PoorModdedOresVariant.ANTIMONY),
-    poorAdamantineOre = new BlockPoorModdedOres(PoorModdedOresVariant.ADAMANTINE),
-    poorColdIronOre = new BlockPoorModdedOres(PoorModdedOresVariant.COLD_IRON),
-    poorStarsteelOre = new BlockPoorModdedOres(PoorModdedOresVariant.STARSTEEL);
+    public static final BlockPoorOres
+    poorCopperOre = new BlockPoorOres(BlockPooreOreTypes.COPPER),
+    poorTinOre = new BlockPoorOres(BlockPooreOreTypes.TIN),
+    poorSilverOre = new BlockPoorOres(BlockPooreOreTypes.SILVER),
+    poorLeadOre = new BlockPoorOres(BlockPooreOreTypes.LEAD),
+    poorNickelOre = new BlockPoorOres(BlockPooreOreTypes.NICKEL),
+    poorZincOre = new BlockPoorOres(BlockPooreOreTypes.ZINC),
+    poorMercuryOre = new BlockPoorOres(BlockPooreOreTypes.MERCURY),
+    poorPlatinumOre = new BlockPoorOres(BlockPooreOreTypes.PLATINUM),
+    poorBismuthOre = new BlockPoorOres(BlockPooreOreTypes.BISMUTH),
+    poorAntimonyOre = new BlockPoorOres(BlockPooreOreTypes.ANTIMONY),
+    poorAdamantineOre = new BlockPoorOres(BlockPooreOreTypes.ADAMANTINE),
+    poorColdIronOre = new BlockPoorOres(BlockPooreOreTypes.COLD_IRON),
+    poorStarsteelOre = new BlockPoorOres(BlockPooreOreTypes.STARSTEEL);
 
-    public static final BlockPoorModernMetalsOres
-    poorAluminumOre = new BlockPoorModernMetalsOres(PoorModernMetalsOreVariant.ALUMINUM),
-    poorBerylliumOre = new BlockPoorModernMetalsOres(PoorModernMetalsOreVariant.BERYLLIUM),
-    poorBoronOre = new BlockPoorModernMetalsOres(PoorModernMetalsOreVariant.BORON),
-    poorCadmiumOre = new BlockPoorModernMetalsOres(PoorModernMetalsOreVariant.CADMIUM),
-    poorChromiumOre = new BlockPoorModernMetalsOres(PoorModernMetalsOreVariant.CHROMIUM),
-    poorIridiumOre = new BlockPoorModernMetalsOres(PoorModernMetalsOreVariant.IRIDIUM),
-    poorMagnesiumOre = new BlockPoorModernMetalsOres(PoorModernMetalsOreVariant.MAGNESIUM),
-    poorMaganeseOre = new BlockPoorModernMetalsOres(PoorModernMetalsOreVariant.MAGANESE),
-    poorOsmiumOre = new BlockPoorModernMetalsOres(PoorModernMetalsOreVariant.OSMIUM),
-    poorPlutoniumOre = new BlockPoorModernMetalsOres(PoorModernMetalsOreVariant.PLUTONIUM),
-    poorRutileOre = new BlockPoorModernMetalsOres(PoorModernMetalsOreVariant.RUTILE),
-    poorTantalumOre = new BlockPoorModernMetalsOres(PoorModernMetalsOreVariant.TANTALUM),
-    poorThoriumOre = new BlockPoorModernMetalsOres(PoorModernMetalsOreVariant.THORIUM),
-    poorTitaniumOre = new BlockPoorModernMetalsOres(PoorModernMetalsOreVariant.TITANIUM),
-    poorTungstenOre = new BlockPoorModernMetalsOres(PoorModernMetalsOreVariant.TUNGSTEN),
-    poorUraniumOre = new BlockPoorModernMetalsOres(PoorModernMetalsOreVariant.URANIUM),
-    poorZirconiumOre = new BlockPoorModernMetalsOres(PoorModernMetalsOreVariant.ZIRCONIUM);
+    public static final BlockPoorOres
+    poorAluminumOre = new BlockPoorOres(BlockPooreOreTypes.ALUMINUM),
+    poorBerylliumOre = new BlockPoorOres(BlockPooreOreTypes.BERYLLIUM),
+    poorBoronOre = new BlockPoorOres(BlockPooreOreTypes.BORON),
+    poorCadmiumOre = new BlockPoorOres(BlockPooreOreTypes.CADMIUM),
+    poorChromiumOre = new BlockPoorOres(BlockPooreOreTypes.CHROMIUM),
+    poorIridiumOre = new BlockPoorOres(BlockPooreOreTypes.IRIDIUM),
+    poorMagnesiumOre = new BlockPoorOres(BlockPooreOreTypes.MAGNESIUM),
+    poorMaganeseOre = new BlockPoorOres(BlockPooreOreTypes.MAGANESE),
+    poorOsmiumOre = new BlockPoorOres(BlockPooreOreTypes.OSMIUM),
+    poorPlutoniumOre = new BlockPoorOres(BlockPooreOreTypes.PLUTONIUM),
+    poorRutileOre = new BlockPoorOres(BlockPooreOreTypes.RUTILE),
+    poorTantalumOre = new BlockPoorOres(BlockPooreOreTypes.TANTALUM),
+    poorThoriumOre = new BlockPoorOres(BlockPooreOreTypes.THORIUM),
+    poorTitaniumOre = new BlockPoorOres(BlockPooreOreTypes.TITANIUM),
+    poorTungstenOre = new BlockPoorOres(BlockPooreOreTypes.TUNGSTEN),
+    poorUraniumOre = new BlockPoorOres(BlockPooreOreTypes.URANIUM),
+    poorZirconiumOre = new BlockPoorOres(BlockPooreOreTypes.ZIRCONIUM);
 
-    public static final BlockPoorModdedNetherOres
-    poorNetherIronOre = new BlockPoorModdedNetherOres(PoorModdedNetherOresVariant.IRON),
-    poorNetherGoldOre = new BlockPoorModdedNetherOres(PoorModdedNetherOresVariant.GOLD),
-    poorNetherCopperOre = new BlockPoorModdedNetherOres(PoorModdedNetherOresVariant.COPPER),
-    poorNetherTinOre = new BlockPoorModdedNetherOres(PoorModdedNetherOresVariant.TIN),
-    poorNetherSilverOre = new BlockPoorModdedNetherOres(PoorModdedNetherOresVariant.SILVER),
-    poorNetherLeadOre = new BlockPoorModdedNetherOres(PoorModdedNetherOresVariant.LEAD),
-    poorNetherNickelOre = new BlockPoorModdedNetherOres(PoorModdedNetherOresVariant.NICKEL),
-    poorNetherZincOre = new BlockPoorModdedNetherOres(PoorModdedNetherOresVariant.ZINC),
-    poorNetherMercuryOre = new BlockPoorModdedNetherOres(PoorModdedNetherOresVariant.MERCURY),
-    poorNetherPlatinumOre = new BlockPoorModdedNetherOres(PoorModdedNetherOresVariant.PLATINUM),
-    poorNetherBismuthOre = new BlockPoorModdedNetherOres(PoorModdedNetherOresVariant.BISMUTH),
-    poorNetherAntimonyOre = new BlockPoorModdedNetherOres(PoorModdedNetherOresVariant.ANTIMONY);
+    public static final BlockPoorNetherOres
+    poorNetherIronOre = new BlockPoorNetherOres(BlockPooreOreTypes.IRON),
+    poorNetherGoldOre = new BlockPoorNetherOres(BlockPooreOreTypes.GOLD),
+    poorNetherCopperOre = new BlockPoorNetherOres(BlockPooreOreTypes.COPPER),
+    poorNetherTinOre = new BlockPoorNetherOres(BlockPooreOreTypes.TIN),
+    poorNetherSilverOre = new BlockPoorNetherOres(BlockPooreOreTypes.SILVER),
+    poorNetherLeadOre = new BlockPoorNetherOres(BlockPooreOreTypes.LEAD),
+    poorNetherNickelOre = new BlockPoorNetherOres(BlockPooreOreTypes.NICKEL),
+    poorNetherZincOre = new BlockPoorNetherOres(BlockPooreOreTypes.ZINC),
+    poorNetherMercuryOre = new BlockPoorNetherOres(BlockPooreOreTypes.MERCURY),
+    poorNetherPlatinumOre = new BlockPoorNetherOres(BlockPooreOreTypes.PLATINUM),
+    poorNetherBismuthOre = new BlockPoorNetherOres(BlockPooreOreTypes.BISMUTH),
+    poorNetherAntimonyOre = new BlockPoorNetherOres(BlockPooreOreTypes.ANTIMONY);
 
-    public static final BlockPoorModdedEndOres
-    poorEndIronOre = new BlockPoorModdedEndOres(PoorModdedEndOresVariant.IRON),
-    poorEndGoldOre = new BlockPoorModdedEndOres(PoorModdedEndOresVariant.GOLD),
-    poorEndCopperOre = new BlockPoorModdedEndOres(PoorModdedEndOresVariant.COPPER),
-    poorEndTinOre = new BlockPoorModdedEndOres(PoorModdedEndOresVariant.TIN),
-    poorEndSilverOre = new BlockPoorModdedEndOres(PoorModdedEndOresVariant.SILVER),
-    poorEndLeadOre = new BlockPoorModdedEndOres(PoorModdedEndOresVariant.LEAD),
-    poorEndNickelOre = new BlockPoorModdedEndOres(PoorModdedEndOresVariant.NICKEL),
-    poorEndZincOre = new BlockPoorModdedEndOres(PoorModdedEndOresVariant.ZINC),
-    poorEndMercuryOre = new BlockPoorModdedEndOres(PoorModdedEndOresVariant.MERCURY),
-    poorEndPlatinumOre = new BlockPoorModdedEndOres(PoorModdedEndOresVariant.PLATINUM),
-    poorEndBismuthOre = new BlockPoorModdedEndOres(PoorModdedEndOresVariant.BISMUTH),
-    poorEndAntimonyOre = new BlockPoorModdedEndOres(PoorModdedEndOresVariant.ANTIMONY);
+    public static final BlockPoorEndOres
+    poorEndIronOre = new BlockPoorEndOres(BlockPooreOreTypes.IRON),
+    poorEndGoldOre = new BlockPoorEndOres(BlockPooreOreTypes.GOLD),
+    poorEndCopperOre = new BlockPoorEndOres(BlockPooreOreTypes.COPPER),
+    poorEndTinOre = new BlockPoorEndOres(BlockPooreOreTypes.TIN),
+    poorEndSilverOre = new BlockPoorEndOres(BlockPooreOreTypes.SILVER),
+    poorEndLeadOre = new BlockPoorEndOres(BlockPooreOreTypes.LEAD),
+    poorEndNickelOre = new BlockPoorEndOres(BlockPooreOreTypes.NICKEL),
+    poorEndZincOre = new BlockPoorEndOres(BlockPooreOreTypes.ZINC),
+    poorEndMercuryOre = new BlockPoorEndOres(BlockPooreOreTypes.MERCURY),
+    poorEndPlatinumOre = new BlockPoorEndOres(BlockPooreOreTypes.PLATINUM),
+    poorEndBismuthOre = new BlockPoorEndOres(BlockPooreOreTypes.BISMUTH),
+    poorEndAntimonyOre = new BlockPoorEndOres(BlockPooreOreTypes.ANTIMONY);
 
-    public static final BlockPoorModernMetalsEndOres
-    poorEndAluminumOre = new BlockPoorModernMetalsEndOres(PoorModernMetalsEndOreVariant.ALUMINUM),
-    poorEndBerylliumOre = new BlockPoorModernMetalsEndOres(PoorModernMetalsEndOreVariant.BERYLLIUM),
-    poorEndBoronOre = new BlockPoorModernMetalsEndOres(PoorModernMetalsEndOreVariant.BORON),
-    poorEndCadmiumOre = new BlockPoorModernMetalsEndOres(PoorModernMetalsEndOreVariant.CADMIUM),
-    poorEndChromiumOre = new BlockPoorModernMetalsEndOres(PoorModernMetalsEndOreVariant.CHROMIUM),
-    poorEndIridiumOre = new BlockPoorModernMetalsEndOres(PoorModernMetalsEndOreVariant.IRIDIUM),
-    poorEndMagnesiumOre = new BlockPoorModernMetalsEndOres(PoorModernMetalsEndOreVariant.MAGNESIUM),
-    poorEndMaganeseOre = new BlockPoorModernMetalsEndOres(PoorModernMetalsEndOreVariant.MAGANESE),
-    poorEndOsmiumOre = new BlockPoorModernMetalsEndOres(PoorModernMetalsEndOreVariant.OSMIUM),
-    poorEndPlutoniumOre = new BlockPoorModernMetalsEndOres(PoorModernMetalsEndOreVariant.PLUTONIUM),
-    poorEndRutileOre = new BlockPoorModernMetalsEndOres(PoorModernMetalsEndOreVariant.RUTILE),
-    poorEndTantalumOre = new BlockPoorModernMetalsEndOres(PoorModernMetalsEndOreVariant.TANTALUM),
-    poorEndThoriumOre = new BlockPoorModernMetalsEndOres(PoorModernMetalsEndOreVariant.THORIUM),
-    poorEndTitaniumOre = new BlockPoorModernMetalsEndOres(PoorModernMetalsEndOreVariant.TITANIUM),
-    poorEndTungstenOre = new BlockPoorModernMetalsEndOres(PoorModernMetalsEndOreVariant.TUNGSTEN),
-    poorEndUraniumOre = new BlockPoorModernMetalsEndOres(PoorModernMetalsEndOreVariant.URANIUM),
-    poorEndZirconiumOre = new BlockPoorModernMetalsEndOres(PoorModernMetalsEndOreVariant.ZIRCONIUM);
+    public static final BlockPoorEndOres
+    poorEndAluminumOre = new BlockPoorEndOres(BlockPooreOreTypes.ALUMINUM),
+    poorEndBerylliumOre = new BlockPoorEndOres(BlockPooreOreTypes.BERYLLIUM),
+    poorEndBoronOre = new BlockPoorEndOres(BlockPooreOreTypes.BORON),
+    poorEndCadmiumOre = new BlockPoorEndOres(BlockPooreOreTypes.CADMIUM),
+    poorEndChromiumOre = new BlockPoorEndOres(BlockPooreOreTypes.CHROMIUM),
+    poorEndIridiumOre = new BlockPoorEndOres(BlockPooreOreTypes.IRIDIUM),
+    poorEndMagnesiumOre = new BlockPoorEndOres(BlockPooreOreTypes.MAGNESIUM),
+    poorEndMaganeseOre = new BlockPoorEndOres(BlockPooreOreTypes.MAGANESE),
+    poorEndOsmiumOre = new BlockPoorEndOres(BlockPooreOreTypes.OSMIUM),
+    poorEndPlutoniumOre = new BlockPoorEndOres(BlockPooreOreTypes.PLUTONIUM),
+    poorEndRutileOre = new BlockPoorEndOres(BlockPooreOreTypes.RUTILE),
+    poorEndTantalumOre = new BlockPoorEndOres(BlockPooreOreTypes.TANTALUM),
+    poorEndThoriumOre = new BlockPoorEndOres(BlockPooreOreTypes.THORIUM),
+    poorEndTitaniumOre = new BlockPoorEndOres(BlockPooreOreTypes.TITANIUM),
+    poorEndTungstenOre = new BlockPoorEndOres(BlockPooreOreTypes.TUNGSTEN),
+    poorEndUraniumOre = new BlockPoorEndOres(BlockPooreOreTypes.URANIUM),
+    poorEndZirconiumOre = new BlockPoorEndOres(BlockPooreOreTypes.ZIRCONIUM);
 
-    public static final BlockPoorModernMetalsNetherOres
-    poorNetherAluminumOre = new BlockPoorModernMetalsNetherOres(PoorModernMetalsNetherOreVariant.ALUMINUM),
-    poorNetherBerylliumOre = new BlockPoorModernMetalsNetherOres(PoorModernMetalsNetherOreVariant.BERYLLIUM),
-    poorNetherBoronOre = new BlockPoorModernMetalsNetherOres(PoorModernMetalsNetherOreVariant.BORON),
-    poorNetherCadmiumOre = new BlockPoorModernMetalsNetherOres(PoorModernMetalsNetherOreVariant.CADMIUM),
-    poorNetherChromiumOre = new BlockPoorModernMetalsNetherOres(PoorModernMetalsNetherOreVariant.CHROMIUM),
-    poorNetherIridiumOre = new BlockPoorModernMetalsNetherOres(PoorModernMetalsNetherOreVariant.IRIDIUM),
-    poorNetherMagnesiumOre = new BlockPoorModernMetalsNetherOres(PoorModernMetalsNetherOreVariant.MAGNESIUM),
-    poorNetherMaganeseOre = new BlockPoorModernMetalsNetherOres(PoorModernMetalsNetherOreVariant.MAGANESE),
-    poorNetherOsmiumOre = new BlockPoorModernMetalsNetherOres(PoorModernMetalsNetherOreVariant.OSMIUM),
-    poorNetherPlutoniumOre = new BlockPoorModernMetalsNetherOres(PoorModernMetalsNetherOreVariant.PLUTONIUM),
-    poorNetherRutileOre = new BlockPoorModernMetalsNetherOres(PoorModernMetalsNetherOreVariant.RUTILE),
-    poorNetherTantalumOre = new BlockPoorModernMetalsNetherOres(PoorModernMetalsNetherOreVariant.TANTALUM),
-    poorNetherThoriumOre = new BlockPoorModernMetalsNetherOres(PoorModernMetalsNetherOreVariant.THORIUM),
-    poorNetherTitaniumOre = new BlockPoorModernMetalsNetherOres(PoorModernMetalsNetherOreVariant.TITANIUM),
-    poorNetherTungstenOre = new BlockPoorModernMetalsNetherOres(PoorModernMetalsNetherOreVariant.TUNGSTEN),
-    poorNetherUraniumOre = new BlockPoorModernMetalsNetherOres(PoorModernMetalsNetherOreVariant.URANIUM),
-    poorNetherZirconiumOre = new BlockPoorModernMetalsNetherOres(PoorModernMetalsNetherOreVariant.ZIRCONIUM);
+    public static final BlockPoorNetherOres
+    poorNetherAluminumOre = new BlockPoorNetherOres(BlockPooreOreTypes.ALUMINUM),
+    poorNetherBerylliumOre = new BlockPoorNetherOres(BlockPooreOreTypes.BERYLLIUM),
+    poorNetherBoronOre = new BlockPoorNetherOres(BlockPooreOreTypes.BORON),
+    poorNetherCadmiumOre = new BlockPoorNetherOres(BlockPooreOreTypes.CADMIUM),
+    poorNetherChromiumOre = new BlockPoorNetherOres(BlockPooreOreTypes.CHROMIUM),
+    poorNetherIridiumOre = new BlockPoorNetherOres(BlockPooreOreTypes.IRIDIUM),
+    poorNetherMagnesiumOre = new BlockPoorNetherOres(BlockPooreOreTypes.MAGNESIUM),
+    poorNetherMaganeseOre = new BlockPoorNetherOres(BlockPooreOreTypes.MAGANESE),
+    poorNetherOsmiumOre = new BlockPoorNetherOres(BlockPooreOreTypes.OSMIUM),
+    poorNetherPlutoniumOre = new BlockPoorNetherOres(BlockPooreOreTypes.PLUTONIUM),
+    poorNetherRutileOre = new BlockPoorNetherOres(BlockPooreOreTypes.RUTILE),
+    poorNetherTantalumOre = new BlockPoorNetherOres(BlockPooreOreTypes.TANTALUM),
+    poorNetherThoriumOre = new BlockPoorNetherOres(BlockPooreOreTypes.THORIUM),
+    poorNetherTitaniumOre = new BlockPoorNetherOres(BlockPooreOreTypes.TITANIUM),
+    poorNetherTungstenOre = new BlockPoorNetherOres(BlockPooreOreTypes.TUNGSTEN),
+    poorNetherUraniumOre = new BlockPoorNetherOres(BlockPooreOreTypes.URANIUM),
+    poorNetherZirconiumOre = new BlockPoorNetherOres(BlockPooreOreTypes.ZIRCONIUM);
 
     @Mod.EventBusSubscriber(modid = PoorMetals.MODID)
     public static class RegistrationHandler {
 
-        private static ArrayList<BlockPoorVanillaOres> vanilla = null;
-        private static ArrayList<BlockPoorModdedOres> baseMetals = null;
-        private static ArrayList<BlockPoorModernMetalsOres> modernMetals = null;
-        private static ArrayList<BlockPoorModdedNetherOres> netherMetalsRegular = null;
-        private static ArrayList<BlockPoorModdedEndOres> endMetalsRegular = null;
-        private static ArrayList<BlockPoorModernMetalsNetherOres> netherMetalsModern = null;
-        private static ArrayList<BlockPoorModernMetalsEndOres> endMetalsModern = null;
+        private static ArrayList<BlockPoorOres> vanilla = null;
+        private static ArrayList<BlockPoorNetherOres> netherMetalsRegular = null;
+        private static ArrayList<BlockPoorEndOres> endMetalsRegular = null;
         private void initVanilla(){
             if(vanilla == null){
                 vanilla = new ArrayList<>();
@@ -733,236 +722,6 @@ public class ModBlocks {
                 poorEndTungstenOre.initModel();
                 poorEndUraniumOre.initModel();
                 poorEndZirconiumOre.initModel();
-            }
-        }
-    }
-
-    public static void init(){
-        if (Config.vanillaPoorOres) {
-            poorIronOre.setHarvestLevel("pickaxe", 1);
-            poorGoldOre.setHarvestLevel("pickaxe", 2);
-        }
-        if (!Config.baseMetalsPoorOresOverride){
-            if (Loader.isModLoaded("basemetals")){
-                if (Config.baseMetalsPoorOres) {
-                    poorAdamantineOre.setHarvestLevel("pickaxe", 3);
-                    poorAntimonyOre.setHarvestLevel("pickaxe", 0);
-                    poorBismuthOre.setHarvestLevel("pickaxe", 0);
-                    poorColdIronOre.setHarvestLevel("pickaxe", 2);
-                    poorCopperOre.setHarvestLevel("pickaxe", 1);
-                    poorLeadOre.setHarvestLevel("pickaxe", 0);
-                    poorMercuryOre.setHarvestLevel("pickaxe", 0);
-                    poorNickelOre.setHarvestLevel("pickaxe", 1);
-                    poorPlatinumOre.setHarvestLevel("pickaxe", 0);
-                    poorSilverOre.setHarvestLevel("pickaxe", 1);
-                    poorStarsteelOre.setHarvestLevel("pickaxe", 3);
-                    poorTinOre.setHarvestLevel("pickaxe", 0);
-                    poorZincOre.setHarvestLevel("pickaxe", 0);
-                }
-            }
-        }else if (Config.baseMetalsPoorOresOverride){
-            if (Config.baseMetalsPoorOres) {
-                poorAdamantineOre.setHarvestLevel("pickaxe", 3);
-                poorAntimonyOre.setHarvestLevel("pickaxe", 0);
-                poorBismuthOre.setHarvestLevel("pickaxe", 0);
-                poorColdIronOre.setHarvestLevel("pickaxe", 2);
-                poorCopperOre.setHarvestLevel("pickaxe", 1);
-                poorLeadOre.setHarvestLevel("pickaxe", 0);
-                poorMercuryOre.setHarvestLevel("pickaxe", 0);
-                poorNickelOre.setHarvestLevel("pickaxe", 1);
-                poorPlatinumOre.setHarvestLevel("pickaxe", 0);
-                poorSilverOre.setHarvestLevel("pickaxe", 1);
-                poorStarsteelOre.setHarvestLevel("pickaxe", 3);
-                poorTinOre.setHarvestLevel("pickaxe", 0);
-                poorZincOre.setHarvestLevel("pickaxe", 0);
-            }
-        }
-
-        if (!Config.modernMetalsPoorOresOverride){
-            if (Loader.isModLoaded("modernmetals")){
-                if (Config.modernMetalsPoorOres) {
-                    poorAluminumOre.setHarvestLevel("pickaxe", 0);
-                    poorBerylliumOre.setHarvestLevel("pickaxe", 1);
-                    poorBoronOre.setHarvestLevel("pickaxe", 2);
-                    poorCadmiumOre.setHarvestLevel("pickaxe", 0);
-                    poorChromiumOre.setHarvestLevel("pickaxe", 2);
-                    poorIridiumOre.setHarvestLevel("pickaxe", 1);
-                    poorMagnesiumOre.setHarvestLevel("pickaxe", 0);
-                    poorMaganeseOre.setHarvestLevel("pickaxe", 1);
-                    poorOsmiumOre.setHarvestLevel("pickaxe", 2);
-                    poorPlutoniumOre.setHarvestLevel("pickaxe", 1);
-                    poorRutileOre.setHarvestLevel("pickaxe", 1);
-                    poorTantalumOre.setHarvestLevel("pickaxe", 1);
-                    poorThoriumOre.setHarvestLevel("pickaxe", 0);
-                    poorTitaniumOre.setHarvestLevel("pickaxe", 1);
-                    poorTungstenOre.setHarvestLevel("pickaxe", 2);
-                    poorUraniumOre.setHarvestLevel("pickaxe", 1);
-                    poorZirconiumOre.setHarvestLevel("pickaxe", 1);
-                }
-            }
-        }else if (Config.modernMetalsPoorOresOverride){
-            if (Config.modernMetalsPoorOres) {
-                poorAluminumOre.setHarvestLevel("pickaxe", 0);
-                poorBerylliumOre.setHarvestLevel("pickaxe", 1);
-                poorBoronOre.setHarvestLevel("pickaxe", 2);
-                poorCadmiumOre.setHarvestLevel("pickaxe", 0);
-                poorChromiumOre.setHarvestLevel("pickaxe", 2);
-                poorIridiumOre.setHarvestLevel("pickaxe", 1);
-                poorMagnesiumOre.setHarvestLevel("pickaxe", 0);
-                poorMaganeseOre.setHarvestLevel("pickaxe", 1);
-                poorOsmiumOre.setHarvestLevel("pickaxe", 2);
-                poorPlutoniumOre.setHarvestLevel("pickaxe", 1);
-                poorRutileOre.setHarvestLevel("pickaxe", 1);
-                poorTantalumOre.setHarvestLevel("pickaxe", 1);
-                poorThoriumOre.setHarvestLevel("pickaxe", 0);
-                poorTitaniumOre.setHarvestLevel("pickaxe", 1);
-                poorTungstenOre.setHarvestLevel("pickaxe", 2);
-                poorUraniumOre.setHarvestLevel("pickaxe", 1);
-                poorZirconiumOre.setHarvestLevel("pickaxe", 1);
-            }
-        }
-
-        if (!Config.netherMetalsPoorOresOverride){
-            if (Loader.isModLoaded("nethermetals")){
-                if (Config.netherMetalsPoorOres) {
-                    poorNetherGoldOre.setHarvestLevel("pickaxe", 0);
-                    poorNetherIronOre.setHarvestLevel("pickaxe", 2);
-                    poorNetherAntimonyOre.setHarvestLevel("pickaxe", 0);
-                    poorNetherBismuthOre.setHarvestLevel("pickaxe", 0);
-                    poorNetherCopperOre.setHarvestLevel("pickaxe", 1);
-                    poorNetherLeadOre.setHarvestLevel("pickaxe", 0);
-                    poorNetherMercuryOre.setHarvestLevel("pickaxe", 0);
-                    poorNetherNickelOre.setHarvestLevel("pickaxe", 1);
-                    poorNetherPlatinumOre.setHarvestLevel("pickaxe", 0);
-                    poorNetherSilverOre.setHarvestLevel("pickaxe", 1);
-                    poorNetherTinOre.setHarvestLevel("pickaxe", 0);
-                    poorNetherZincOre.setHarvestLevel("pickaxe", 0);
-                }
-            }
-        }else if (Config.netherMetalsPoorOresOverride){
-            if (Config.netherMetalsPoorOres) {
-                poorNetherGoldOre.setHarvestLevel("pickaxe", 0);
-                poorNetherIronOre.setHarvestLevel("pickaxe", 2);
-                poorNetherAntimonyOre.setHarvestLevel("pickaxe", 0);
-                poorNetherBismuthOre.setHarvestLevel("pickaxe", 0);
-                poorNetherCopperOre.setHarvestLevel("pickaxe", 1);
-                poorNetherLeadOre.setHarvestLevel("pickaxe", 0);
-                poorNetherMercuryOre.setHarvestLevel("pickaxe", 0);
-                poorNetherNickelOre.setHarvestLevel("pickaxe", 1);
-                poorNetherPlatinumOre.setHarvestLevel("pickaxe", 0);
-                poorNetherSilverOre.setHarvestLevel("pickaxe", 1);
-                poorNetherTinOre.setHarvestLevel("pickaxe", 0);
-                poorNetherZincOre.setHarvestLevel("pickaxe", 0);
-            }
-        }
-
-        if (!Config.netherModernMetalsPoorOresOverride){
-            if (Loader.isModLoaded("modernmetals") && Loader.isModLoaded("nethermetals")){
-                if (Config.netherModernMetalsPoorOres) {
-                    poorNetherAluminumOre.setHarvestLevel("pickaxe", 0);
-                    poorNetherCadmiumOre.setHarvestLevel("pickaxe", 0);
-                    poorNetherChromiumOre.setHarvestLevel("pickaxe", 2);
-                    poorNetherIridiumOre.setHarvestLevel("pickaxe", 1);
-                    poorNetherMagnesiumOre.setHarvestLevel("pickaxe", 0);
-                    poorNetherMaganeseOre.setHarvestLevel("pickaxe", 1);
-                    poorNetherOsmiumOre.setHarvestLevel("pickaxe", 2);
-                    poorNetherPlutoniumOre.setHarvestLevel("pickaxe", 1);
-                    poorNetherRutileOre.setHarvestLevel("pickaxe", 1);
-                    poorNetherTantalumOre.setHarvestLevel("pickaxe", 1);
-                    poorNetherTitaniumOre.setHarvestLevel("pickaxe", 1);
-                    poorNetherTungstenOre.setHarvestLevel("pickaxe", 2);
-                    poorNetherUraniumOre.setHarvestLevel("pickaxe", 1);
-                    poorNetherZirconiumOre.setHarvestLevel("pickaxe", 1);
-                }
-            }
-        }else if (Config.netherModernMetalsPoorOresOverride){
-            if (Config.netherModernMetalsPoorOres) {
-                poorNetherAluminumOre.setHarvestLevel("pickaxe", 0);
-                poorNetherCadmiumOre.setHarvestLevel("pickaxe", 0);
-                poorNetherChromiumOre.setHarvestLevel("pickaxe", 2);
-                poorNetherIridiumOre.setHarvestLevel("pickaxe", 1);
-                poorNetherMagnesiumOre.setHarvestLevel("pickaxe", 0);
-                poorNetherMaganeseOre.setHarvestLevel("pickaxe", 1);
-                poorNetherOsmiumOre.setHarvestLevel("pickaxe", 2);
-                poorNetherPlutoniumOre.setHarvestLevel("pickaxe", 1);
-                poorNetherRutileOre.setHarvestLevel("pickaxe", 1);
-                poorNetherTantalumOre.setHarvestLevel("pickaxe", 1);
-                poorNetherTitaniumOre.setHarvestLevel("pickaxe", 1);
-                poorNetherTungstenOre.setHarvestLevel("pickaxe", 2);
-                poorNetherUraniumOre.setHarvestLevel("pickaxe", 1);
-                poorNetherZirconiumOre.setHarvestLevel("pickaxe", 1);
-            }
-        }
-
-        if (!Config.endMetalsPoorOresOverride){
-            if (Loader.isModLoaded("endmetals")){
-                if (Config.endMetalsPoorOres) {
-                    poorEndGoldOre.setHarvestLevel("pickaxe", 0);
-                    poorEndIronOre.setHarvestLevel("pickaxe", 2);
-                    poorEndAntimonyOre.setHarvestLevel("pickaxe", 0);
-                    poorEndBismuthOre.setHarvestLevel("pickaxe", 0);
-                    poorEndCopperOre.setHarvestLevel("pickaxe", 1);
-                    poorEndLeadOre.setHarvestLevel("pickaxe", 0);
-                    poorEndMercuryOre.setHarvestLevel("pickaxe", 0);
-                    poorEndNickelOre.setHarvestLevel("pickaxe", 1);
-                    poorEndPlatinumOre.setHarvestLevel("pickaxe", 0);
-                    poorEndSilverOre.setHarvestLevel("pickaxe", 1);
-                    poorEndTinOre.setHarvestLevel("pickaxe", 0);
-                    poorEndZincOre.setHarvestLevel("pickaxe", 0);
-                }
-            }
-        }else if (Config.endMetalsPoorOresOverride){
-            if (Config.endMetalsPoorOres) {
-                poorEndGoldOre.setHarvestLevel("pickaxe", 0);
-                poorEndIronOre.setHarvestLevel("pickaxe", 2);
-                poorEndAntimonyOre.setHarvestLevel("pickaxe", 0);
-                poorEndBismuthOre.setHarvestLevel("pickaxe", 0);
-                poorEndCopperOre.setHarvestLevel("pickaxe", 1);
-                poorEndLeadOre.setHarvestLevel("pickaxe", 0);
-                poorEndMercuryOre.setHarvestLevel("pickaxe", 0);
-                poorEndNickelOre.setHarvestLevel("pickaxe", 1);
-                poorEndPlatinumOre.setHarvestLevel("pickaxe", 0);
-                poorEndSilverOre.setHarvestLevel("pickaxe", 1);
-                poorEndTinOre.setHarvestLevel("pickaxe", 0);
-                poorEndZincOre.setHarvestLevel("pickaxe", 0);
-            }
-        }
-
-        if (!Config.endModernMetalsPoorOresOverride){
-            if (Loader.isModLoaded("modernmetals") && Loader.isModLoaded("endmetals")){
-                if (Config.endModernMetalsPoorOres) {
-                    poorEndAluminumOre.setHarvestLevel("pickaxe", 0);
-                    poorEndCadmiumOre.setHarvestLevel("pickaxe", 0);
-                    poorEndChromiumOre.setHarvestLevel("pickaxe", 2);
-                    poorEndIridiumOre.setHarvestLevel("pickaxe", 1);
-                    poorEndMagnesiumOre.setHarvestLevel("pickaxe", 0);
-                    poorEndMaganeseOre.setHarvestLevel("pickaxe", 1);
-                    poorEndOsmiumOre.setHarvestLevel("pickaxe", 2);
-                    poorEndPlutoniumOre.setHarvestLevel("pickaxe", 1);
-                    poorEndRutileOre.setHarvestLevel("pickaxe", 1);
-                    poorEndTantalumOre.setHarvestLevel("pickaxe", 1);
-                    poorEndTitaniumOre.setHarvestLevel("pickaxe", 1);
-                    poorEndTungstenOre.setHarvestLevel("pickaxe", 2);
-                    poorEndUraniumOre.setHarvestLevel("pickaxe", 1);
-                    poorEndZirconiumOre.setHarvestLevel("pickaxe", 1);
-                }
-            }
-        }else if (Config.endModernMetalsPoorOresOverride){
-            if (Config.endModernMetalsPoorOres) {
-                poorEndAluminumOre.setHarvestLevel("pickaxe", 0);
-                poorEndCadmiumOre.setHarvestLevel("pickaxe", 0);
-                poorEndChromiumOre.setHarvestLevel("pickaxe", 2);
-                poorEndIridiumOre.setHarvestLevel("pickaxe", 1);
-                poorEndMagnesiumOre.setHarvestLevel("pickaxe", 0);
-                poorEndMaganeseOre.setHarvestLevel("pickaxe", 1);
-                poorEndOsmiumOre.setHarvestLevel("pickaxe", 2);
-                poorEndPlutoniumOre.setHarvestLevel("pickaxe", 1);
-                poorEndRutileOre.setHarvestLevel("pickaxe", 1);
-                poorEndTantalumOre.setHarvestLevel("pickaxe", 1);
-                poorEndTitaniumOre.setHarvestLevel("pickaxe", 1);
-                poorEndTungstenOre.setHarvestLevel("pickaxe", 2);
-                poorEndUraniumOre.setHarvestLevel("pickaxe", 1);
-                poorEndZirconiumOre.setHarvestLevel("pickaxe", 1);
             }
         }
     }

@@ -9,20 +9,17 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import trinsdar.poormetals.PoorMetals;
 
-public class BlockPoorModernMetalsEndOres extends Block {
-    public enum PoorModernMetalsEndOreVariant{
-        ALUMINUM, BERYLLIUM, BORON, CADMIUM, CHROMIUM, IRIDIUM, MAGNESIUM, MAGANESE, OSMIUM, PLUTONIUM, RUTILE, TANTALUM, THORIUM, TITANIUM, TUNGSTEN, URANIUM, ZIRCONIUM;
-    }
+public class BlockPoorEndOres extends Block {
 
-    PoorModernMetalsEndOreVariant variant;
-    public BlockPoorModernMetalsEndOres(PoorModernMetalsEndOreVariant variant) {
+    BlockPooreOreTypes variant;
+    public BlockPoorEndOres(BlockPooreOreTypes variant) {
         super(Material.ROCK);
         this.variant = variant;
         setCreativeTab(PoorMetals.creativeTab);
         final String name = "poor_end_"+ variant.toString().toLowerCase()+ "_ore";
         setUnlocalizedName( PoorMetals.MODID + "." + name );
         setRegistryName(name);
-        this.setHarvestLevel("pickaxe", 1);
+        this.setHarvestLevel("pickaxe", variant.getHarvest());
         setHardness(4.0f);
         setResistance(15.0f);
     }
