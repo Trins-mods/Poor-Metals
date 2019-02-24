@@ -1,6 +1,7 @@
 {
-  "parent": "block/cube_all",
+  "parent": "poormetals:block/poor_ore",
   "textures": {
-    "all": "poormetals:blocks/overworld/poor_nickel_ore"
+    "overlay": "poormetals:blocks/overworld/poor_nickel_ore",
+    "background": "blocks/stone"
   }
 }

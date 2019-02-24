@@ -1,6 +1,7 @@
 {
-  "parent": "block/cube_all",
+  "parent": "poormetals:block/poor_ore",
   "textures": {
-    "all": "poormetals:blocks/end/poor_end_rutile_ore"
+    "overlay": "poormetals:blocks/end/poor_end_rutile_ore",
+    "background": "blocks/end_stone"
   }
 }

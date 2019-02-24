@@ -1,6 +1,7 @@
 {
-  "parent": "block/cube_all",
+  "parent": "poormetals:block/poor_ore",
   "textures": {
-    "all": "poormetals:blocks/nether/poor_nether_aluminum_ore"
+    "overlay": "poormetals:blocks/nether/poor_nether_aluminum_ore",
+    "background": "blocks/netherrack"
   }
 }

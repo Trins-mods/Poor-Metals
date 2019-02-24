@@ -58,7 +58,7 @@ compileJava {
 }
 
 minecraft {
-    version = "${forge_mc_version}-${forge_version}"
+    version = "${forgemc_version}-${forge_version}"
     runDir = "run"
    
     mappings = "${mappings_version}"
