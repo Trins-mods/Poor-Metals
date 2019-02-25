@@ -30,6 +30,7 @@ public class Config {
 
     public static boolean poorOreDouble = false;
     public static boolean poorOreCrackHammer = true;
+    public static boolean poorOreMacerator = true;
 
     public static void readConfig() {
         Configuration cfg = CommonProxy.config;
@@ -63,5 +64,6 @@ public class Config {
         endModernMetalsPoorOresOverride = cfg.getBoolean("enableEndModernMetalsPoorOresOverride", CATEGORY_GENERAL, endModernMetalsPoorOresOverride, "Set to true to enable End Modern Metals ores even when End Metals & Modern Metals are not loaded. Does nothing if enableEndModernMetalsPoorOres is set to false.");
         poorOreDouble = cfg.getBoolean("enablePoorOreDoubling", CATEGORY_GENERAL, poorOreDouble, "Set to true to enable doubling of poor ores with crack hammer and other mod methods");
         poorOreCrackHammer = cfg.getBoolean("enablePoorOreCrackHammerRecipes", CATEGORY_GENERAL, poorOreCrackHammer, "Set to false to disable regestering of crackhammer recipes for poor ores.");
+        poorOreMacerator = cfg.getBoolean("enablePoorOreMaceratorRecipes", CATEGORY_GENERAL, poorOreMacerator, "Set to false to disable registering of macerator recipes for poor ores.");
     }
 }
