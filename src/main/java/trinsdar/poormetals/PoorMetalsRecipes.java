@@ -48,7 +48,7 @@ public class PoorMetalsRecipes {
                 FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorCadmiumOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.CADMIUM).getItem(Names.NUGGET), 3), 0.7f);
                 FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorChromiumOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.CHROMIUM).getItem(Names.NUGGET), 3), 0.7f);
                 FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorIridiumOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.IRIDIUM).getItem(Names.NUGGET), 3), 0.7f);
-                FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorMaganeseOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.MANGANESE).getItem(Names.NUGGET), 3), 0.7f);
+                FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorManganeseOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.MANGANESE).getItem(Names.NUGGET), 3), 0.7f);
                 FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorMagnesiumOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.MAGNESIUM).getItem(Names.NUGGET), 3), 0.7f);
                 FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorOsmiumOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.OSMIUM).getItem(Names.NUGGET), 3), 0.7f);
                 FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorPlutoniumOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.PLUTONIUM).getItem(Names.NUGGET), 3), 0.7f);
@@ -224,7 +224,7 @@ public class PoorMetalsRecipes {
                                 FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherCadmiumOre, 1), new ItemStack(ModBlocks.poorCadmiumOre, 2), 0.7f);
                                 FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherChromiumOre, 1), new ItemStack(ModBlocks.poorChromiumOre, 2), 0.7f);
                                 FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherIridiumOre, 1), new ItemStack(ModBlocks.poorIridiumOre, 2), 0.7f);
-                                FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherMaganeseOre, 1), new ItemStack(ModBlocks.poorMaganeseOre, 2), 0.7f);
+                                FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherManganeseOre, 1), new ItemStack(ModBlocks.poorManganeseOre, 2), 0.7f);
                                 FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherMagnesiumOre, 1), new ItemStack(ModBlocks.poorMagnesiumOre, 2), 0.7f);
                                 FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherOsmiumOre, 1), new ItemStack(ModBlocks.poorOsmiumOre, 2), 0.7f);
                                 FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherPlutoniumOre, 1), new ItemStack(ModBlocks.poorPlutoniumOre, 2), 0.7f);
@@ -242,7 +242,7 @@ public class PoorMetalsRecipes {
                             FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherCadmiumOre, 1), new ItemStack(ModBlocks.poorCadmiumOre, 2), 0.7f);
                             FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherChromiumOre, 1), new ItemStack(ModBlocks.poorChromiumOre, 2), 0.7f);
                             FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherIridiumOre, 1), new ItemStack(ModBlocks.poorIridiumOre, 2), 0.7f);
-                            FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherMaganeseOre, 1), new ItemStack(ModBlocks.poorMaganeseOre, 2), 0.7f);
+                            FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherManganeseOre, 1), new ItemStack(ModBlocks.poorManganeseOre, 2), 0.7f);
                             FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherMagnesiumOre, 1), new ItemStack(ModBlocks.poorMagnesiumOre, 2), 0.7f);
                             FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherOsmiumOre, 1), new ItemStack(ModBlocks.poorOsmiumOre, 2), 0.7f);
                             FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherPlutoniumOre, 1), new ItemStack(ModBlocks.poorPlutoniumOre, 2), 0.7f);
@@ -265,7 +265,7 @@ public class PoorMetalsRecipes {
                             FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherCadmiumOre, 1), new ItemStack(ModBlocks.poorCadmiumOre, 2), 0.7f);
                             FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherChromiumOre, 1), new ItemStack(ModBlocks.poorChromiumOre, 2), 0.7f);
                             FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherIridiumOre, 1), new ItemStack(ModBlocks.poorIridiumOre, 2), 0.7f);
-                            FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherMaganeseOre, 1), new ItemStack(ModBlocks.poorMaganeseOre, 2), 0.7f);
+                            FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherManganeseOre, 1), new ItemStack(ModBlocks.poorManganeseOre, 2), 0.7f);
                             FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherMagnesiumOre, 1), new ItemStack(ModBlocks.poorMagnesiumOre, 2), 0.7f);
                             FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherOsmiumOre, 1), new ItemStack(ModBlocks.poorOsmiumOre, 2), 0.7f);
                             FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherPlutoniumOre, 1), new ItemStack(ModBlocks.poorPlutoniumOre, 2), 0.7f);
@@ -283,7 +283,7 @@ public class PoorMetalsRecipes {
                         FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherCadmiumOre, 1), new ItemStack(ModBlocks.poorCadmiumOre, 2), 0.7f);
                         FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherChromiumOre, 1), new ItemStack(ModBlocks.poorChromiumOre, 2), 0.7f);
                         FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherIridiumOre, 1), new ItemStack(ModBlocks.poorIridiumOre, 2), 0.7f);
-                        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherMaganeseOre, 1), new ItemStack(ModBlocks.poorMaganeseOre, 2), 0.7f);
+                        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherManganeseOre, 1), new ItemStack(ModBlocks.poorManganeseOre, 2), 0.7f);
                         FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherMagnesiumOre, 1), new ItemStack(ModBlocks.poorMagnesiumOre, 2), 0.7f);
                         FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherOsmiumOre, 1), new ItemStack(ModBlocks.poorOsmiumOre, 2), 0.7f);
                         FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherPlutoniumOre, 1), new ItemStack(ModBlocks.poorPlutoniumOre, 2), 0.7f);
@@ -308,7 +308,7 @@ public class PoorMetalsRecipes {
                                 FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndCadmiumOre, 1), new ItemStack(ModBlocks.poorCadmiumOre, 2), 0.7f);
                                 FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndChromiumOre, 1), new ItemStack(ModBlocks.poorChromiumOre, 2), 0.7f);
                                 FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndIridiumOre, 1), new ItemStack(ModBlocks.poorIridiumOre, 2), 0.7f);
-                                FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndMaganeseOre, 1), new ItemStack(ModBlocks.poorMaganeseOre, 2), 0.7f);
+                                FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndManganeseOre, 1), new ItemStack(ModBlocks.poorManganeseOre, 2), 0.7f);
                                 FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndMagnesiumOre, 1), new ItemStack(ModBlocks.poorMagnesiumOre, 2), 0.7f);
                                 FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndOsmiumOre, 1), new ItemStack(ModBlocks.poorOsmiumOre, 2), 0.7f);
                                 FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndPlutoniumOre, 1), new ItemStack(ModBlocks.poorPlutoniumOre, 2), 0.7f);
@@ -326,7 +326,7 @@ public class PoorMetalsRecipes {
                             FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndCadmiumOre, 1), new ItemStack(ModBlocks.poorCadmiumOre, 2), 0.7f);
                             FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndChromiumOre, 1), new ItemStack(ModBlocks.poorChromiumOre, 2), 0.7f);
                             FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndIridiumOre, 1), new ItemStack(ModBlocks.poorIridiumOre, 2), 0.7f);
-                            FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndMaganeseOre, 1), new ItemStack(ModBlocks.poorMaganeseOre, 2), 0.7f);
+                            FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndManganeseOre, 1), new ItemStack(ModBlocks.poorManganeseOre, 2), 0.7f);
                             FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndMagnesiumOre, 1), new ItemStack(ModBlocks.poorMagnesiumOre, 2), 0.7f);
                             FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndOsmiumOre, 1), new ItemStack(ModBlocks.poorOsmiumOre, 2), 0.7f);
                             FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndPlutoniumOre, 1), new ItemStack(ModBlocks.poorPlutoniumOre, 2), 0.7f);
@@ -349,7 +349,7 @@ public class PoorMetalsRecipes {
                             FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndCadmiumOre, 1), new ItemStack(ModBlocks.poorCadmiumOre, 2), 0.7f);
                             FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndChromiumOre, 1), new ItemStack(ModBlocks.poorChromiumOre, 2), 0.7f);
                             FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndIridiumOre, 1), new ItemStack(ModBlocks.poorIridiumOre, 2), 0.7f);
-                            FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndMaganeseOre, 1), new ItemStack(ModBlocks.poorMaganeseOre, 2), 0.7f);
+                            FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndManganeseOre, 1), new ItemStack(ModBlocks.poorManganeseOre, 2), 0.7f);
                             FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndMagnesiumOre, 1), new ItemStack(ModBlocks.poorMagnesiumOre, 2), 0.7f);
                             FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndOsmiumOre, 1), new ItemStack(ModBlocks.poorOsmiumOre, 2), 0.7f);
                             FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndPlutoniumOre, 1), new ItemStack(ModBlocks.poorPlutoniumOre, 2), 0.7f);
@@ -367,7 +367,7 @@ public class PoorMetalsRecipes {
                         FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndCadmiumOre, 1), new ItemStack(ModBlocks.poorCadmiumOre, 2), 0.7f);
                         FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndChromiumOre, 1), new ItemStack(ModBlocks.poorChromiumOre, 2), 0.7f);
                         FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndIridiumOre, 1), new ItemStack(ModBlocks.poorIridiumOre, 2), 0.7f);
-                        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndMaganeseOre, 1), new ItemStack(ModBlocks.poorMaganeseOre, 2), 0.7f);
+                        FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndManganeseOre, 1), new ItemStack(ModBlocks.poorManganeseOre, 2), 0.7f);
                         FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndMagnesiumOre, 1), new ItemStack(ModBlocks.poorMagnesiumOre, 2), 0.7f);
                         FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndOsmiumOre, 1), new ItemStack(ModBlocks.poorOsmiumOre, 2), 0.7f);
                         FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndPlutoniumOre, 1), new ItemStack(ModBlocks.poorPlutoniumOre, 2), 0.7f);
@@ -419,6 +419,7 @@ public class PoorMetalsRecipes {
             materialNamesMme.THORIUM,
             materialNamesMme.TITANIUM,
             materialNamesMme.TUNGSTEN,
+            materialNamesMme.URANIUM,
             materialNamesMme.ZIRCONIUM
     };
 
@@ -437,28 +438,20 @@ public class PoorMetalsRecipes {
                     }
                 }
                 if (Config.vanillaPoorOres){
-                    CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorGoldOre, 1), new ItemStack(Materials.getMaterialByName(MaterialNames.GOLD).getItem(Names.SMALLPOWDER), 6));
-                    CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorIronOre, 1), new ItemStack(Materials.getMaterialByName(MaterialNames.IRON).getItem(Names.SMALLPOWDER), 6));
+                    CrusherRecipeRegistry.addNewCrusherRecipe("orePoorGold", new ItemStack(Materials.getMaterialByName(MaterialNames.GOLD).getItem(Names.SMALLPOWDER), 6));
+                    CrusherRecipeRegistry.addNewCrusherRecipe("orePoorIron", new ItemStack(Materials.getMaterialByName(MaterialNames.IRON).getItem(Names.SMALLPOWDER), 6));
                 }
 
                 if (Loader.isModLoaded("modernmetals") && Config.modernMetalsPoorOres){
-                    CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorAluminumOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.ALUMINUM).getItem(Names.SMALLPOWDER), 6));
-                    CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorBerylliumOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.BERYLLIUM).getItem(Names.SMALLPOWDER), 6));
-                    CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorBoronOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.BORON).getItem(Names.SMALLPOWDER), 6));
-                    CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorCadmiumOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.CADMIUM).getItem(Names.SMALLPOWDER), 6));
-                    CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorChromiumOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.CHROMIUM).getItem(Names.SMALLPOWDER), 6));
-                    CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorIridiumOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.IRIDIUM).getItem(Names.SMALLPOWDER), 6));
-                    CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorMaganeseOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.MANGANESE).getItem(Names.SMALLPOWDER), 6));
-                    CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorMagnesiumOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.MAGNESIUM).getItem(Names.SMALLPOWDER), 6));
-                    CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorOsmiumOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.OSMIUM).getItem(Names.SMALLPOWDER), 6));
-                    CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorPlutoniumOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.PLUTONIUM).getItem(Names.SMALLPOWDER), 6));
-                    CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorRutileOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.RUTILE).getItem(Names.SMALLPOWDER), 6));
-                    CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorTantalumOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.TANTALUM).getItem(Names.SMALLPOWDER), 6));
-                    CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorThoriumOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.THORIUM).getItem(Names.SMALLPOWDER), 6));
-                    CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorTitaniumOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.TITANIUM).getItem(Names.SMALLPOWDER), 6));
-                    CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorTungstenOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.TUNGSTEN).getItem(Names.SMALLPOWDER), 6));
-                    CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorUraniumOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.URANIUM).getItem(Names.SMALLPOWDER), 6));
-                    CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorZirconiumOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.ZIRCONIUM).getItem(Names.SMALLPOWDER), 6));
+                    for (String matName : myMaterialNamesMme) {
+                        if (Materials.hasMaterial(matName)){
+                            MMDMaterial mat = Materials.getMaterialByName(matName);
+                            String oreName = mat.getCapitalizedName();
+                            String poorOreName = "orePoor" + oreName;
+                            ItemStack smallPowder = mat.getItemStack(Names.SMALLPOWDER, 6);
+                            CrusherRecipeRegistry.addNewCrusherRecipe(poorOreName, smallPowder);
+                        }
+                    }
                 }
             }else { //returns 3 instead of 6 tiny ore dust
                 if (Config.baseMetalsPoorOres){
@@ -473,28 +466,20 @@ public class PoorMetalsRecipes {
                     }
                 }
                 if (Config.vanillaPoorOres){
-                    CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorGoldOre, 1), new ItemStack(Materials.getMaterialByName(MaterialNames.GOLD).getItem(Names.SMALLPOWDER), 3));
-                    CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorIronOre, 1), new ItemStack(Materials.getMaterialByName(MaterialNames.IRON).getItem(Names.SMALLPOWDER), 3));
+                    CrusherRecipeRegistry.addNewCrusherRecipe("orePoorGold", new ItemStack(Materials.getMaterialByName(MaterialNames.GOLD).getItem(Names.SMALLPOWDER), 3));
+                    CrusherRecipeRegistry.addNewCrusherRecipe("orePoorIron", new ItemStack(Materials.getMaterialByName(MaterialNames.IRON).getItem(Names.SMALLPOWDER), 3));
                 }
 
                 if (Loader.isModLoaded("modernmetals") && Config.modernMetalsPoorOres){
-                    CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorAluminumOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.ALUMINUM).getItem(Names.SMALLPOWDER), 3));
-                    CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorBerylliumOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.BERYLLIUM).getItem(Names.SMALLPOWDER), 3));
-                    CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorBoronOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.BORON).getItem(Names.SMALLPOWDER), 3));
-                    CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorCadmiumOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.CADMIUM).getItem(Names.SMALLPOWDER), 3));
-                    CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorChromiumOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.CHROMIUM).getItem(Names.SMALLPOWDER), 3));
-                    CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorIridiumOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.IRIDIUM).getItem(Names.SMALLPOWDER), 3));
-                    CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorMaganeseOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.MANGANESE).getItem(Names.SMALLPOWDER), 3));
-                    CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorMagnesiumOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.MAGNESIUM).getItem(Names.SMALLPOWDER), 3));
-                    CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorOsmiumOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.OSMIUM).getItem(Names.SMALLPOWDER), 3));
-                    CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorPlutoniumOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.PLUTONIUM).getItem(Names.SMALLPOWDER), 3));
-                    CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorRutileOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.RUTILE).getItem(Names.SMALLPOWDER), 3));
-                    CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorTantalumOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.TANTALUM).getItem(Names.SMALLPOWDER), 3));
-                    CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorThoriumOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.THORIUM).getItem(Names.SMALLPOWDER), 3));
-                    CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorTitaniumOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.TITANIUM).getItem(Names.SMALLPOWDER), 3));
-                    CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorTungstenOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.TUNGSTEN).getItem(Names.SMALLPOWDER), 3));
-                    CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorUraniumOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.URANIUM).getItem(Names.SMALLPOWDER), 3));
-                    CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorZirconiumOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.ZIRCONIUM).getItem(Names.SMALLPOWDER), 3));
+                    for (String matName : myMaterialNamesMme) {
+                        if (Materials.hasMaterial(matName)){
+                            MMDMaterial mat = Materials.getMaterialByName(matName);
+                            String oreName = mat.getCapitalizedName();
+                            String poorOreName = "orePoor" + oreName;
+                            ItemStack smallPowder = mat.getItemStack(Names.SMALLPOWDER, 3);
+                            CrusherRecipeRegistry.addNewCrusherRecipe(poorOreName, smallPowder);
+                        }
+                    }
                 }
             }
         }
@@ -525,7 +510,7 @@ public class PoorMetalsRecipes {
                             CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorNetherCadmiumOre, 1), new ItemStack(ModBlocks.poorCadmiumOre, 2));
                             CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorNetherChromiumOre, 1), new ItemStack(ModBlocks.poorChromiumOre, 2));
                             CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorNetherIridiumOre, 1), new ItemStack(ModBlocks.poorIridiumOre, 2));
-                            CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorNetherMaganeseOre, 1), new ItemStack(ModBlocks.poorMaganeseOre, 2));
+                            CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorNetherManganeseOre, 1), new ItemStack(ModBlocks.poorManganeseOre, 2));
                             CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorNetherMagnesiumOre, 1), new ItemStack(ModBlocks.poorMagnesiumOre, 2));
                             CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorNetherOsmiumOre, 1), new ItemStack(ModBlocks.poorOsmiumOre, 2));
                             CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorNetherPlutoniumOre, 1), new ItemStack(ModBlocks.poorPlutoniumOre, 2));
@@ -563,7 +548,7 @@ public class PoorMetalsRecipes {
                             CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorEndCadmiumOre, 1), new ItemStack(ModBlocks.poorCadmiumOre, 2));
                             CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorEndChromiumOre, 1), new ItemStack(ModBlocks.poorChromiumOre, 2));
                             CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorEndIridiumOre, 1), new ItemStack(ModBlocks.poorIridiumOre, 2));
-                            CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorEndMaganeseOre, 1), new ItemStack(ModBlocks.poorMaganeseOre, 2));
+                            CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorEndManganeseOre, 1), new ItemStack(ModBlocks.poorManganeseOre, 2));
                             CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorEndMagnesiumOre, 1), new ItemStack(ModBlocks.poorMagnesiumOre, 2));
                             CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorEndOsmiumOre, 1), new ItemStack(ModBlocks.poorOsmiumOre, 2));
                             CrusherRecipeRegistry.addNewCrusherRecipe(new ItemStack(ModBlocks.poorEndPlutoniumOre, 1), new ItemStack(ModBlocks.poorPlutoniumOre, 2));
@@ -602,6 +587,27 @@ public class PoorMetalsRecipes {
                 OreDictionary.registerOre("orePoorZinc", ModBlocks.poorZincOre);
             }
         }
+        if (Config.modernMetalsPoorOresOverride || Loader.isModLoaded("modernmetals")){
+            if (Config.modernMetalsPoorOres){
+                OreDictionary.registerOre("orePoorAluminum", ModBlocks.poorAluminumOre);
+                OreDictionary.registerOre("orePoorBeryllium", ModBlocks.poorBerylliumOre);
+                OreDictionary.registerOre("orePoorBoron", ModBlocks.poorBoronOre);
+                OreDictionary.registerOre("orePoorCadmium", ModBlocks.poorCadmiumOre);
+                OreDictionary.registerOre("orePoorChromium", ModBlocks.poorChromiumOre);
+                OreDictionary.registerOre("orePoorIridium", ModBlocks.poorIridiumOre);
+                OreDictionary.registerOre("orePoorMagnesium", ModBlocks.poorMagnesiumOre);
+                OreDictionary.registerOre("orePoorManganese", ModBlocks.poorManganeseOre);
+                OreDictionary.registerOre("orePoorOsmium", ModBlocks.poorOsmiumOre);
+                OreDictionary.registerOre("orePoorPlutonium", ModBlocks.poorPlutoniumOre);
+                OreDictionary.registerOre("orePoorRutile", ModBlocks.poorRutileOre);
+                OreDictionary.registerOre("orePoorTantalum", ModBlocks.poorTantalumOre);
+                OreDictionary.registerOre("orePoorThorium", ModBlocks.poorThoriumOre);
+                OreDictionary.registerOre("orePoorTitanium", ModBlocks.poorTitaniumOre);
+                OreDictionary.registerOre("orePoorTungsten", ModBlocks.poorTungstenOre);
+                OreDictionary.registerOre("orePoorUranium", ModBlocks.poorUraniumOre);
+                OreDictionary.registerOre("orePoorZirconium", ModBlocks.poorZirconiumOre);
+            }
+        }
     }
 
     public static void initMaceratorRecipes(){
@@ -611,6 +617,20 @@ public class PoorMetalsRecipes {
                     for (String matName : myMaterialNamesBme) {
                         if (Materials.hasMaterial(matName)){
                             if (matName.equals("copper") || matName.equals("tin") || matName.equals("silver") || matName.equals("lead") || matName.equals("mercury")){
+                                continue;
+                            }
+                            MMDMaterial mat = Materials.getMaterialByName(matName);
+                            String oreName = mat.getCapitalizedName();
+                            String poorOreName = "orePoor" + oreName;
+                            ItemStack crushed = mat.getItemStack(Names.CRUSHED, 2);
+                            Recipes.macerator.addRecipe(Recipes.inputFactory.forOreDict(poorOreName, 3), null, false, crushed);
+                        }
+                    }
+                }
+                if (Config.modernMetalsPoorOres){
+                    for (String matName : myMaterialNamesMme) {
+                        if (Materials.hasMaterial(matName)){
+                            if (matName.equals("uranium")){
                                 continue;
                             }
                             MMDMaterial mat = Materials.getMaterialByName(matName);
@@ -634,6 +654,18 @@ public class PoorMetalsRecipes {
                             ItemStack crushed = mat.getItemStack(Names.CRUSHED, 1);
                             Recipes.macerator.addRecipe(Recipes.inputFactory.forOreDict(poorOreName, 3), null, false, crushed);
                         }
+                    }
+                }
+                for (String matName : myMaterialNamesMme) {
+                    if (Materials.hasMaterial(matName)){
+                        if (matName.equals("uranium")){
+                            continue;
+                        }
+                        MMDMaterial mat = Materials.getMaterialByName(matName);
+                        String oreName = mat.getCapitalizedName();
+                        String poorOreName = "orePoor" + oreName;
+                        ItemStack crushed = mat.getItemStack(Names.CRUSHED, 1);
+                        Recipes.macerator.addRecipe(Recipes.inputFactory.forOreDict(poorOreName, 3), null, false, crushed);
                     }
                 }
             }
