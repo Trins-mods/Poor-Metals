@@ -134,34 +134,34 @@ repositories{
 
 dependencies {
     deobfProvided ("com.mcmoddev:OreSpawn:${mc_version}-${orespawn_version}") {
-        exclude group: "com.mcmoddev.AdditionalLootTables"
+        exclude group: "com.mcmoddev"
     }
     runtime ("com.mcmoddev:OreSpawn:${mc_version}-${orespawn_version}") {
-        exclude group: "com.mcmoddev.AdditionalLootTables"
+        exclude group: "com.mcmoddev"
     }
     deobfProvided ("com.mcmoddev:MMDLib:${mc_version}-${mmdlib_version}") {
-        exclude group: "com.mcmoddev.AdditionalLootTables"
+        exclude group: "com.mcmoddev"
     }
     runtime ("com.mcmoddev:MMDLib:${mc_version}-${mmdlib_version}") {
-        exclude group: "com.mcmoddev.AdditionalLootTables"
+        exclude group: "com.mcmoddev"
     }
     deobfProvided ("com.mcmoddev:BaseMetals:${mc_version}-${bme_version}") {
-        exclude group: "com.mcmoddev.AdditionalLootTables"
+        exclude group: "com.mcmoddev"
     }
     runtime ("com.mcmoddev:BaseMetals:${mc_version}-${bme_version}") {
-        exclude group: "com.mcmoddev.AdditionalLootTables"
+        exclude group: "com.mcmoddev"
     }
     deobfProvided ("com.mcmoddev:BaseMinerals:${mc_version}-${bmi_version}") {
-        exclude group: "com.mcmoddev.AdditionalLootTables"
+        exclude group: "com.mcmoddev"
     }
     runtime ("com.mcmoddev:BaseMinerals:${mc_version}-${bmi_version}") {
-        exclude group: "com.mcmoddev.AdditionalLootTables"
+        exclude group: "com.mcmoddev"
     }
     deobfProvided ("com.mcmoddev:ModernMetals:${mc_version}-${mme_version}") {
-        exclude group: "com.mcmoddev.AdditionalLootTables"
+        exclude group: "com.mcmoddev"
     }
     runtime ("com.mcmoddev:ModernMetals:${mc_version}-${mme_version}") {
-        exclude group: "com.mcmoddev.AdditionalLootTables"
+        exclude group: "com.mcmoddev"
     }
     deobfProvided "net.industrial-craft:industrialcraft-2:${ic2_version}:api"
     runtime "net.industrial-craft:industrialcraft-2:${ic2_version}"
