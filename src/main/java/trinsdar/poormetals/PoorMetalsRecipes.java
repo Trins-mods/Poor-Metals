@@ -6,26 +6,24 @@ import com.mcmoddev.lib.data.Names;
 import com.mcmoddev.lib.material.MMDMaterial;
 import com.mcmoddev.lib.registry.CrusherRecipeRegistry;
 import com.mcmoddev.lib.util.Config.Options;
-import ic2.api.event.ProfileEvent;
 import ic2.api.item.IC2Items;
 import ic2.api.recipe.Recipes;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraftforge.fml.common.Loader;
-import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.oredict.OreDictionary;
 import trinsdar.poormetals.init.ModBlocks;
 
 public class PoorMetalsRecipes {
     private static void initFurnaceRecipes() {
-        if (Config.vanillaPoorOres){
+        if (PoorMetalsConfig.vanillaPoorOres){
             FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorGoldOre, 1), new ItemStack(Items.GOLD_NUGGET, 3), 0.7f);
             FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorIronOre, 1), new ItemStack(Items.IRON_NUGGET, 3), 0.7f);
         }
 
         if (Loader.isModLoaded("basemetals")) {
-            if (Config.baseMetalsPoorOres){
+            if (PoorMetalsConfig.baseMetalsPoorOres){
                 FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorAdamantineOre, 1), new ItemStack(Materials.getMaterialByName(MaterialNames.ADAMANTINE).getItem(Names.NUGGET), 3), 0.7f);
                 FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorAntimonyOre, 1), new ItemStack(Materials.getMaterialByName(MaterialNames.ANTIMONY).getItem(Names.NUGGET), 3), 0.7f);
                 FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorBismuthOre, 1), new ItemStack(Materials.getMaterialByName(MaterialNames.BISMUTH).getItem(Names.NUGGET), 3), 0.7f);
@@ -43,7 +41,7 @@ public class PoorMetalsRecipes {
         }
 
         if (Loader.isModLoaded("modernmetals")){
-            if (Config.modernMetalsPoorOres){
+            if (PoorMetalsConfig.modernMetalsPoorOres){
                 FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorAluminumOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.ALUMINUM).getItem(Names.NUGGET), 3), 0.7f);
                 FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorBerylliumOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.BERYLLIUM).getItem(Names.NUGGET), 3), 0.7f);
                 FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorBoronOre, 1), new ItemStack(com.mcmoddev.modernmetals.init.Materials.getMaterialByName(com.mcmoddev.modernmetals.data.MaterialNames.BORON).getItem(Names.NUGGET), 3), 0.7f);
@@ -64,16 +62,16 @@ public class PoorMetalsRecipes {
             }
         }
 
-        if (!Config.netherMetalsPoorOresOverride){
+        if (!PoorMetalsConfig.netherMetalsPoorOresOverride){
             if (Loader.isModLoaded("nethermetals")){
-                if (Config.netherMetalsPoorOres){
-                    if (Config.vanillaPoorOres){
+                if (PoorMetalsConfig.netherMetalsPoorOres){
+                    if (PoorMetalsConfig.vanillaPoorOres){
                         FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherGoldOre, 1), new ItemStack(ModBlocks.poorGoldOre, 2), 0.7f);
                         FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherIronOre, 1), new ItemStack(ModBlocks.poorIronOre, 2), 0.7f);
                     }
-                    if (!Config.baseMetalsPoorOresOverride){
+                    if (!PoorMetalsConfig.baseMetalsPoorOresOverride){
                         if (Loader.isModLoaded("basemetals")){
-                            if (Config.baseMetalsPoorOres){
+                            if (PoorMetalsConfig.baseMetalsPoorOres){
                                 FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherAntimonyOre, 1), new ItemStack(ModBlocks.poorAntimonyOre, 2), 0.7f);
                                 FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherBismuthOre, 1), new ItemStack(ModBlocks.poorBismuthOre, 2), 0.7f);
                                 FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherCopperOre, 1), new ItemStack(ModBlocks.poorCopperOre, 2), 0.7f);
@@ -86,8 +84,8 @@ public class PoorMetalsRecipes {
                                 FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherZincOre, 1), new ItemStack(ModBlocks.poorZincOre, 2), 0.7f);
                             }
                         }
-                    }else if (Config.baseMetalsPoorOresOverride){
-                        if (Config.baseMetalsPoorOres){
+                    }else if (PoorMetalsConfig.baseMetalsPoorOresOverride){
+                        if (PoorMetalsConfig.baseMetalsPoorOres){
                             FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherAntimonyOre, 1), new ItemStack(ModBlocks.poorAntimonyOre, 2), 0.7f);
                             FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherBismuthOre, 1), new ItemStack(ModBlocks.poorBismuthOre, 2), 0.7f);
                             FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherCopperOre, 1), new ItemStack(ModBlocks.poorCopperOre, 2), 0.7f);
@@ -102,15 +100,15 @@ public class PoorMetalsRecipes {
                     }
                 }
             }
-        }else if (Config.netherMetalsPoorOresOverride){
-            if (Config.netherMetalsPoorOres){
-                if (Config.vanillaPoorOres){
+        }else if (PoorMetalsConfig.netherMetalsPoorOresOverride){
+            if (PoorMetalsConfig.netherMetalsPoorOres){
+                if (PoorMetalsConfig.vanillaPoorOres){
                     FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherGoldOre, 1), new ItemStack(ModBlocks.poorGoldOre, 2), 0.7f);
                     FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherIronOre, 1), new ItemStack(ModBlocks.poorIronOre, 2), 0.7f);
                 }
-                if (!Config.baseMetalsPoorOresOverride){
+                if (!PoorMetalsConfig.baseMetalsPoorOresOverride){
                     if (Loader.isModLoaded("basemetals")){
-                        if (Config.baseMetalsPoorOres){
+                        if (PoorMetalsConfig.baseMetalsPoorOres){
                             FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherAntimonyOre, 1), new ItemStack(ModBlocks.poorAntimonyOre, 2), 0.7f);
                             FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherBismuthOre, 1), new ItemStack(ModBlocks.poorBismuthOre, 2), 0.7f);
                             FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherCopperOre, 1), new ItemStack(ModBlocks.poorCopperOre, 2), 0.7f);
@@ -123,8 +121,8 @@ public class PoorMetalsRecipes {
                             FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherZincOre, 1), new ItemStack(ModBlocks.poorZincOre, 2), 0.7f);
                         }
                     }
-                }else if (Config.baseMetalsPoorOresOverride){
-                    if (Config.baseMetalsPoorOres){
+                }else if (PoorMetalsConfig.baseMetalsPoorOresOverride){
+                    if (PoorMetalsConfig.baseMetalsPoorOres){
                         FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherAntimonyOre, 1), new ItemStack(ModBlocks.poorAntimonyOre, 2), 0.7f);
                         FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherBismuthOre, 1), new ItemStack(ModBlocks.poorBismuthOre, 2), 0.7f);
                         FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherCopperOre, 1), new ItemStack(ModBlocks.poorCopperOre, 2), 0.7f);
@@ -140,16 +138,16 @@ public class PoorMetalsRecipes {
             }
         }
 
-        if (!Config.endMetalsPoorOresOverride){
+        if (!PoorMetalsConfig.endMetalsPoorOresOverride){
             if (Loader.isModLoaded("endmetals")){
-                if (Config.endMetalsPoorOres){
-                    if (Config.vanillaPoorOres){
+                if (PoorMetalsConfig.endMetalsPoorOres){
+                    if (PoorMetalsConfig.vanillaPoorOres){
                         FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndGoldOre, 1), new ItemStack(ModBlocks.poorGoldOre, 2), 0.7f);
                         FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndIronOre, 1), new ItemStack(ModBlocks.poorIronOre, 2), 0.7f);
                     }
-                    if (!Config.baseMetalsPoorOresOverride){
+                    if (!PoorMetalsConfig.baseMetalsPoorOresOverride){
                         if (Loader.isModLoaded("basemetals")){
-                            if (Config.baseMetalsPoorOres){
+                            if (PoorMetalsConfig.baseMetalsPoorOres){
                                 FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndAntimonyOre, 1), new ItemStack(ModBlocks.poorAntimonyOre, 2), 0.7f);
                                 FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndBismuthOre, 1), new ItemStack(ModBlocks.poorBismuthOre, 2), 0.7f);
                                 FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndCopperOre, 1), new ItemStack(ModBlocks.poorCopperOre, 2), 0.7f);
@@ -162,8 +160,8 @@ public class PoorMetalsRecipes {
                                 FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndZincOre, 1), new ItemStack(ModBlocks.poorZincOre, 2), 0.7f);
                             }
                         }
-                    }else if (Config.baseMetalsPoorOresOverride){
-                        if (Config.baseMetalsPoorOres){
+                    }else if (PoorMetalsConfig.baseMetalsPoorOresOverride){
+                        if (PoorMetalsConfig.baseMetalsPoorOres){
                             FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndAntimonyOre, 1), new ItemStack(ModBlocks.poorAntimonyOre, 2), 0.7f);
                             FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndBismuthOre, 1), new ItemStack(ModBlocks.poorBismuthOre, 2), 0.7f);
                             FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndCopperOre, 1), new ItemStack(ModBlocks.poorCopperOre, 2), 0.7f);
@@ -178,15 +176,15 @@ public class PoorMetalsRecipes {
                     }
                 }
             }
-        }else if (Config.endMetalsPoorOresOverride){
-            if (Config.endMetalsPoorOres){
-                if (Config.vanillaPoorOres){
+        }else if (PoorMetalsConfig.endMetalsPoorOresOverride){
+            if (PoorMetalsConfig.endMetalsPoorOres){
+                if (PoorMetalsConfig.vanillaPoorOres){
                     FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndGoldOre, 1), new ItemStack(ModBlocks.poorGoldOre, 2), 0.7f);
                     FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndIronOre, 1), new ItemStack(ModBlocks.poorIronOre, 2), 0.7f);
                 }
-                if (!Config.baseMetalsPoorOresOverride){
+                if (!PoorMetalsConfig.baseMetalsPoorOresOverride){
                     if (Loader.isModLoaded("basemetals")){
-                        if (Config.baseMetalsPoorOres){
+                        if (PoorMetalsConfig.baseMetalsPoorOres){
                             FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndAntimonyOre, 1), new ItemStack(ModBlocks.poorAntimonyOre, 2), 0.7f);
                             FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndBismuthOre, 1), new ItemStack(ModBlocks.poorBismuthOre, 2), 0.7f);
                             FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndCopperOre, 1), new ItemStack(ModBlocks.poorCopperOre, 2), 0.7f);
@@ -199,8 +197,8 @@ public class PoorMetalsRecipes {
                             FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndZincOre, 1), new ItemStack(ModBlocks.poorZincOre, 2), 0.7f);
                         }
                     }
-                }else if (Config.baseMetalsPoorOresOverride){
-                    if (Config.baseMetalsPoorOres){
+                }else if (PoorMetalsConfig.baseMetalsPoorOresOverride){
+                    if (PoorMetalsConfig.baseMetalsPoorOres){
                         FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndAntimonyOre, 1), new ItemStack(ModBlocks.poorAntimonyOre, 2), 0.7f);
                         FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndBismuthOre, 1), new ItemStack(ModBlocks.poorBismuthOre, 2), 0.7f);
                         FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndCopperOre, 1), new ItemStack(ModBlocks.poorCopperOre, 2), 0.7f);
@@ -216,12 +214,12 @@ public class PoorMetalsRecipes {
             }
         }
 
-        if (!Config.netherModernMetalsPoorOresOverride){
+        if (!PoorMetalsConfig.netherModernMetalsPoorOresOverride){
             if (Loader.isModLoaded("nethermetals") && Loader.isModLoaded("modernmetals")){
-                if (Config.netherModernMetalsPoorOres){
-                    if (!Config.modernMetalsPoorOresOverride){
+                if (PoorMetalsConfig.netherModernMetalsPoorOres){
+                    if (!PoorMetalsConfig.modernMetalsPoorOresOverride){
                         if (Loader.isModLoaded("modernmetals")){
-                            if (Config.modernMetalsPoorOres){
+                            if (PoorMetalsConfig.modernMetalsPoorOres){
                                 FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherAluminumOre, 1), new ItemStack(ModBlocks.poorAluminumOre, 2), 0.7f);
                                 FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherCadmiumOre, 1), new ItemStack(ModBlocks.poorCadmiumOre, 2), 0.7f);
                                 FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherChromiumOre, 1), new ItemStack(ModBlocks.poorChromiumOre, 2), 0.7f);
@@ -238,8 +236,8 @@ public class PoorMetalsRecipes {
                                 FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherZirconiumOre, 1), new ItemStack(ModBlocks.poorZirconiumOre, 2), 0.7f);
                             }
                         }
-                    }else if (Config.modernMetalsPoorOresOverride){
-                        if (Config.modernMetalsPoorOres){
+                    }else if (PoorMetalsConfig.modernMetalsPoorOresOverride){
+                        if (PoorMetalsConfig.modernMetalsPoorOres){
                             FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherAluminumOre, 1), new ItemStack(ModBlocks.poorAluminumOre, 2), 0.7f);
                             FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherCadmiumOre, 1), new ItemStack(ModBlocks.poorCadmiumOre, 2), 0.7f);
                             FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherChromiumOre, 1), new ItemStack(ModBlocks.poorChromiumOre, 2), 0.7f);
@@ -258,11 +256,11 @@ public class PoorMetalsRecipes {
                     }
                 }
             }
-        }else if (Config.netherModernMetalsPoorOresOverride){
-            if (Config.netherModernMetalsPoorOres){
-                if (!Config.modernMetalsPoorOresOverride){
+        }else if (PoorMetalsConfig.netherModernMetalsPoorOresOverride){
+            if (PoorMetalsConfig.netherModernMetalsPoorOres){
+                if (!PoorMetalsConfig.modernMetalsPoorOresOverride){
                     if (Loader.isModLoaded("modernmetals")){
-                        if (Config.modernMetalsPoorOres){
+                        if (PoorMetalsConfig.modernMetalsPoorOres){
                             FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherAluminumOre, 1), new ItemStack(ModBlocks.poorAluminumOre, 2), 0.7f);
                             FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherCadmiumOre, 1), new ItemStack(ModBlocks.poorCadmiumOre, 2), 0.7f);
                             FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherChromiumOre, 1), new ItemStack(ModBlocks.poorChromiumOre, 2), 0.7f);
@@ -279,8 +277,8 @@ public class PoorMetalsRecipes {
                             FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherZirconiumOre, 1), new ItemStack(ModBlocks.poorZirconiumOre, 2), 0.7f);
                         }
                     }
-                }else if (Config.modernMetalsPoorOresOverride){
-                    if (Config.modernMetalsPoorOres){
+                }else if (PoorMetalsConfig.modernMetalsPoorOresOverride){
+                    if (PoorMetalsConfig.modernMetalsPoorOres){
                         FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherAluminumOre, 1), new ItemStack(ModBlocks.poorAluminumOre, 2), 0.7f);
                         FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherCadmiumOre, 1), new ItemStack(ModBlocks.poorCadmiumOre, 2), 0.7f);
                         FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorNetherChromiumOre, 1), new ItemStack(ModBlocks.poorChromiumOre, 2), 0.7f);
@@ -300,12 +298,12 @@ public class PoorMetalsRecipes {
             }
         }
 
-        if (!Config.endModernMetalsPoorOresOverride){
+        if (!PoorMetalsConfig.endModernMetalsPoorOresOverride){
             if (Loader.isModLoaded("endmetals") && Loader.isModLoaded("modernmetals")){
-                if (Config.endModernMetalsPoorOres){
-                    if (!Config.modernMetalsPoorOresOverride){
+                if (PoorMetalsConfig.endModernMetalsPoorOres){
+                    if (!PoorMetalsConfig.modernMetalsPoorOresOverride){
                         if (Loader.isModLoaded("modernmetals")){
-                            if (Config.modernMetalsPoorOres){
+                            if (PoorMetalsConfig.modernMetalsPoorOres){
                                 FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndAluminumOre, 1), new ItemStack(ModBlocks.poorAluminumOre, 2), 0.7f);
                                 FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndCadmiumOre, 1), new ItemStack(ModBlocks.poorCadmiumOre, 2), 0.7f);
                                 FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndChromiumOre, 1), new ItemStack(ModBlocks.poorChromiumOre, 2), 0.7f);
@@ -322,8 +320,8 @@ public class PoorMetalsRecipes {
                                 FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndZirconiumOre, 1), new ItemStack(ModBlocks.poorZirconiumOre, 2), 0.7f);
                             }
                         }
-                    }else if (Config.modernMetalsPoorOresOverride){
-                        if (Config.modernMetalsPoorOres){
+                    }else if (PoorMetalsConfig.modernMetalsPoorOresOverride){
+                        if (PoorMetalsConfig.modernMetalsPoorOres){
                             FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndAluminumOre, 1), new ItemStack(ModBlocks.poorAluminumOre, 2), 0.7f);
                             FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndCadmiumOre, 1), new ItemStack(ModBlocks.poorCadmiumOre, 2), 0.7f);
                             FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndChromiumOre, 1), new ItemStack(ModBlocks.poorChromiumOre, 2), 0.7f);
@@ -342,11 +340,11 @@ public class PoorMetalsRecipes {
                     }
                 }
             }
-        }else if (Config.endModernMetalsPoorOresOverride){
-            if (Config.endModernMetalsPoorOres){
-                if (!Config.modernMetalsPoorOresOverride){
+        }else if (PoorMetalsConfig.endModernMetalsPoorOresOverride){
+            if (PoorMetalsConfig.endModernMetalsPoorOres){
+                if (!PoorMetalsConfig.modernMetalsPoorOresOverride){
                     if (Loader.isModLoaded("modernmetals")){
-                        if (Config.modernMetalsPoorOres){
+                        if (PoorMetalsConfig.modernMetalsPoorOres){
                             FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndAluminumOre, 1), new ItemStack(ModBlocks.poorAluminumOre, 2), 0.7f);
                             FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndCadmiumOre, 1), new ItemStack(ModBlocks.poorCadmiumOre, 2), 0.7f);
                             FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndChromiumOre, 1), new ItemStack(ModBlocks.poorChromiumOre, 2), 0.7f);
@@ -363,8 +361,8 @@ public class PoorMetalsRecipes {
                             FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndZirconiumOre, 1), new ItemStack(ModBlocks.poorZirconiumOre, 2), 0.7f);
                         }
                     }
-                }else if (Config.modernMetalsPoorOresOverride){
-                    if (Config.modernMetalsPoorOres){
+                }else if (PoorMetalsConfig.modernMetalsPoorOresOverride){
+                    if (PoorMetalsConfig.modernMetalsPoorOres){
                         FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndAluminumOre, 1), new ItemStack(ModBlocks.poorAluminumOre, 2), 0.7f);
                         FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndCadmiumOre, 1), new ItemStack(ModBlocks.poorCadmiumOre, 2), 0.7f);
                         FurnaceRecipes.instance().addSmeltingRecipe(new ItemStack(ModBlocks.poorEndChromiumOre, 1), new ItemStack(ModBlocks.poorChromiumOre, 2), 0.7f);
@@ -426,14 +424,14 @@ public class PoorMetalsRecipes {
     };
 
     private static void initCrackhammerRecipes(){
-        if (Config.poorOreCrackHammer && Loader.isModLoaded("basemetals")){
-            if (Config.poorOreDouble){
-                if (Config.vanillaPoorOres){
+        if (PoorMetalsConfig.poorOreCrackHammer && Loader.isModLoaded("basemetals")){
+            if (PoorMetalsConfig.poorOreDouble){
+                if (PoorMetalsConfig.vanillaPoorOres){
                     CrusherRecipeRegistry.addNewCrusherRecipe("orePoorGold", Materials.getMaterialByName(MaterialNames.GOLD).getItemStack(Names.SMALLPOWDER, 6));
                     CrusherRecipeRegistry.addNewCrusherRecipe("orePoorIron", Materials.getMaterialByName(MaterialNames.IRON).getItemStack(Names.SMALLPOWDER, 6));
                 }
 
-                if (Config.baseMetalsPoorOres){
+                if (PoorMetalsConfig.baseMetalsPoorOres){
                     for (String matName : myMaterialNamesBme) {
                         if (Materials.hasMaterial(matName)){
                             MMDMaterial mat = Materials.getMaterialByName(matName);
@@ -445,7 +443,7 @@ public class PoorMetalsRecipes {
                     }
                 }
                 if (Loader.isModLoaded("modernmetals")){
-                    if (Config.modernMetalsPoorOres){
+                    if (PoorMetalsConfig.modernMetalsPoorOres){
                         for (String matName : myMaterialNamesMme) {
                             if (Materials.hasMaterial(matName)){
                                 MMDMaterial mat = Materials.getMaterialByName(matName);
@@ -456,7 +454,7 @@ public class PoorMetalsRecipes {
                             }
                         }
                     }
-                    if (Loader.isModLoaded("nethermetals") && Config.netherModernMetalsPoorOres){
+                    if (Loader.isModLoaded("nethermetals") && PoorMetalsConfig.netherModernMetalsPoorOres){
                         for (String matName : myMaterialNamesMme) {
                             if (Materials.hasMaterial(matName)){
                                 if (matName.equals("beryllium") || matName.equals("boron") || matName.equals("thorium")){
@@ -470,7 +468,7 @@ public class PoorMetalsRecipes {
                             }
                         }
                     }
-                    if (Loader.isModLoaded("endmetals") && Config.endModernMetalsPoorOres){
+                    if (Loader.isModLoaded("endmetals") && PoorMetalsConfig.endModernMetalsPoorOres){
                         for (String matName : myMaterialNamesMme) {
                             if (Materials.hasMaterial(matName)){
                                 if (matName.equals("beryllium") || matName.equals("boron") || matName.equals("thorium")){
@@ -485,7 +483,7 @@ public class PoorMetalsRecipes {
                         }
                     }
                 }
-                if (Loader.isModLoaded("nethermetals") && Config.netherMetalsPoorOres){
+                if (Loader.isModLoaded("nethermetals") && PoorMetalsConfig.netherMetalsPoorOres){
                     CrusherRecipeRegistry.addNewCrusherRecipe("orePoorNetherGold", Materials.getMaterialByName(MaterialNames.GOLD).getItemStack(Names.SMALLPOWDER, 12));
                     CrusherRecipeRegistry.addNewCrusherRecipe("orePoorNetherIron", Materials.getMaterialByName(MaterialNames.IRON).getItemStack(Names.SMALLPOWDER, 12));
                     for (String matName : myMaterialNamesBme) {
@@ -501,7 +499,7 @@ public class PoorMetalsRecipes {
                         }
                     }
                 }
-                if (Loader.isModLoaded("endmetals") && Config.endMetalsPoorOres){
+                if (Loader.isModLoaded("endmetals") && PoorMetalsConfig.endMetalsPoorOres){
                     CrusherRecipeRegistry.addNewCrusherRecipe("orePoorEndGold", Materials.getMaterialByName(MaterialNames.GOLD).getItemStack(Names.SMALLPOWDER, 12));
                     CrusherRecipeRegistry.addNewCrusherRecipe("orePoorEndIron", Materials.getMaterialByName(MaterialNames.IRON).getItemStack(Names.SMALLPOWDER, 12));
                     for (String matName : myMaterialNamesBme) {
@@ -518,7 +516,7 @@ public class PoorMetalsRecipes {
                     }
                 }
             }else { //returns 3 & 6 instead of 6 & 12 tiny ore dust
-                if (Config.baseMetalsPoorOres){
+                if (PoorMetalsConfig.baseMetalsPoorOres){
                     for (String matName : myMaterialNamesBme) {
                         if (Materials.hasMaterial(matName)){
                             MMDMaterial mat = Materials.getMaterialByName(matName);
@@ -529,13 +527,13 @@ public class PoorMetalsRecipes {
                         }
                     }
                 }
-                if (Config.vanillaPoorOres){
+                if (PoorMetalsConfig.vanillaPoorOres){
                     CrusherRecipeRegistry.addNewCrusherRecipe("orePoorGold", Materials.getMaterialByName(MaterialNames.GOLD).getItemStack(Names.SMALLPOWDER, 3));
                     CrusherRecipeRegistry.addNewCrusherRecipe("orePoorIron", Materials.getMaterialByName(MaterialNames.IRON).getItemStack(Names.SMALLPOWDER, 3));
                 }
 
                 if (Loader.isModLoaded("modernmetals")){
-                    if (Config.modernMetalsPoorOres){
+                    if (PoorMetalsConfig.modernMetalsPoorOres){
                         for (String matName : myMaterialNamesMme) {
                             if (Materials.hasMaterial(matName)){
                                 MMDMaterial mat = Materials.getMaterialByName(matName);
@@ -546,7 +544,7 @@ public class PoorMetalsRecipes {
                             }
                         }
                     }
-                    if (Loader.isModLoaded("nethermetals") && Config.netherModernMetalsPoorOres){
+                    if (Loader.isModLoaded("nethermetals") && PoorMetalsConfig.netherModernMetalsPoorOres){
                         for (String matName : myMaterialNamesMme) {
                             if (Materials.hasMaterial(matName)){
                                 if (matName.equals("beryllium") || matName.equals("boron") || matName.equals("thorium")){
@@ -560,7 +558,7 @@ public class PoorMetalsRecipes {
                             }
                         }
                     }
-                    if (Loader.isModLoaded("endmetals") && Config.endModernMetalsPoorOres){
+                    if (Loader.isModLoaded("endmetals") && PoorMetalsConfig.endModernMetalsPoorOres){
                         for (String matName : myMaterialNamesMme) {
                             if (Materials.hasMaterial(matName)){
                                 if (matName.equals("beryllium") || matName.equals("boron") || matName.equals("thorium")){
@@ -575,7 +573,7 @@ public class PoorMetalsRecipes {
                         }
                     }
                 }
-                if (Loader.isModLoaded("nethermetals") && Config.netherMetalsPoorOres){
+                if (Loader.isModLoaded("nethermetals") && PoorMetalsConfig.netherMetalsPoorOres){
                     CrusherRecipeRegistry.addNewCrusherRecipe("orePoorNetherGold", Materials.getMaterialByName(MaterialNames.GOLD).getItemStack(Names.SMALLPOWDER, 6));
                     CrusherRecipeRegistry.addNewCrusherRecipe("orePoorNetherIron", Materials.getMaterialByName(MaterialNames.IRON).getItemStack(Names.SMALLPOWDER, 6));
                     for (String matName : myMaterialNamesBme) {
@@ -591,7 +589,7 @@ public class PoorMetalsRecipes {
                         }
                     }
                 }
-                if (Loader.isModLoaded("endmetals") && Config.endMetalsPoorOres){
+                if (Loader.isModLoaded("endmetals") && PoorMetalsConfig.endMetalsPoorOres){
                     CrusherRecipeRegistry.addNewCrusherRecipe("orePoorEndGold", Materials.getMaterialByName(MaterialNames.GOLD).getItemStack(Names.SMALLPOWDER, 6));
                     CrusherRecipeRegistry.addNewCrusherRecipe("orePoorEndIron", Materials.getMaterialByName(MaterialNames.IRON).getItemStack(Names.SMALLPOWDER, 6));
                     for (String matName : myMaterialNamesBme) {
@@ -612,12 +610,12 @@ public class PoorMetalsRecipes {
     }
 
     private static void initOreDictionary(){
-        if (Config.vanillaPoorOres){
+        if (PoorMetalsConfig.vanillaPoorOres){
             OreDictionary.registerOre("orePoorIron", ModBlocks.poorIronOre);
             OreDictionary.registerOre("orePoorGold", ModBlocks.poorGoldOre);
         }
-        if (Config.baseMetalsPoorOresOverride || Loader.isModLoaded("basemetals")){
-            if (Config.baseMetalsPoorOres){
+        if (PoorMetalsConfig.baseMetalsPoorOresOverride || Loader.isModLoaded("basemetals")){
+            if (PoorMetalsConfig.baseMetalsPoorOres){
                 OreDictionary.registerOre("orePoorAdamantine", ModBlocks.poorAdamantineOre);
                 OreDictionary.registerOre("orePoorAntimony", ModBlocks.poorAntimonyOre);
                 OreDictionary.registerOre("orePoorBismuth", ModBlocks.poorBismuthOre);
@@ -633,8 +631,8 @@ public class PoorMetalsRecipes {
                 OreDictionary.registerOre("orePoorZinc", ModBlocks.poorZincOre);
 
             }
-            if (Config.netherMetalsPoorOresOverride || Loader.isModLoaded("nethermetals")){
-                if (Config.netherMetalsPoorOres){
+            if (PoorMetalsConfig.netherMetalsPoorOresOverride || Loader.isModLoaded("nethermetals")){
+                if (PoorMetalsConfig.netherMetalsPoorOres){
                     OreDictionary.registerOre("orePoorNetherIron", ModBlocks.poorIronOre);
                     OreDictionary.registerOre("orePoorNetherGold", ModBlocks.poorGoldOre);
                     OreDictionary.registerOre("orePoorNetherAntimony", ModBlocks.poorNetherAntimonyOre);
@@ -650,8 +648,8 @@ public class PoorMetalsRecipes {
 
                 }
             }
-            if (Config.endMetalsPoorOresOverride || Loader.isModLoaded("endmetals")){
-                if (Config.endMetalsPoorOres){
+            if (PoorMetalsConfig.endMetalsPoorOresOverride || Loader.isModLoaded("endmetals")){
+                if (PoorMetalsConfig.endMetalsPoorOres){
                     OreDictionary.registerOre("orePoorEndIron", ModBlocks.poorIronOre);
                     OreDictionary.registerOre("orePoorEndGold", ModBlocks.poorGoldOre);
                     OreDictionary.registerOre("orePoorEndAntimony", ModBlocks.poorEndAntimonyOre);
@@ -668,8 +666,8 @@ public class PoorMetalsRecipes {
                 }
             }
         }
-        if (Config.modernMetalsPoorOresOverride || Loader.isModLoaded("modernmetals")){
-            if (Config.modernMetalsPoorOres){
+        if (PoorMetalsConfig.modernMetalsPoorOresOverride || Loader.isModLoaded("modernmetals")){
+            if (PoorMetalsConfig.modernMetalsPoorOres){
                 OreDictionary.registerOre("orePoorAluminum", ModBlocks.poorAluminumOre);
                 OreDictionary.registerOre("orePoorBeryllium", ModBlocks.poorBerylliumOre);
                 OreDictionary.registerOre("orePoorBoron", ModBlocks.poorBoronOre);
@@ -688,8 +686,8 @@ public class PoorMetalsRecipes {
                 OreDictionary.registerOre("orePoorUranium", ModBlocks.poorUraniumOre);
                 OreDictionary.registerOre("orePoorZirconium", ModBlocks.poorZirconiumOre);
             }
-            if (Config.netherModernMetalsPoorOresOverride || Loader.isModLoaded("nethermetals")){
-                if (Config.netherModernMetalsPoorOres){
+            if (PoorMetalsConfig.netherModernMetalsPoorOresOverride || Loader.isModLoaded("nethermetals")){
+                if (PoorMetalsConfig.netherModernMetalsPoorOres){
                     OreDictionary.registerOre("orePoorNetherAluminum", ModBlocks.poorNetherAluminumOre);
                     OreDictionary.registerOre("orePoorNetherCadmium", ModBlocks.poorNetherCadmiumOre);
                     OreDictionary.registerOre("orePoorNetherChromium", ModBlocks.poorNetherChromiumOre);
@@ -706,8 +704,8 @@ public class PoorMetalsRecipes {
                     OreDictionary.registerOre("orePoorNetherZirconium", ModBlocks.poorNetherZirconiumOre);
                 }
             }
-            if (Config.endModernMetalsPoorOresOverride || Loader.isModLoaded("endmetals")){
-                if (Config.endModernMetalsPoorOres){
+            if (PoorMetalsConfig.endModernMetalsPoorOresOverride || Loader.isModLoaded("endmetals")){
+                if (PoorMetalsConfig.endModernMetalsPoorOres){
                     OreDictionary.registerOre("orePoorEndAluminum", ModBlocks.poorEndAluminumOre);
                     OreDictionary.registerOre("orePoorEndCadmium", ModBlocks.poorEndCadmiumOre);
                     OreDictionary.registerOre("orePoorEndChromium", ModBlocks.poorEndChromiumOre);
@@ -734,9 +732,9 @@ public class PoorMetalsRecipes {
     }
 
     public static void initMaceratorRecipes(){
-        if (Loader.isModLoaded("basemetals") && Loader.isModLoaded("ic2") && Config.poorOreMacerator && Options.isModEnabled("ic2")){
-            if (Config.poorOreDouble){
-                if (Config.baseMetalsPoorOres){
+        if (Loader.isModLoaded("basemetals") && Loader.isModLoaded("ic2") && PoorMetalsConfig.poorOreMacerator && Options.isModEnabled("ic2")){
+            if (PoorMetalsConfig.poorOreDouble){
+                if (PoorMetalsConfig.baseMetalsPoorOres){
                     for (String matName : myMaterialNamesBme) {
                         if (Materials.hasMaterial(matName)){
                             if (matName.equals("copper") || matName.equals("tin") || matName.equals("silver") || matName.equals("lead") || matName.equals("mercury")){
@@ -749,7 +747,7 @@ public class PoorMetalsRecipes {
                             Recipes.macerator.addRecipe(Recipes.inputFactory.forOreDict(poorOreName, 3), null, false, crushed);
                         }
                     }
-                    if (Config.netherMetalsPoorOres){
+                    if (PoorMetalsConfig.netherMetalsPoorOres){
                         for (String matName : myMaterialNamesBme) {
                             if (Materials.hasMaterial(matName)){
                                 if (matName.equals("copper") || matName.equals("tin") || matName.equals("silver") || matName.equals("lead") || matName.equals("mercury") || matName.equals("adamantine") || matName.equals("coldiron") || matName.equals("starsteel")){
@@ -763,7 +761,7 @@ public class PoorMetalsRecipes {
                             }
                         }
                     }
-                    if (Config.endMetalsPoorOres){
+                    if (PoorMetalsConfig.endMetalsPoorOres){
                         for (String matName : myMaterialNamesBme) {
                             if (Materials.hasMaterial(matName)){
                                 if (matName.equals("copper") || matName.equals("tin") || matName.equals("silver") || matName.equals("lead") || matName.equals("mercury") || matName.equals("adamantine") || matName.equals("coldiron") || matName.equals("starsteel")){
@@ -778,7 +776,7 @@ public class PoorMetalsRecipes {
                         }
                     }
                 }
-                if (Config.modernMetalsPoorOres && Loader.isModLoaded("modernmetals")){
+                if (PoorMetalsConfig.modernMetalsPoorOres && Loader.isModLoaded("modernmetals")){
                     Recipes.macerator.addRecipe(Recipes.inputFactory.forOreDict("orePoorUranium", 3), null, false, getIc2(IC2Items.getItem("crushed", "uranium"), 2));
                     for (String matName : myMaterialNamesMme) {
                         if (Materials.hasMaterial(matName)){
@@ -792,7 +790,7 @@ public class PoorMetalsRecipes {
                             Recipes.macerator.addRecipe(Recipes.inputFactory.forOreDict(poorOreName, 3), null, false, crushed);
                         }
                     }
-                    if (Loader.isModLoaded("nethermetals") && Config.netherModernMetalsPoorOres){
+                    if (Loader.isModLoaded("nethermetals") && PoorMetalsConfig.netherModernMetalsPoorOres){
                         Recipes.macerator.addRecipe(Recipes.inputFactory.forOreDict("orePoorNetherUranium", 3), null, false, getIc2(IC2Items.getItem("crushed", "uranium"), 4));
                         for (String matName : myMaterialNamesBme) {
                             if (Materials.hasMaterial(matName)){
@@ -807,7 +805,7 @@ public class PoorMetalsRecipes {
                             }
                         }
                     }
-                    if (Loader.isModLoaded("endmetals") && Config.endModernMetalsPoorOres){
+                    if (Loader.isModLoaded("endmetals") && PoorMetalsConfig.endModernMetalsPoorOres){
                         Recipes.macerator.addRecipe(Recipes.inputFactory.forOreDict("orePoorEndUranium", 3), null, false, getIc2(IC2Items.getItem("crushed", "uranium"), 4));
                         for (String matName : myMaterialNamesBme) {
                             if (Materials.hasMaterial(matName)){
@@ -824,7 +822,7 @@ public class PoorMetalsRecipes {
                     }
                 }
             }else {
-                if (Config.baseMetalsPoorOres){
+                if (PoorMetalsConfig.baseMetalsPoorOres){
                     for (String matName : myMaterialNamesBme) {
                         if (Materials.hasMaterial(matName)){
                             if (matName.equals("copper") || matName.equals("tin") || matName.equals("silver") || matName.equals("lead") || matName.equals("mercury")){
@@ -837,7 +835,7 @@ public class PoorMetalsRecipes {
                             Recipes.macerator.addRecipe(Recipes.inputFactory.forOreDict(poorOreName, 3), null, false, crushed);
                         }
                     }
-                    if (Config.netherMetalsPoorOres){
+                    if (PoorMetalsConfig.netherMetalsPoorOres){
                         for (String matName : myMaterialNamesBme) {
                             if (Materials.hasMaterial(matName)){
                                 if (matName.equals("copper") || matName.equals("tin") || matName.equals("silver") || matName.equals("lead") || matName.equals("mercury") || matName.equals("adamantine") || matName.equals("coldiron") || matName.equals("starsteel")){
@@ -851,7 +849,7 @@ public class PoorMetalsRecipes {
                             }
                         }
                     }
-                    if (Config.endMetalsPoorOres){
+                    if (PoorMetalsConfig.endMetalsPoorOres){
                         for (String matName : myMaterialNamesBme) {
                             if (Materials.hasMaterial(matName)){
                                 if (matName.equals("copper") || matName.equals("tin") || matName.equals("silver") || matName.equals("lead") || matName.equals("mercury") || matName.equals("adamantine") || matName.equals("coldiron") || matName.equals("starsteel")){
@@ -866,7 +864,7 @@ public class PoorMetalsRecipes {
                         }
                     }
                 }
-                if (Config.modernMetalsPoorOres && Loader.isModLoaded("modernmetals")){
+                if (PoorMetalsConfig.modernMetalsPoorOres && Loader.isModLoaded("modernmetals")){
                     Recipes.macerator.addRecipe(Recipes.inputFactory.forOreDict("orePoorUranium", 3), null, false, getIc2(IC2Items.getItem("crushed", "uranium"), 1));
                     for (String matName : myMaterialNamesMme) {
                         if (Materials.hasMaterial(matName)){
@@ -880,7 +878,7 @@ public class PoorMetalsRecipes {
                             Recipes.macerator.addRecipe(Recipes.inputFactory.forOreDict(poorOreName, 3), null, false, crushed);
                         }
                     }
-                    if (Loader.isModLoaded("nethermetals") && Config.netherModernMetalsPoorOres){
+                    if (Loader.isModLoaded("nethermetals") && PoorMetalsConfig.netherModernMetalsPoorOres){
                         Recipes.macerator.addRecipe(Recipes.inputFactory.forOreDict("orePoorNetherUranium", 3), null, false, getIc2(IC2Items.getItem("crushed", "uranium"), 2));
                         for (String matName : myMaterialNamesBme) {
                             if (Materials.hasMaterial(matName)){
@@ -895,7 +893,7 @@ public class PoorMetalsRecipes {
                             }
                         }
                     }
-                    if (Loader.isModLoaded("endmetals") && Config.endModernMetalsPoorOres){
+                    if (Loader.isModLoaded("endmetals") && PoorMetalsConfig.endModernMetalsPoorOres){
                         Recipes.macerator.addRecipe(Recipes.inputFactory.forOreDict("orePoorEndUranium", 3), null, false, getIc2(IC2Items.getItem("crushed", "uranium"), 2));
                         for (String matName : myMaterialNamesBme) {
                             if (Materials.hasMaterial(matName)){

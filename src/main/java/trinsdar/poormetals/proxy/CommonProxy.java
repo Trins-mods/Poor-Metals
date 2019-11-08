@@ -5,18 +5,17 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import trinsdar.poormetals.Config;
+import trinsdar.poormetals.PoorMetalsConfig;
+import trinsdar.poormetals.init.ModBlocks;
 
 import java.io.File;
 
 @Mod.EventBusSubscriber
 public class CommonProxy {
-    public static Configuration config;
 
     public void preInit(FMLPreInitializationEvent event) {
-        File directory = event.getModConfigurationDirectory();
-        config = new Configuration(new File(directory.getPath(), "poormetals.cfg"));
-        Config.readConfig();
+        ModBlocks.registerBlocks();
+        ModBlocks.registerItemBlocks();
     }
 
     public void init(FMLInitializationEvent event) {

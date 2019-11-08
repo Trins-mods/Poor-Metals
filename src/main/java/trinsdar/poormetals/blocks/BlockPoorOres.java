@@ -17,7 +17,7 @@ public class BlockPoorOres extends Block {
         super(Material.ROCK);
         this.variant = variant;
         setCreativeTab(PoorMetals.creativeTab);
-        final String name = "poor_"+ variant.toString().toLowerCase()+ "_ore";
+        final String name = "poor_"+ variant.getName() + "_ore";
         setUnlocalizedName( PoorMetals.MODID + "." + name );
         setRegistryName(name);
         this.setHarvestLevel("pickaxe", variant.getHarvest());
