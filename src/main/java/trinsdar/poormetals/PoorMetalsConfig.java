@@ -24,39 +24,24 @@ public class PoorMetalsConfig {
     @Comment("Set to false to disable BaseMetals Poor ores")
     @RequiresMcRestart
     public static boolean baseMetalsPoorOres = true;
-    @Comment("Set to true to enable Base Metals ores even when Base Metals is not loaded. Does nothing if baseMetalsPoorOres is set to false.")
-    @RequiresMcRestart
-    public static boolean baseMetalsPoorOresOverride = false;
     @Comment("Set to false to disable ModernMetals Poor ores")
     @RequiresMcRestart
     public static boolean modernMetalsPoorOres = true;
-    @Comment("Set to true to enable Modern Metals ores even when Modern Metals is not loaded. Does nothing if modernMetalsPoorOres is set to false.")
-    @RequiresMcRestart
-    public static boolean modernMetalsPoorOresOverride = false;
     @Comment("Set to false to disable NetherMetals Poor ores")
     @RequiresMcRestart
     public static boolean netherMetalsPoorOres = true;
-    @Comment("Set to true to enable Nether Metals ores even when Nether Metals is not loaded. Does nothing if netherMetalsPoorOres is set to false.")
-    @RequiresMcRestart
-    public static boolean netherMetalsPoorOresOverride = false;
     @Comment("Set to false to disable EndMetals Poor ores")
     @RequiresMcRestart
     public static boolean endMetalsPoorOres = true;
-    @Comment("Set to true to enable End Metals ores even when End Metals is not loaded. Does nothing if endMetalsPoorOres is set to false.")
-    @RequiresMcRestart
-    public static boolean endMetalsPoorOresOverride = false;
     @Comment("Set to false to disable Nether Modern Metals Poor ores")
     @RequiresMcRestart
     public static boolean netherModernMetalsPoorOres = true;
-    @Comment("Set to true to enable Nether Modern Metals ores even when Nether Metals & Modern Metals are not loaded. Does nothing if enableNetherModernMetalsPoorOres is set to false.")
+    @Comment("Set to true to enable Poor Ores of respective mods ores even when the respective mod is not loaded.")
     @RequiresMcRestart
-    public static boolean netherModernMetalsPoorOresOverride = false;
+    public static boolean modlessOres = false;
     @Comment("Set to false to disable End Modern Metals Poor ores")
     @RequiresMcRestart
     public static boolean endModernMetalsPoorOres = true;
-    @Comment("Set to true to enable Nether Modern Metals ores even when Nether Metals & Modern Metals are not loaded. Does nothing if enableNetherModernMetalsPoorOres is set to false.")
-    @RequiresMcRestart
-    public static boolean endModernMetalsPoorOresOverride = false;
     @Comment("Set to true to enable doubling of poor ores with crack hammer and other mod methods")
     @RequiresMcRestart
     public static boolean poorOreDouble = false;
@@ -72,11 +57,14 @@ public class PoorMetalsConfig {
     public static IndividualToggles individualToggles = new IndividualToggles();
 
     public static class IndividualToggles {
-        public static final Map<String, Boolean> ENABLED_ORES = new TreeMap();
+        public final Map<String, Boolean> ENABLED_ORES = new TreeMap();
 
-        static {
+        {
             for (BlockPooreOreTypes variant : BlockPooreOreTypes.values()){
                 ENABLED_ORES.put("poor_"+ variant.getName() + "_ore", true);
+                if (variant.getName().equals("adamantine") || variant.getName().equals("coldiron") || variant.getName().equals("starsteel") || variant.getName().equals("beryllium") || variant.getName().equals("boron") || variant.getName().equals("thorium")){
+                    continue;
+                }
                 ENABLED_ORES.put("poor_nether_"+ variant.getName() + "_ore", true);
                 ENABLED_ORES.put("poor_end_"+ variant.getName() + "_ore", true);
             }

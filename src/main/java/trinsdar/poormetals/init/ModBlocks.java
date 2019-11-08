@@ -5,12 +5,8 @@ import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Loader;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
-import net.minecraftforge.registries.IForgeRegistry;
 import trinsdar.poormetals.PoorMetalsConfig;
 import trinsdar.poormetals.PoorMetals;
 import trinsdar.poormetals.blocks.BlockPoorEndOres;
@@ -20,19 +16,18 @@ import trinsdar.poormetals.blocks.BlockPooreOreTypes;
 
 
 import java.util.AbstractMap.SimpleEntry;
-import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
 public class ModBlocks {
-    static final Map<Boolean, Entry<Block, Item>> toRegisterVanilla = new LinkedHashMap<>();
-    static final Map<Boolean, Entry<Block, Item>> toRegisterBme = new LinkedHashMap<>();
-    static final Map<Boolean, Entry<Block, Item>> toRegisterMme = new LinkedHashMap<>();
-    static final Map<Boolean, Entry<Block, Item>> toRegisterNether = new LinkedHashMap<>();
-    static final Map<Boolean, Entry<Block, Item>> toRegisterEnd = new LinkedHashMap<>();
-    static final Map<Boolean, Entry<Block, Item>> toRegisterNetherMme = new LinkedHashMap<>();
-    static final Map<Boolean, Entry<Block, Item>> toRegisterEndMme = new LinkedHashMap<>();
+    static final Map<String, Entry<Block, Item>> toRegisterVanilla = new LinkedHashMap<>();
+    static final Map<String, Entry<Block, Item>> toRegisterBme = new LinkedHashMap<>();
+    static final Map<String, Entry<Block, Item>> toRegisterMme = new LinkedHashMap<>();
+    static final Map<String, Entry<Block, Item>> toRegisterNether = new LinkedHashMap<>();
+    static final Map<String, Entry<Block, Item>> toRegisterEnd = new LinkedHashMap<>();
+    static final Map<String, Entry<Block, Item>> toRegisterNetherMme = new LinkedHashMap<>();
+    static final Map<String, Entry<Block, Item>> toRegisterEndMme = new LinkedHashMap<>();
 
     public static final BlockPoorOres poorIronOre = registerVanillaBlock(new BlockPoorOres(BlockPooreOreTypes.IRON));
     public static final BlockPoorOres poorGoldOre = registerVanillaBlock(new BlockPoorOres(BlockPooreOreTypes.GOLD));
@@ -134,7 +129,7 @@ public class ModBlocks {
     static <T extends Block> T registerVanillaBlock(T block) {
         ResourceLocation registryName = Preconditions.checkNotNull(block.getRegistryName(),
                 "Block %s has null registry name", block);
-        boolean ore = PoorMetalsConfig.IndividualToggles.ENABLED_ORES.get(registryName.toString().replace(PoorMetals.MODID + ":", ""));
+        String ore = registryName.toString().replace(PoorMetals.MODID + ":", "");
         toRegisterVanilla.put(ore, new SimpleEntry<>(block, new ItemBlock(block)));
         return block;
     }
@@ -142,7 +137,7 @@ public class ModBlocks {
     static <T extends Block> T registerBmeBlock(T block) {
         ResourceLocation registryName = Preconditions.checkNotNull(block.getRegistryName(),
                 "Block %s has null registry name", block);
-        boolean ore = PoorMetalsConfig.IndividualToggles.ENABLED_ORES.get(registryName.toString().replace(PoorMetals.MODID + ":", ""));
+        String ore = registryName.toString().replace(PoorMetals.MODID + ":", "");
         toRegisterBme.put(ore, new SimpleEntry<>(block, new ItemBlock(block)));
         return block;
     }
@@ -150,7 +145,7 @@ public class ModBlocks {
     static <T extends Block> T registerMmeBlock(T block) {
         ResourceLocation registryName = Preconditions.checkNotNull(block.getRegistryName(),
                 "Block %s has null registry name", block);
-        boolean ore = PoorMetalsConfig.IndividualToggles.ENABLED_ORES.get(registryName.toString().replace(PoorMetals.MODID + ":", ""));
+        String ore = registryName.toString().replace(PoorMetals.MODID + ":", "");
         toRegisterMme.put(ore, new SimpleEntry<>(block, new ItemBlock(block)));
         return block;
     }
@@ -158,7 +153,7 @@ public class ModBlocks {
     static <T extends Block> T registerNetherBlock(T block) {
         ResourceLocation registryName = Preconditions.checkNotNull(block.getRegistryName(),
                 "Block %s has null registry name", block);
-        boolean ore = PoorMetalsConfig.IndividualToggles.ENABLED_ORES.get(registryName.toString().replace(PoorMetals.MODID + ":", ""));
+        String ore = registryName.toString().replace(PoorMetals.MODID + ":", "");
         toRegisterNether.put(ore, new SimpleEntry<>(block, new ItemBlock(block)));
         return block;
     }
@@ -166,7 +161,7 @@ public class ModBlocks {
     static <T extends Block> T registerEndBlock(T block) {
         ResourceLocation registryName = Preconditions.checkNotNull(block.getRegistryName(),
                 "Block %s has null registry name", block);
-        boolean ore = PoorMetalsConfig.IndividualToggles.ENABLED_ORES.get(registryName.toString().replace(PoorMetals.MODID + ":", ""));
+        String ore = registryName.toString().replace(PoorMetals.MODID + ":", "");
         toRegisterEnd.put(ore, new SimpleEntry<>(block, new ItemBlock(block)));
         return block;
     }
@@ -174,7 +169,7 @@ public class ModBlocks {
     static <T extends Block> T registerNetherMmeBlock(T block) {
         ResourceLocation registryName = Preconditions.checkNotNull(block.getRegistryName(),
                 "Block %s has null registry name", block);
-        boolean ore = PoorMetalsConfig.IndividualToggles.ENABLED_ORES.get(registryName.toString().replace(PoorMetals.MODID + ":", ""));
+        String ore = registryName.toString().replace(PoorMetals.MODID + ":", "");
         toRegisterNetherMme.put(ore, new SimpleEntry<>(block, new ItemBlock(block)));
         return block;
     }
@@ -182,70 +177,70 @@ public class ModBlocks {
     static <T extends Block> T registerEndMmeBlock(T block) {
         ResourceLocation registryName = Preconditions.checkNotNull(block.getRegistryName(),
                 "Block %s has null registry name", block);
-        boolean ore = PoorMetalsConfig.IndividualToggles.ENABLED_ORES.get(registryName.toString().replace(PoorMetals.MODID + ":", ""));
+        String ore = registryName.toString().replace(PoorMetals.MODID + ":", "");
         toRegisterEndMme.put(ore, new SimpleEntry<>(block, new ItemBlock(block)));
         return block;
     }
 
     public static void registerBlocks(){
         if (PoorMetalsConfig.vanillaPoorOres){
-            for (Entry<Boolean, Entry<Block, Item>> entry : toRegisterVanilla.entrySet()){
+            for (Entry<String, Entry<Block, Item>> entry : toRegisterVanilla.entrySet()){
                 Entry<Block, Item> block = entry.getValue();
-                if (entry.getKey()){
+                if (PoorMetalsConfig.individualToggles.ENABLED_ORES.get(entry.getKey())){
                     ForgeRegistries.BLOCKS.register(block.getKey());
                 }
             }
         }
 
-        if ( PoorMetalsConfig.baseMetalsPoorOres && (PoorMetalsConfig.baseMetalsPoorOresOverride || Loader.isModLoaded("basemetals"))){
-            for (Entry<Boolean, Entry<Block, Item>> entry : toRegisterBme.entrySet()){
+        if ( PoorMetalsConfig.baseMetalsPoorOres && (PoorMetalsConfig.modlessOres || Loader.isModLoaded("basemetals"))){
+            for (Entry<String, Entry<Block, Item>> entry : toRegisterBme.entrySet()){
                 Entry<Block, Item> block = entry.getValue();
-                if (entry.getKey()){
+                if (PoorMetalsConfig.individualToggles.ENABLED_ORES.get(entry.getKey())){
                     ForgeRegistries.BLOCKS.register(block.getKey());
                 }
             }
         }
 
-        if (PoorMetalsConfig.modernMetalsPoorOres && (PoorMetalsConfig.modernMetalsPoorOresOverride || Loader.isModLoaded("modernmetals"))){
-            for (Entry<Boolean, Entry<Block, Item>> entry : toRegisterMme.entrySet()){
+        if (PoorMetalsConfig.modernMetalsPoorOres && (PoorMetalsConfig.modlessOres || Loader.isModLoaded("modernmetals"))){
+            for (Entry<String, Entry<Block, Item>> entry : toRegisterMme.entrySet()){
                 Entry<Block, Item> block = entry.getValue();
-                if (entry.getKey()){
+                if (PoorMetalsConfig.individualToggles.ENABLED_ORES.get(entry.getKey())){
                     ForgeRegistries.BLOCKS.register(block.getKey());
                 }
             }
         }
 
-        if (PoorMetalsConfig.netherMetalsPoorOres && (PoorMetalsConfig.netherMetalsPoorOresOverride || Loader.isModLoaded("nethermetals"))){
-            for (Entry<Boolean, Entry<Block, Item>> entry : toRegisterNether.entrySet()){
+        if (PoorMetalsConfig.netherMetalsPoorOres && (PoorMetalsConfig.modlessOres || Loader.isModLoaded("nethermetals"))){
+            for (Entry<String, Entry<Block, Item>> entry : toRegisterNether.entrySet()){
                 Entry<Block, Item> block = entry.getValue();
-                if (entry.getKey()){
+                if (PoorMetalsConfig.individualToggles.ENABLED_ORES.get(entry.getKey())){
                     ForgeRegistries.BLOCKS.register(block.getKey());
                 }
             }
         }
 
-        if (PoorMetalsConfig.netherModernMetalsPoorOres && (PoorMetalsConfig.netherModernMetalsPoorOresOverride || (Loader.isModLoaded("modernmetals") && Loader.isModLoaded("nethermetals")))){
-            for (Entry<Boolean, Entry<Block, Item>> entry : toRegisterNetherMme.entrySet()){
+        if (PoorMetalsConfig.netherModernMetalsPoorOres && (PoorMetalsConfig.modlessOres || (Loader.isModLoaded("modernmetals") && Loader.isModLoaded("nethermetals")))){
+            for (Entry<String, Entry<Block, Item>> entry : toRegisterNetherMme.entrySet()){
                 Entry<Block, Item> block = entry.getValue();
-                if (entry.getKey()){
+                if (PoorMetalsConfig.individualToggles.ENABLED_ORES.get(entry.getKey())){
                     ForgeRegistries.BLOCKS.register(block.getKey());
                 }
             }
         }
 
-        if (PoorMetalsConfig.endMetalsPoorOres && (PoorMetalsConfig.endMetalsPoorOresOverride || Loader.isModLoaded("endmetals"))){
-            for (Entry<Boolean, Entry<Block, Item>> entry : toRegisterEnd.entrySet()){
+        if (PoorMetalsConfig.endMetalsPoorOres && (PoorMetalsConfig.modlessOres || Loader.isModLoaded("endmetals"))){
+            for (Entry<String, Entry<Block, Item>> entry : toRegisterEnd.entrySet()){
                 Entry<Block, Item> block = entry.getValue();
-                if (entry.getKey()){
+                if (PoorMetalsConfig.individualToggles.ENABLED_ORES.get(entry.getKey())){
                     ForgeRegistries.BLOCKS.register(block.getKey());
                 }
             }
         }
 
-        if (PoorMetalsConfig.endModernMetalsPoorOres && (PoorMetalsConfig.endModernMetalsPoorOresOverride || (Loader.isModLoaded("modernmetals") && Loader.isModLoaded("endmetals")))){
-            for (Entry<Boolean, Entry<Block, Item>> entry : toRegisterEndMme.entrySet()){
+        if (PoorMetalsConfig.endModernMetalsPoorOres && (PoorMetalsConfig.modlessOres || (Loader.isModLoaded("modernmetals") && Loader.isModLoaded("endmetals")))){
+            for (Entry<String, Entry<Block, Item>> entry : toRegisterEndMme.entrySet()){
                 Entry<Block, Item> block = entry.getValue();
-                if (entry.getKey()){
+                if (PoorMetalsConfig.individualToggles.ENABLED_ORES.get(entry.getKey())){
                     ForgeRegistries.BLOCKS.register(block.getKey());
                 }
             }
@@ -254,9 +249,9 @@ public class ModBlocks {
 
     public static void registerItemBlocks(){
         if (PoorMetalsConfig.vanillaPoorOres){
-            for (Entry<Boolean, Entry<Block, Item>> entry : toRegisterVanilla.entrySet()){
+            for (Entry<String, Entry<Block, Item>> entry : toRegisterVanilla.entrySet()){
                 Entry<Block, Item> entry2 = entry.getValue();
-                if (entry.getKey()){
+                if (PoorMetalsConfig.individualToggles.ENABLED_ORES.get(entry.getKey())){
                     Item item = entry2.getValue();
                     Block block = entry2.getKey();
                     ResourceLocation registryName = Preconditions.checkNotNull(block.getRegistryName(),
@@ -267,10 +262,10 @@ public class ModBlocks {
             }
         }
 
-        if ( PoorMetalsConfig.baseMetalsPoorOres && (PoorMetalsConfig.baseMetalsPoorOresOverride || Loader.isModLoaded("basemetals"))){
-            for (Entry<Boolean, Entry<Block, Item>> entry : toRegisterBme.entrySet()){
+        if ( PoorMetalsConfig.baseMetalsPoorOres && (PoorMetalsConfig.modlessOres || Loader.isModLoaded("basemetals"))){
+            for (Entry<String, Entry<Block, Item>> entry : toRegisterBme.entrySet()){
                 Entry<Block, Item> entry2 = entry.getValue();
-                if (entry.getKey()){
+                if (PoorMetalsConfig.individualToggles.ENABLED_ORES.get(entry.getKey())){
                     Item item = entry2.getValue();
                     Block block = entry2.getKey();
                     ResourceLocation registryName = Preconditions.checkNotNull(block.getRegistryName(),
@@ -281,10 +276,10 @@ public class ModBlocks {
             }
         }
 
-        if (PoorMetalsConfig.modernMetalsPoorOres && (PoorMetalsConfig.modernMetalsPoorOresOverride || Loader.isModLoaded("modernmetals"))){
-            for (Entry<Boolean, Entry<Block, Item>> entry : toRegisterMme.entrySet()){
+        if (PoorMetalsConfig.modernMetalsPoorOres && (PoorMetalsConfig.modlessOres || Loader.isModLoaded("modernmetals"))){
+            for (Entry<String, Entry<Block, Item>> entry : toRegisterMme.entrySet()){
                 Entry<Block, Item> entry2 = entry.getValue();
-                if (entry.getKey()){
+                if (PoorMetalsConfig.individualToggles.ENABLED_ORES.get(entry.getKey())){
                     Item item = entry2.getValue();
                     Block block = entry2.getKey();
                     ResourceLocation registryName = Preconditions.checkNotNull(block.getRegistryName(),
@@ -295,10 +290,10 @@ public class ModBlocks {
             }
         }
 
-        if (PoorMetalsConfig.netherMetalsPoorOres && (PoorMetalsConfig.netherMetalsPoorOresOverride || Loader.isModLoaded("nethermetals"))){
-            for (Entry<Boolean, Entry<Block, Item>> entry : toRegisterNether.entrySet()){
+        if (PoorMetalsConfig.netherMetalsPoorOres && (PoorMetalsConfig.modlessOres || Loader.isModLoaded("nethermetals"))){
+            for (Entry<String, Entry<Block, Item>> entry : toRegisterNether.entrySet()){
                 Entry<Block, Item> entry2 = entry.getValue();
-                if (entry.getKey()){
+                if (PoorMetalsConfig.individualToggles.ENABLED_ORES.get(entry.getKey())){
                     Item item = entry2.getValue();
                     Block block = entry2.getKey();
                     ResourceLocation registryName = Preconditions.checkNotNull(block.getRegistryName(),
@@ -309,10 +304,10 @@ public class ModBlocks {
             }
         }
 
-        if (PoorMetalsConfig.netherModernMetalsPoorOres && (PoorMetalsConfig.netherModernMetalsPoorOresOverride || (Loader.isModLoaded("modernmetals") && Loader.isModLoaded("nethermetals")))){
-            for (Entry<Boolean, Entry<Block, Item>> entry : toRegisterNetherMme.entrySet()){
+        if (PoorMetalsConfig.netherModernMetalsPoorOres && (PoorMetalsConfig.modlessOres || (Loader.isModLoaded("modernmetals") && Loader.isModLoaded("nethermetals")))){
+            for (Entry<String, Entry<Block, Item>> entry : toRegisterNetherMme.entrySet()){
                 Entry<Block, Item> entry2 = entry.getValue();
-                if (entry.getKey()){
+                if (PoorMetalsConfig.individualToggles.ENABLED_ORES.get(entry.getKey())){
                     Item item = entry2.getValue();
                     Block block = entry2.getKey();
                     ResourceLocation registryName = Preconditions.checkNotNull(block.getRegistryName(),
@@ -323,10 +318,10 @@ public class ModBlocks {
             }
         }
 
-        if (PoorMetalsConfig.endMetalsPoorOres && (PoorMetalsConfig.endMetalsPoorOresOverride || Loader.isModLoaded("endmetals"))){
-            for (Entry<Boolean, Entry<Block, Item>> entry : toRegisterEnd.entrySet()){
+        if (PoorMetalsConfig.endMetalsPoorOres && (PoorMetalsConfig.modlessOres || Loader.isModLoaded("endmetals"))){
+            for (Entry<String, Entry<Block, Item>> entry : toRegisterEnd.entrySet()){
                 Entry<Block, Item> entry2 = entry.getValue();
-                if (entry.getKey()){
+                if (PoorMetalsConfig.individualToggles.ENABLED_ORES.get(entry.getKey())){
                     Item item = entry2.getValue();
                     Block block = entry2.getKey();
                     ResourceLocation registryName = Preconditions.checkNotNull(block.getRegistryName(),
@@ -337,10 +332,10 @@ public class ModBlocks {
             }
         }
 
-        if (PoorMetalsConfig.endModernMetalsPoorOres && (PoorMetalsConfig.endModernMetalsPoorOresOverride || (Loader.isModLoaded("modernmetals") && Loader.isModLoaded("endmetals")))){
-            for (Entry<Boolean, Entry<Block, Item>> entry : toRegisterEndMme.entrySet()){
+        if (PoorMetalsConfig.endModernMetalsPoorOres && (PoorMetalsConfig.modlessOres || (Loader.isModLoaded("modernmetals") && Loader.isModLoaded("endmetals")))){
+            for (Entry<String, Entry<Block, Item>> entry : toRegisterEndMme.entrySet()){
                 Entry<Block, Item> entry2 = entry.getValue();
-                if (entry.getKey()){
+                if (PoorMetalsConfig.individualToggles.ENABLED_ORES.get(entry.getKey())){
                     Item item = entry2.getValue();
                     Block block = entry2.getKey();
                     ResourceLocation registryName = Preconditions.checkNotNull(block.getRegistryName(),
@@ -354,63 +349,63 @@ public class ModBlocks {
 
     public static void initModels(){
         if (PoorMetalsConfig.vanillaPoorOres){
-            for (Entry<Boolean, Entry<Block, Item>> entry : toRegisterVanilla.entrySet()){
+            for (Entry<String, Entry<Block, Item>> entry : toRegisterVanilla.entrySet()){
                 Entry<Block, Item> block = entry.getValue();
-                if (entry.getKey()){
+                if (PoorMetalsConfig.individualToggles.ENABLED_ORES.get(entry.getKey())){
                     ((BlockPoorOres)block.getKey()).initModel();
                 }
             }
         }
 
-        if ( PoorMetalsConfig.baseMetalsPoorOres && (PoorMetalsConfig.baseMetalsPoorOresOverride || Loader.isModLoaded("basemetals"))){
-            for (Entry<Boolean, Entry<Block, Item>> entry : toRegisterBme.entrySet()){
+        if ( PoorMetalsConfig.baseMetalsPoorOres && (PoorMetalsConfig.modlessOres || Loader.isModLoaded("basemetals"))){
+            for (Entry<String, Entry<Block, Item>> entry : toRegisterBme.entrySet()){
                 Entry<Block, Item> block = entry.getValue();
-                if (entry.getKey()){
+                if (PoorMetalsConfig.individualToggles.ENABLED_ORES.get(entry.getKey())){
                     ((BlockPoorOres)block.getKey()).initModel();
                 }
             }
         }
 
-        if (PoorMetalsConfig.modernMetalsPoorOres && (PoorMetalsConfig.modernMetalsPoorOresOverride || Loader.isModLoaded("modernmetals"))){
-            for (Entry<Boolean, Entry<Block, Item>> entry : toRegisterMme.entrySet()){
+        if (PoorMetalsConfig.modernMetalsPoorOres && (PoorMetalsConfig.modlessOres || Loader.isModLoaded("modernmetals"))){
+            for (Entry<String, Entry<Block, Item>> entry : toRegisterMme.entrySet()){
                 Entry<Block, Item> block = entry.getValue();
-                if (entry.getKey()){
+                if (PoorMetalsConfig.individualToggles.ENABLED_ORES.get(entry.getKey())){
                     ((BlockPoorOres)block.getKey()).initModel();
                 }
             }
         }
 
-        if (PoorMetalsConfig.netherMetalsPoorOres && (PoorMetalsConfig.netherMetalsPoorOresOverride || Loader.isModLoaded("nethermetals"))){
-            for (Entry<Boolean, Entry<Block, Item>> entry : toRegisterNether.entrySet()){
+        if (PoorMetalsConfig.netherMetalsPoorOres && (PoorMetalsConfig.modlessOres || Loader.isModLoaded("nethermetals"))){
+            for (Entry<String, Entry<Block, Item>> entry : toRegisterNether.entrySet()){
                 Entry<Block, Item> block = entry.getValue();
-                if (entry.getKey()){
+                if (PoorMetalsConfig.individualToggles.ENABLED_ORES.get(entry.getKey())){
                     ((BlockPoorNetherOres)block.getKey()).initModel();
                 }
             }
         }
 
-        if (PoorMetalsConfig.netherModernMetalsPoorOres && (PoorMetalsConfig.netherModernMetalsPoorOresOverride || (Loader.isModLoaded("modernmetals") && Loader.isModLoaded("nethermetals")))){
-            for (Entry<Boolean, Entry<Block, Item>> entry : toRegisterNetherMme.entrySet()){
+        if (PoorMetalsConfig.netherModernMetalsPoorOres && (PoorMetalsConfig.modlessOres || (Loader.isModLoaded("modernmetals") && Loader.isModLoaded("nethermetals")))){
+            for (Entry<String, Entry<Block, Item>> entry : toRegisterNetherMme.entrySet()){
                 Entry<Block, Item> block = entry.getValue();
-                if (entry.getKey()){
+                if (PoorMetalsConfig.individualToggles.ENABLED_ORES.get(entry.getKey())){
                     ((BlockPoorNetherOres)block.getKey()).initModel();
                 }
             }
         }
 
-        if (PoorMetalsConfig.endMetalsPoorOres && (PoorMetalsConfig.endMetalsPoorOresOverride || Loader.isModLoaded("endmetals"))){
-            for (Entry<Boolean, Entry<Block, Item>> entry : toRegisterEnd.entrySet()){
+        if (PoorMetalsConfig.endMetalsPoorOres && (PoorMetalsConfig.modlessOres || Loader.isModLoaded("endmetals"))){
+            for (Entry<String, Entry<Block, Item>> entry : toRegisterEnd.entrySet()){
                 Entry<Block, Item> block = entry.getValue();
-                if (entry.getKey()){
+                if (PoorMetalsConfig.individualToggles.ENABLED_ORES.get(entry.getKey())){
                     ((BlockPoorEndOres)block.getKey()).initModel();
                 }
             }
         }
 
-        if (PoorMetalsConfig.endModernMetalsPoorOres && (PoorMetalsConfig.endModernMetalsPoorOresOverride || (Loader.isModLoaded("modernmetals") && Loader.isModLoaded("endmetals")))) {
-            for (Entry<Boolean, Entry<Block, Item>> entry : toRegisterEndMme.entrySet()) {
+        if (PoorMetalsConfig.endModernMetalsPoorOres && (PoorMetalsConfig.modlessOres || (Loader.isModLoaded("modernmetals") && Loader.isModLoaded("endmetals")))) {
+            for (Entry<String, Entry<Block, Item>> entry : toRegisterEndMme.entrySet()) {
                 Entry<Block, Item> block = entry.getValue();
-                if (entry.getKey()) {
+                if (PoorMetalsConfig.individualToggles.ENABLED_ORES.get(entry.getKey())) {
                     ((BlockPoorEndOres) block.getKey()).initModel();
                 }
             }

@@ -17,7 +17,7 @@ public enum BlockPooreOreTypes {
     BISMUTH("bismuth", 4.0F, 0),
     ANTIMONY("antimony", 4.0F, 0),
     ADAMANTINE("adamantine", 4.0F, 3),
-    COLD_IRON("cold_iron", 4.0F, 2),
+    COLD_IRON("coldiron", 4.0F, 2),
     STARSTEEL("starsteel", 4.0F, 3),
 
     //modern metals
